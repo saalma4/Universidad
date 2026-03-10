@@ -1,33 +1,39 @@
-import pymunk
+import pybullet as p
+import pybullet_data
+import time
 
-# 1. Crear el espacio de simulación
-espacio = pymunk.Space()
-espacio.gravity = (0, -900)  # Gravedad hacia abajo (eje Y)
+# 1. Conectar con la interfaz gráfica (GUI)
+# Si estás en un servidor sin pantalla, usarías p.DIRECT
+physicsClient = p.connect(p.GUI)
 
-# 2. Crear el suelo (una línea estática)
-suelo = pymunk.Segment(espacio.static_body, (0, 50), (500, 50), 5)
-suelo.elasticity = 0.9  # Muy elástico para que rebote mucho
-espacio.add(suelo)
+# 2. Añadir la ruta de los modelos básicos (planos, esferas, robots)
+p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
-# 3. Crear una pelota (cuerpo dinámico)
-masa = 1
-radio = 25
-momento = pymunk.moment_for_circle(masa, 0, radio) # Calcula cómo gira
-cuerpo_pelota = pymunk.Body(masa, momento)
-cuerpo_pelota.position = (250, 400) # Empieza en el aire
+# 3. Configurar el mundo
+p.setGravity(0, 0, -9.81) # Gravedad en el eje Z (3D)
+planoId = p.loadURDF("plane.urdf") # Cargamos un suelo
 
-forma_pelota = pymunk.Circle(cuerpo_pelota, radio)
-forma_pelota.elasticity = 0.9
-espacio.add(cuerpo_pelota, forma_pelota)
+# 4. Crear una esfera manualmente
+# Posición inicial (x, y, z)
+startPos = [0, 0, 5] 
+# Orientación inicial (ángulos en radianes)
+startOrientation = p.getQuaternionFromEuler([0, 0, 0])
 
-# 4. Simular la caída paso a paso
-print("Simulando caída de la pelota...")
-print(f"{'Tiempo':<10} | {'Altura (Y)':<10}")
-print("-" * 25)
+# Cargamos el modelo de una esfera
+sphereId = p.loadURDF("sphere_1cm.urdf", startPos, startOrientation)
 
-for i in range(20):
-    # Avanzamos la simulación 0.02 segundos en cada paso
-    espacio.step(0.02)
-    print(f"{i*0.02:>9.2f}s | {cuerpo_pelota.position.y:>9.2f}px")
+# 5. Bucle de simulación
+print("Simulación iniciada. Cierra la ventana para terminar.")
 
-print("\n✅ Si los números de Altura (Y) han bajado y luego subido, ¡el rebote funciona!")
+for i in range(10000):
+    p.stepSimulation() # Avanza un paso la física
+    
+    # Obtenemos la posición de la esfera para imprimirla
+    pos, _ = p.getBasePositionAndOrientation(sphereId)
+    if i % 100 == 0: # Imprime cada 100 pasos para no saturar
+        print(f"Altura de la esfera: {pos[2]:.2f} metros")
+    
+    time.sleep(1./240.) # PyBullet funciona por defecto a 240Hz
+
+# 6. Desconectar al terminar
+p.disconnect()
