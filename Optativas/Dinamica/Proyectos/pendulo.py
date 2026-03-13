@@ -1,3 +1,5 @@
+#SALMA BOULAGNA MORENO Y MIGUEL ANGEL DORADO MALDONADO
+
 import pygame
 import pymunk
 from pymunk import Vec2d
@@ -49,7 +51,7 @@ def run_simulation():
 
     suspension_point = (300, 100)
     length = 250
-    friction_coefficient = 0.5
+    friction_coefficient = 0.3
 
     pendulum = DampingPendulum(
         space, length, ball, suspension_point, friction_coefficient
