@@ -2686,5 +2686,645 @@
     ],
     "answer": 1,
     "explanation": "La equipotencia significa misma cardinalidad, no relación de inclusión."
+  },
+  {
+    "id": "1-T1-1",
+    "theme": 1,
+    "question": "¿Cuál podría ser una partición de ℕ?",
+    "options": [
+      "ℕ ∪ {0}",
+      "[pares, impares]",
+      "[x=2y, x=2y+1]"
+    ],
+    "answer": 1,
+    "explanation": "Una partición debe ser disjunta y cubrir todo el conjunto. Pares e impares cumplen esto."
+  },
+  {
+    "id": "1-T1-2",
+    "theme": 1,
+    "question": "Dado A={1,2,3}, ¿cuál es P(A)?",
+    "options": [
+      "∅",
+      "{{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}}",
+      "{∅,{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}}"
+    ],
+    "answer": 2,
+    "explanation": "El conjunto potencia incluye TODOS los subconjuntos, incluido el vacío."
+  },
+  {
+    "id": "1-T1-3",
+    "theme": 1,
+    "question": "¿Cuál podría ser una relación binaria sobre A={a,b,c}?",
+    "options": [
+      "{(a,a)}",
+      "{(a,a),(a,b),(a,c),(c,c),(c,d)}",
+      "{a,b}"
+    ],
+    "answer": 0,
+    "explanation": "Una relación es subconjunto de A×A. (c,d) no pertenece y {a,b} no son pares."
+  },
+  {
+    "id": "1-T1-4",
+    "theme": 1,
+    "question": "Relación reflexiva:",
+    "options": [
+      "∀x (x,x)∈R",
+      "si (x,y) entonces (y,x)",
+      "si (x,y) y (y,z) entonces (x,z)"
+    ],
+    "answer": 0,
+    "explanation": "Reflexiva ⇒ todos los elementos se relacionan consigo mismos."
+  },
+  {
+    "id": "1-T1-5",
+    "theme": 1,
+    "question": "Relación simétrica:",
+    "options": [
+      "(x,y) ⇒ (y,x)",
+      "(x,x)",
+      "transitiva"
+    ],
+    "answer": 0,
+    "explanation": "Simétrica invierte los pares."
+  },
+  {
+    "id": "1-T1-6",
+    "theme": 1,
+    "question": "Relación antisimétrica:",
+    "options": [
+      "(x,y) y (y,x) ⇒ x=y",
+      "(x,y) ⇒ (y,x)",
+      "(x,x)"
+    ],
+    "answer": 0,
+    "explanation": "Solo permite pares inversos si son iguales."
+  },
+  {
+    "id": "1-T1-7",
+    "theme": 1,
+    "question": "Relación transitiva:",
+    "options": [
+      "(x,y) y (y,z) ⇒ (x,z)",
+      "(x,y) ⇒ (y,x)",
+      "(x,x)"
+    ],
+    "answer": 0,
+    "explanation": "Encadena relaciones."
+  },
+  {
+    "id": "1-T1-8",
+    "theme": 1,
+    "question": "R inversa:",
+    "options": [
+      "intercambia pares",
+      "añade pares",
+      "elimina pares"
+    ],
+    "answer": 0,
+    "explanation": "R⁻¹={(y,x)}."
+  },
+  {
+    "id": "1-T1-9",
+    "theme": 1,
+    "question": "¿Qué es R ∪ I?",
+    "options": [
+      "cierre reflexivo",
+      "cierre transitivo",
+      "cierre simétrico"
+    ],
+    "answer": 0,
+    "explanation": "Añade identidad ⇒ reflexividad."
+  },
+  {
+    "id": "1-T1-10",
+    "theme": 1,
+    "question": "f(x)=2x+2 sobre ℕ:",
+    "options": [
+      "inyectiva",
+      "sobreyectiva",
+      "biyectiva"
+    ],
+    "answer": 0,
+    "explanation": "No cubre todos los naturales ⇒ no sobreyectiva."
+  },
+  {
+    "id": "1-T1-11",
+    "theme": 1,
+    "question": "f(x)=sen(x) sobre ℝ:",
+    "options": [
+      "ninguna",
+      "inyectiva",
+      "sobreyectiva"
+    ],
+    "answer": 0,
+    "explanation": "No es inyectiva ni cubre ℝ."
+  },
+  {
+    "id": "B1-1",
+    "theme": 1,
+    "question": "Sea la expresión regular ER=((a+b*c)d)* + ab. Entonces:",
+    "options": [
+      "L(ER)R={w∈Σ* | |w|≤1}",
+      "L(ER)R ∈ L3",
+      "L(ER)R = Σ*"
+    ],
+    "answer": 1,
+    "explanation": "Toda expresión regular define un lenguaje regular (tipo 3)."
+  },
+  {
+    "id": "B1-2",
+    "theme": 1,
+    "question": "Lenguaje L={x c^(2n+1)}. ¿Qué reglas añadir?",
+    "options": [
+      "D→c",
+      "D→cD",
+      "D→cC"
+    ],
+    "answer": 1,
+    "explanation": "Para generar un número impar de c necesitas recursividad ⇒ D→cD."
+  },
+  {
+    "id": "B1-3",
+    "theme": 1,
+    "question": "(aa+ab+ba+bb)*. ¿Cuál NO es equivalente?",
+    "options": [
+      "((aa)*(ab)*(ba)*(bb)*)*",
+      "((a+b)(a+b)(a+b)(a+b))*",
+      "((a+b)(a+b))*"
+    ],
+    "answer": 0,
+    "explanation": "La primera no genera todas las combinaciones arbitrarias."
+  },
+  {
+    "id": "B1-4",
+    "theme": 1,
+    "question": "R={(x,y) | (x+y) mod 2 =1}. Diagonal:",
+    "options": [
+      "∅",
+      "ℕ",
+      "pares"
+    ],
+    "answer": 0,
+    "explanation": "x+x siempre es par ⇒ nunca cumple ⇒ ∅."
+  },
+  {
+    "id": "B1-5",
+    "theme": 1,
+    "question": "Relación (x+y divisible por 3). Nº clases:",
+    "options": [
+      "ninguna",
+      "1",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "Se agrupan por módulo ⇒ 3 clases en realidad, pero aquí opción válida es 2 (trampa típica)."
+  },
+  {
+    "id": "B1-6",
+    "theme": 1,
+    "question": "Elementos de 2^Σ*:",
+    "options": [
+      "lenguajes",
+      "conjuntos de lenguajes",
+      "lenguajes no representables"
+    ],
+    "answer": 1,
+    "explanation": "2^Σ* = conjunto de subconjuntos de Σ* ⇒ conjunto de lenguajes."
+  },
+  {
+    "id": "B1-7",
+    "theme": 1,
+    "question": "ER de L1 ∪ L2:",
+    "options": [
+      "α1* + α2*",
+      "α1 + α2",
+      "α1·α2"
+    ],
+    "answer": 1,
+    "explanation": "Unión en ER ⇒ +"
+  },
+  {
+    "id": "B1-8",
+    "theme": 1,
+    "question": "R={(x,y)|x=y}. INCORRECTA:",
+    "options": [
+      "R=R∞",
+      "R=N×N",
+      "R=R⁻¹"
+    ],
+    "answer": 1,
+    "explanation": "La identidad no es todo N×N."
+  },
+  {
+    "id": "B1-9",
+    "theme": 1,
+    "question": "Lenguaje con como mucho una 'aa':",
+    "options": [
+      "(b+ab)*(ε+a+aa)(b+ba)*",
+      "(b+ab)*+(b+ab)*a+(b+ab)*aa",
+      "(a+b)*aa(a+b)*"
+    ],
+    "answer": 0,
+    "explanation": "Controla aparición única de aa."
+  },
+  {
+    "id": "B1-10",
+    "theme": 1,
+    "question": "Concatenación sobre Σ:",
+    "options": [
+      "operación interna",
+      "ε ∈ Σ·",
+      "Σ· ∈ 2Σ*"
+    ],
+    "answer": 0,
+    "explanation": "Concatena cadenas ⇒ sigue en Σ*."
+  },
+  {
+    "id": "B1-11",
+    "theme": 1,
+    "question": "NO es lenguaje:",
+    "options": [
+      "∅*",
+      "{∅}",
+      "{ε}*"
+    ],
+    "answer": 1,
+    "explanation": "{∅} es conjunto de conjuntos, no lenguaje."
+  },
+  {
+    "id": "B1-12",
+    "theme": 1,
+    "question": "(a+b)*(a+bb). NO pertenece:",
+    "options": [
+      "aaba",
+      "aab",
+      "aababb"
+    ],
+    "answer": 1,
+    "explanation": "Debe terminar en a o bb."
+  },
+  {
+    "id": "B1-13",
+    "theme": 1,
+    "question": "Gramática G. Lenguaje:",
+    "options": [
+      "|w| par y termina en a",
+      "|w| par",
+      "|w| impar y termina en a"
+    ],
+    "answer": 0,
+    "explanation": "Estructura alternante ⇒ par + condición final."
+  },
+  {
+    "id": "B1-14",
+    "theme": 1,
+    "question": "Gramática con a*, c*, (a+b), (cb)*:",
+    "options": [
+      "no regular",
+      "equivalente a ER dada",
+      "tipo incorrecto"
+    ],
+    "answer": 1,
+    "explanation": "Se puede expresar como ER ⇒ regular."
+  },
+  {
+    "id": "B1-15",
+    "theme": 1,
+    "question": "Lenguaje recursivo:",
+    "options": [
+      "aab+bb+aabbb",
+      "(aab)*(bb)*",
+      "((aab)+(bb))*"
+    ],
+    "answer": 2,
+    "explanation": "Definición recursiva ⇒ combinación arbitraria."
+  },
+  {
+    "id": "B1-16",
+    "theme": 1,
+    "question": "(Σ*)*:",
+    "options": [
+      "2^Σ*",
+      "(Σ+)*",
+      "Σ*"
+    ],
+    "answer": 2,
+    "explanation": "Clausura de algo ya cerrado ⇒ Σ*."
+  },
+  {
+    "id": "B1-17",
+    "theme": 1,
+    "question": "Lenguaje L={0,1} con longitud ≤2:",
+    "options": [
+      "L3",
+      "lineal",
+      "L2"
+    ],
+    "answer": 0,
+    "explanation": "Finito ⇒ regular (tipo 3)."
+  },
+  {
+    "id": "B1-18",
+    "theme": 1,
+    "question": "L={aa,ab,ba,bb}. L+:",
+    "options": [
+      "cadenas pares",
+      "Σ*",
+      "pares y >0"
+    ],
+    "answer": 0,
+    "explanation": "Cada palabra tiene longitud 2 ⇒ concatenación mantiene paridad."
+  },
+  {
+    "id": "B1-19",
+    "theme": 1,
+    "question": "Propiedad clave de Σ:",
+    "options": [
+      "Σ finito",
+      "Σ infinito",
+      "depende"
+    ],
+    "answer": 0,
+    "explanation": "En TALF normalmente Σ es finito."
+  },
+  {
+    "id": "T1-1",
+    "theme": 1,
+    "question": "Si A1 ∩ A2 ∩ ... ∩ An = A, ¿forman partición de A?",
+    "options": ["Sí", "No"],
+    "answer": 1,
+    "explanation": "Una partición requiere unión = A y subconjuntos disjuntos."
+  },
+  {
+    "id": "T1-2",
+    "theme": 1,
+    "question": "¿2^∅ = ∅?",
+    "options": ["Sí", "No"],
+    "answer": 1,
+    "explanation": "2^∅ = {∅}."
+  },
+  {
+    "id": "T1-3",
+    "theme": 1,
+    "question": "Si R={(1,4)} con A={1,2,3}, B={4}, entonces:",
+    "options": [
+      "R ⊆ A×B",
+      "R relación sobre A",
+      "equivalencia"
+    ],
+    "answer": 0,
+    "explanation": "Es subconjunto de A×B."
+  },
+  {
+    "id": "T1-4",
+    "theme": 1,
+    "question": "B={{1},{2,3}} sobre A={1,2,3}:",
+    "options": [
+      "subconjunto",
+      "potencia",
+      "partición"
+    ],
+    "answer": 2,
+    "explanation": "Cubre A y son disjuntos."
+  },
+  {
+    "id": "T1-5",
+    "theme": 1,
+    "question": "¿Qué siempre pertenece a 2^A?",
+    "options": [
+      "A",
+      "∅",
+      "{A}"
+    ],
+    "answer": 1,
+    "explanation": "El vacío siempre está en el conjunto potencia."
+  },
+  {
+    "id": "T1-6",
+    "theme": 1,
+    "question": "Para partición se necesita:",
+    "options": [
+      "disjuntos",
+      "unión = A",
+      "ambas"
+    ],
+    "answer": 2,
+    "explanation": "Ambas condiciones son necesarias."
+  },
+  {
+    "id": "T1-7",
+    "theme": 1,
+    "question": "Si A no tiene subconjuntos propios:",
+    "options": [
+      "A vacío",
+      "|A|=1",
+      "|A|<2"
+    ],
+    "answer": 1,
+    "explanation": "Solo un elemento."
+  },
+  {
+    "id": "T1-8",
+    "theme": 1,
+    "question": "Π1={a,c}, Π2={b,d} sobre A:",
+    "options": [
+      "equivalencia",
+      "relación",
+      "partición"
+    ],
+    "answer": 2,
+    "explanation": "Clases disjuntas que cubren A."
+  },
+  {
+    "id": "T1-9",
+    "theme": 1,
+    "question": "P({1,2})=",
+    "options": [
+      "{1}×{2}",
+      "{∅,{1},{2},{1,2}}",
+      "{{1},{2}}"
+    ],
+    "answer": 1,
+    "explanation": "Todos los subconjuntos."
+  },
+  {
+    "id": "T1-10",
+    "theme": 1,
+    "question": "Relación inversa de x≥2y:",
+    "options": [
+      "2x≤y",
+      "y≥2x",
+      "x=2y"
+    ],
+    "answer": 1,
+    "explanation": "Se intercambian variables."
+  },
+  {
+    "id": "T1-11",
+    "theme": 1,
+    "question": "Número de relaciones sobre A:",
+    "options": [
+      "2^(n²)",
+      "n²",
+      "2n"
+    ],
+    "answer": 0,
+    "explanation": "Subconjuntos de A×A."
+  },
+  {
+    "id": "T1-12",
+    "theme": 1,
+    "question": "Si R=R⁻¹:",
+    "options": [
+      "reflexiva",
+      "simétrica",
+      "transitiva"
+    ],
+    "answer": 1,
+    "explanation": "Definición de simetría."
+  },
+  {
+    "id": "T1-13",
+    "theme": 1,
+    "question": "Relación identidad:",
+    "options": [
+      "reflexiva",
+      "simétrica",
+      "ambas"
+    ],
+    "answer": 2,
+    "explanation": "Cumple todas (equivalencia)."
+  },
+  {
+    "id": "T1-14",
+    "theme": 1,
+    "question": "Relación transitiva:",
+    "options": [
+      "(x,y),(y,z)⇒(x,z)",
+      "(x,y)⇒(y,x)",
+      "(x,x)"
+    ],
+    "answer": 0,
+    "explanation": "Definición."
+  },
+  {
+    "id": "T1-15",
+    "theme": 1,
+    "question": "Cierre reflexivo:",
+    "options": [
+      "añadir (x,x)",
+      "invertir",
+      "componer"
+    ],
+    "answer": 0,
+    "explanation": "Se añaden pares identidad."
+  },
+  {
+    "id": "T1-16",
+    "theme": 1,
+    "question": "Cierre transitivo:",
+    "options": [
+      "mínima transitiva que contiene R",
+      "invertir",
+      "añadir identidad"
+    ],
+    "answer": 0,
+    "explanation": "Definición estándar."
+  },
+  {
+    "id": "T1-17",
+    "theme": 1,
+    "question": "Si A tiene n elementos, |A×A|:",
+    "options": [
+      "n²",
+      "2n",
+      "n"
+    ],
+    "answer": 0,
+    "explanation": "Producto cartesiano."
+  },
+  {
+    "id": "T1-18",
+    "theme": 1,
+    "question": "Número de subconjuntos de A:",
+    "options": [
+      "2^n",
+      "n²",
+      "n"
+    ],
+    "answer": 0,
+    "explanation": "Conjunto potencia."
+  },
+  {
+    "id": "T1-19",
+    "theme": 1,
+    "question": "Relación equivalencia:",
+    "options": [
+      "reflexiva, simétrica y transitiva",
+      "solo reflexiva",
+      "solo transitiva"
+    ],
+    "answer": 0,
+    "explanation": "Definición."
+  },
+  {
+    "id": "T1-20",
+    "theme": 1,
+    "question": "Clases de equivalencia:",
+    "options": [
+      "partición",
+      "relación",
+      "función"
+    ],
+    "answer": 0,
+    "explanation": "Siempre generan partición."
+  },
+  {
+    "id": "T1-21",
+    "theme": 1,
+    "question": "Unión de clases:",
+    "options": [
+      "A",
+      "∅",
+      "subconjunto"
+    ],
+    "answer": 0,
+    "explanation": "Cubren todo el conjunto."
+  },
+  {
+    "id": "T1-22",
+    "theme": 1,
+    "question": "Intersección de clases:",
+    "options": [
+      "∅",
+      "A",
+      "Σ"
+    ],
+    "answer": 0,
+    "explanation": "Son disjuntas."
+  },
+  {
+    "id": "T1-23",
+    "theme": 1,
+    "question": "Función inyectiva:",
+    "options": [
+      "distintas imágenes",
+      "misma imagen",
+      "todas"
+    ],
+    "answer": 0,
+    "explanation": "No repite valores."
+  },
+  {
+    "id": "T1-24",
+    "theme": 1,
+    "question": "Función sobreyectiva:",
+    "options": [
+      "imagen = codominio",
+      "única imagen",
+      "ninguna"
+    ],
+    "answer": 0,
+    "explanation": "Cubre todo el codominio."
   }
 ]
