@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modo Dios TALF</title>
+<style>
+  :root {
+    --bg:#0f172a; --panel:#111827; --panel2:#1f2937; --text:#e5e7eb; --muted:#94a3b8;
+    --ok:#22c55e; --bad:#ef4444; --accent:#38bdf8; --warn:#f59e0b;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:Inter,system-ui,Arial,sans-serif; background:linear-gradient(180deg,#0b1220,#111827); color:var(--text); }
+  .wrap { max-width:1100px; margin:0 auto; padding:24px; }
+  .hero,.card,.question,.result-item { background:rgba(17,24,39,.96); border:1px solid rgba(148,163,184,.18); border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.25); }
+  .hero { padding:24px; margin-bottom:20px; }
+  h1 { margin:0 0 10px; font-size:2rem; }
+  .sub { color:var(--muted); line-height:1.5; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:20px 0; }
+  .card { padding:16px; }
+  .badge { display:inline-block; padding:4px 10px; border-radius:999px; background:#082f49; color:#7dd3fc; font-size:.85rem; margin-bottom:8px; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin-bottom:20px; }
+  .btn { border:none; border-radius:12px; padding:12px 16px; font-weight:700; cursor:pointer; }
+  .btn-primary { background:var(--accent); color:#082f49; }
+  .btn-secondary { background:#1e293b; color:var(--text); border:1px solid rgba(148,163,184,.18); }
+  .pill { padding:8px 12px; border-radius:999px; background:#0b1220; border:1px solid rgba(148,163,184,.18); color:var(--muted); }
+  .question { padding:18px; margin-bottom:16px; }
+  .question h3 { margin:0 0 12px; font-size:1.05rem; line-height:1.45; }
+  .meta { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+  .option { display:block; padding:12px 14px; border:1px solid rgba(148,163,184,.18); border-radius:12px; margin:10px 0; cursor:pointer; background:#0b1220; }
+  .option:hover { border-color:#38bdf8; }
+  .option input { margin-right:10px; }
+  .summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin:18px 0; }
+  .kpi { background:#0b1220; padding:14px; border-radius:14px; border:1px solid rgba(148,163,184,.16); }
+  .kpi strong { display:block; font-size:1.35rem; margin-top:6px; }
+  .hidden { display:none; }
+  .correct { border-color:rgba(34,197,94,.55); background:rgba(34,197,94,.08); }
+  .incorrect { border-color:rgba(239,68,68,.55); background:rgba(239,68,68,.08); }
+  .correct-answer { border-color:rgba(34,197,94,.75)!important; }
+  .result-item { padding:16px; margin-bottom:12px; }
+  .explain { color:#cbd5e1; margin-top:10px; }
+  .footer-note { color:var(--muted); font-size:.92rem; margin-top:14px; }
+  .loading, .error {
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    border:1px solid rgba(148,163,184,.18);
+    background:#0b1220;
+  }
+  .error { border-color: rgba(239,68,68,.35); color:#fecaca; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <span class="badge">Modo examen real</span>
+    <h1>TALF · Modo Dios</h1>
+    <p class="sub">Cada recarga genera un examen nuevo de 30 preguntas con reparto equilibrado de los 4 primeros temas. Cada pregunta tiene 3 opciones y 1 correcta. Corrección al final, estilo examen, con opción de ver explicación y respuesta correcta.</p>
+    <div class="grid">
+      <div class="card"><div class="badge">Banco real</div><div><strong id="bankCount">—</strong> preguntas</div><div class="sub">Cargadas desde el archivo JSON.</div></div>
+      <div class="card"><div class="badge">Cobertura</div><div><strong>Temas 1–4</strong></div><div class="sub">Preliminares, lenguajes/gramáticas, expresiones regulares y autómatas finitos.</div></div>
+      <div class="card"><div class="badge">Puntuación</div><div><strong>+1 / -0.5 / 0</strong></div><div class="sub">Como en el ejemplo de revisión que me pasaste.</div></div>
+      <div class="card"><div class="badge">Distribución</div><div><strong>8 + 8 + 7 + 7</strong></div><div class="sub">Para cubrir siempre los 4 temas.</div></div>
+    </div>
+  </section>
+
+  <div id="statusBox" class="loading">Cargando banco de preguntas...</div>
+
+  <div class="toolbar">
+    <div class="pill" id="examInfo">Esperando preguntas...</div>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <button class="btn btn-secondary" onclick="location.reload()">Generar otro examen</button>
+      <button class="btn btn-primary" onclick="submitExam()">Corregir examen</button>
+    </div>
+  </div>
+
+  <div id="quiz"></div>
+
+  <section id="results" class="hidden">
+    <div class="summary">
+      <div class="kpi">Aciertos<strong id="hits"></strong></div>
+      <div class="kpi">Fallos<strong id="fails"></strong></div>
+      <div class="kpi">En blanco<strong id="blank"></strong></div>
+      <div class="kpi">Puntos<strong id="points"></strong></div>
+      <div class="kpi">Nota sobre 10<strong id="grade"></strong></div>
+    </div>
+    <div id="review"></div>
+    <p class="footer-note">Consejo: responde todo primero y corrige solo al final. Cada recarga genera otro examen distinto.</p>
+  </section>
+</div>
+
+<script>
+const THEME_NAMES = {
+  1:'Tema 1 · Preliminares matemáticos',
+  2:'Tema 2 · Lenguajes y gramáticas',
+  3:'Tema 3 · Expresiones regulares',
+  4:'Tema 4 · Autómatas finitos'
+};
+
+const DISTRIBUTION = { 1:8, 2:8, 3:7, 4:7 };
+
+let BANK = [];
+let EXAM = [];
+
+function shuffle(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function setStatus(message, isError = false) {
+  const box = document.getElementById('statusBox');
+  box.textContent = message;
+  box.className = isError ? 'error' : 'loading';
+}
+
+function validateQuestion(q, index) {
+  return q &&
+    typeof q === 'object' &&
+    'theme' in q &&
+    'question' in q &&
+    'options' in q &&
+    'answer' in q &&
+    Array.isArray(q.options) &&
+    q.options.length === 3 &&
+    Number.isInteger(q.answer) &&
+    q.answer >= 0 &&
+    q.answer < 3 &&
+    [1,2,3,4].includes(Number(q.theme));
+}
+
+async function loadBank() {
+  try {
+    const response = await fetch('./talf_banco_preguntas.json', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`No se pudo leer el JSON (${response.status})`);
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+      throw new Error('El archivo JSON no contiene un array de preguntas.');
+    }
+
+    const validQuestions = data.filter(validateQuestion);
+
+    if (validQuestions.length === 0) {
+      throw new Error('No hay preguntas válidas en el JSON.');
+    }
+
+    BANK = validQuestions;
+    document.getElementById('bankCount').textContent = BANK.length;
+
+    checkCoverage();
+    buildExam();
+    renderExam();
+
+    setStatus('Banco cargado correctamente.');
+  } catch (error) {
+    console.error(error);
+    setStatus(
+      'Error al cargar el JSON. Abre esta carpeta con un servidor local y revisa que el archivo se llame exactamente "talf_banco_preguntas.json".',
+      true
+    );
+    document.getElementById('examInfo').textContent = 'No se pudo cargar el examen';
+  }
+}
+
+function checkCoverage() {
+  const counts = {1:0,2:0,3:0,4:0};
+  BANK.forEach(q => {
+    counts[q.theme] = (counts[q.theme] || 0) + 1;
+  });
+
+  for (const [theme, needed] of Object.entries(DISTRIBUTION)) {
+    if ((counts[theme] || 0) < needed) {
+      throw new Error(`No hay suficientes preguntas del tema ${theme}. Hay ${counts[theme] || 0} y se necesitan ${needed}.`);
+    }
+  }
+}
+
+function buildExam() {
+  const chosen = [];
+
+  for (const [theme, count] of Object.entries(DISTRIBUTION)) {
+    const pool = shuffle(BANK.filter(q => Number(q.theme) === Number(theme))).slice(0, count);
+
+    const normalized = pool.map(q => {
+      const optionObjects = q.options.map((text, idx) => ({
+        text,
+        isCorrect: idx === q.answer
+      }));
+
+      const shuffledOptions = shuffle(optionObjects);
+
+      return {
+        ...q,
+        options: shuffledOptions.map(o => o.text),
+        answer: shuffledOptions.findIndex(o => o.isCorrect)
+      };
+    });
+
+    chosen.push(...normalized);
+  }
+
+  EXAM = shuffle(chosen);
+  document.getElementById('examInfo').textContent = `Examen actual: ${EXAM.length} preguntas · reparto 8/8/7/7`;
+}
+
+function renderExam() {
+  const quiz = document.getElementById('quiz');
+  const results = document.getElementById('results');
+
+  quiz.innerHTML = '';
+  results.classList.add('hidden');
+
+  EXAM.forEach((q, index) => {
+    const div = document.createElement('div');
+    div.className = 'question';
+    div.id = `question-${index}`;
+    div.innerHTML = `
+      <div class="meta">${index + 1}. ${THEME_NAMES[q.theme] || `Tema ${q.theme}`}</div>
+      <h3>${q.question}</h3>
+      ${q.options.map((opt, i) => `
+        <label class="option" id="q${index}o${i}">
+          <input type="radio" name="q${index}" value="${i}">
+          ${opt}
+        </label>
+      `).join('')}
+    `;
+    quiz.appendChild(div);
+  });
+}
+
+function submitExam() {
+  if (!EXAM.length) return;
+
+  let hits = 0, fails = 0, blank = 0, points = 0;
+  const review = document.getElementById('review');
+  review.innerHTML = '';
+
+  EXAM.forEach((q, index) => {
+    const selected = document.querySelector(`input[name="q${index}"]:checked`);
+    const selectedValue = selected ? Number(selected.value) : null;
+    const qBox = document.getElementById(`question-${index}`);
+
+    qBox.querySelectorAll('.option').forEach(el => {
+      el.classList.remove('correct', 'incorrect', 'correct-answer');
+    });
+
+    const correctOption = qBox.querySelector(`#q${index}o${q.answer}`);
+    if (correctOption) correctOption.classList.add('correct-answer');
+
+    let status = '';
+
+    if (selectedValue === null) {
+      blank++;
+      status = 'En blanco';
+    } else if (selectedValue === q.answer) {
+      hits++;
+      points += 1;
+      status = 'Correcta';
+      qBox.querySelector(`#q${index}o${selectedValue}`).classList.add('correct');
+    } else {
+      fails++;
+      points -= 0.5;
+      status = 'Incorrecta';
+      qBox.querySelector(`#q${index}o${selectedValue}`).classList.add('incorrect');
+    }
+
+    const item = document.createElement('div');
+    item.className = 'result-item';
+    item.innerHTML = `
+      <strong>${index + 1}. ${status}</strong>
+      <div class="sub">${q.question}</div>
+      <div class="explain">Respuesta correcta: <strong>${q.options[q.answer]}</strong></div>
+      <div class="explain">Pista / explicación: ${q.explanation || 'Sin explicación disponible.'}</div>
+    `;
+    review.appendChild(item);
+  });
+
+  const grade = Math.max(0, Math.min(10, (points / 30) * 10));
+
+  document.getElementById('hits').textContent = hits;
+  document.getElementById('fails').textContent = fails;
+  document.getElementById('blank').textContent = blank;
+  document.getElementById('points').textContent = points.toFixed(2);
+  document.getElementById('grade').textContent = grade.toFixed(2);
+  document.getElementById('results').classList.remove('hidden');
+
+  window.scrollTo({
+    top: document.getElementById('results').offsetTop - 20,
+    behavior: 'smooth'
+  });
+}
+
+loadBank();
+</script>
+</body>
+</html>
