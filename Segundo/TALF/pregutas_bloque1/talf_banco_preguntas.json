@@ -1,29 +1,5 @@
 [
   {
-    "id": "1-1",
-    "theme": 1,
-    "question": "Si A tiene n elementos, ¿cuántas relaciones binarias distintas pueden definirse sobre A?",
-    "options": [
-      "2^(n^2)",
-      "n^2",
-      "2n"
-    ],
-    "answer": 0,
-    "explanation": "2^(n^2)"
-  },
-  {
-    "id": "1-2",
-    "theme": 1,
-    "question": "En un conjunto A de 10 elementos, la relación R={(x,y)∈A×A | x≠y} tiene cardinal:",
-    "options": [
-      "90",
-      "100",
-      "45"
-    ],
-    "answer": 0,
-    "explanation": "90"
-  },
-  {
     "id": "1-3",
     "theme": 1,
     "question": "Sobre ℕ, la relación nRm ⇔ n+m es par divide a ℕ en:",
@@ -33,7 +9,7 @@
       "infinitas clases unitarias"
     ],
     "answer": 0,
-    "explanation": "dos clases de equivalencia"
+    "explanation": "Los naturales quedan separados en pares e impares."
   },
   {
     "id": "1-4",
@@ -45,7 +21,7 @@
       "simétrica y transitiva, pero no reflexiva"
     ],
     "answer": 0,
-    "explanation": "reflexiva, simétrica y transitiva"
+    "explanation": ""
   },
   {
     "id": "1-5",
@@ -57,7 +33,7 @@
       "componer R consigo misma"
     ],
     "answer": 0,
-    "explanation": "intercambiar cada par (x,y) por (y,x)"
+    "explanation": ""
   },
   {
     "id": "1-6",
@@ -69,7 +45,7 @@
       "intercambiando cada par"
     ],
     "answer": 0,
-    "explanation": "añadiendo los pares (a,a) que falten"
+    "explanation": ""
   },
   {
     "id": "1-7",
@@ -81,7 +57,1171 @@
       "tiene la misma inversa que R"
     ],
     "answer": 0,
-    "explanation": "contiene a R"
+    "explanation": ""
+  },
+  {
+    "id": "1-10",
+    "theme": 1,
+    "question": "Todo monoide es necesariamente:",
+    "options": [
+      "un semigrupo con elemento neutro",
+      "un grupo con inversos",
+      "una partición del conjunto"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-11",
+    "theme": 1,
+    "question": "Si una operación tiene elemento neutro, este:",
+    "options": [
+      "es único",
+      "puede haber exactamente dos",
+      "depende del orden de aplicación"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-14",
+    "theme": 1,
+    "question": "Todo subconjunto infinito de un conjunto numerable es:",
+    "options": [
+      "numerable",
+      "no numerable",
+      "siempre finito"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-15",
+    "theme": 1,
+    "question": "La unión finita de conjuntos numerables es:",
+    "options": [
+      "numerable",
+      "siempre no numerable",
+      "finita"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-16",
+    "theme": 1,
+    "question": "ℚ es un conjunto:",
+    "options": [
+      "numerable",
+      "no numerable",
+      "finito"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-17",
+    "theme": 1,
+    "question": "ℝ es un conjunto:",
+    "options": [
+      "no numerable",
+      "numerable",
+      "finito"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-18",
+    "theme": 1,
+    "question": "El argumento diagonal de Cantor se usa para probar típicamente que:",
+    "options": [
+      "ciertos conjuntos son no numerables",
+      "toda función es biyectiva",
+      "toda relación es transitiva"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-19",
+    "theme": 1,
+    "question": "Un alfabeto en lenguajes formales puede ser:",
+    "options": [
+      "vacío",
+      "solo infinito",
+      "solo finito no vacío"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-20",
+    "theme": 1,
+    "question": "Una cadena sobre un alfabeto finito es siempre:",
+    "options": [
+      "finita",
+      "infinita",
+      "numerable"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-22",
+    "theme": 1,
+    "question": "La concatenación de cadenas es:",
+    "options": [
+      "asociativa",
+      "conmutativa",
+      "idempotente"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-23",
+    "theme": 1,
+    "question": "Respecto a la noción de prefijo y sufijo, una cadena cualquiera:",
+    "options": [
+      "es siempre prefijo y sufijo de sí misma",
+      "solo puede ser prefijo de sí misma si es vacía",
+      "nunca puede ser simultáneamente prefijo y sufijo de sí misma"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-24",
+    "theme": 1,
+    "question": "Si x es prefijo de y, entonces existe z tal que:",
+    "options": [
+      "y = xz",
+      "x = yz",
+      "z = xy"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-25",
+    "theme": 1,
+    "question": "La aplicación de Parikh asocia a cada cadena:",
+    "options": [
+      "el número de apariciones de cada símbolo",
+      "su reverso",
+      "su conjunto de prefijos"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-29",
+    "theme": 1,
+    "question": "Si R es una relación de equivalencia, su conjunto cociente está formado por:",
+    "options": [
+      "sus clases de equivalencia",
+      "sus pares simétricos",
+      "sus elementos maximales"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-30",
+    "theme": 1,
+    "question": "Que dos conjuntos sean equipotenciales significa que:",
+    "options": [
+      "existe una biyección entre ellos",
+      "uno está contenido en el otro",
+      "tienen la misma intersección"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-75",
+    "theme": 1,
+    "question": "Dadas x,y ∈ Σ*, ¿qué propiedad cumple siempre la longitud de la concatenación?",
+    "options": [
+      "|xy| = |x| + |y|",
+      "|xy| = |x|·|y|",
+      "|xy| = max(|x|,|y|)"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-91",
+    "theme": 1,
+    "question": "Si f es una función monaria sobre A, con Dom(f) = Rg(f), entonces:",
+    "options": [
+      "f puede ser sobreyectiva sin ser inyectiva",
+      "f puede ser inyectiva sin ser sobreyectiva",
+      "f es biyectiva"
+    ],
+    "answer": 0,
+    "explanation": "Si dominio e imagen coinciden, f es sobreyectiva sobre A; en conjuntos infinitos no tiene por qué ser inyectiva."
+  },
+  {
+    "id": "1-93",
+    "theme": 1,
+    "question": "Dados los conjuntos A = {a,b,c,d}, Π₁ = {a,c}, Π₂ = {b,d}, entonces:",
+    "options": [
+      "Π₁ y Π₂ definen una partición sobre A",
+      "Π₁ y Π₂ son clases de equivalencia sin más datos",
+      "Π₁ y Π₂ no cubren todo A"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-95",
+    "theme": 1,
+    "question": "El cardinal del conjunto potencia de los reales:",
+    "options": [
+      "no es ℵ₀ y no queda forzado a ser ℵ₁",
+      "coincide necesariamente con ℵ₁",
+      "coincide con ℵ₀"
+    ],
+    "answer": 0,
+    "explanation": "℘(ℝ) tiene cardinal estrictamente mayor que |ℝ|, y la hipótesis del continuo no es teorema de ZFC."
+  },
+  {
+    "id": "1-96",
+    "theme": 1,
+    "question": "Sea A ⊆ ℕ, A = {n ∈ ℕ | n ≤ 10}, y A⁻ el cierre estricto con resta natural. Entonces:",
+    "options": [
+      "A⁻ = A",
+      "A⁻ = ℕ",
+      "A⁻ = ℤ"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-98",
+    "theme": 1,
+    "question": "Si A es finito y R es una relación sobre A, entonces:",
+    "options": [
+      "R puede ser antisimétrica aunque sea reflexiva",
+      "si R no es simétrica entonces es antisimétrica",
+      "si R es transitiva nunca es antisimétrica"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "1-100",
+    "theme": 1,
+    "question": "Si Σ₁ y Σ₂ son alfabetos equipotentes, entonces entre Σ₁* y Σ₂* se cumple que:",
+    "options": [
+      "existe una biyección entre ambos lenguajes",
+      "solo puede existir una inyección en un sentido",
+      "sus cardinales dependen de la longitud máxima permitida"
+    ],
+    "answer": 0,
+    "explanation": "Si los alfabetos son finitos no vacíos, ambos lenguajes de cadenas finitas son numerables."
+  },
+  {
+    "id": "2-2",
+    "theme": 2,
+    "question": "Toda gramática regular es también:",
+    "options": [
+      "lineal y de contexto libre",
+      "solo sensible al contexto",
+      "necesariamente ambigua"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-4",
+    "theme": 2,
+    "question": "Para gramáticas regulares, el problema de pertenencia x ∈ L(G):",
+    "options": [
+      "es decidible algorítmicamente",
+      "solo es decidible en alfabetos binarios",
+      "no es decidible en general"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-5",
+    "theme": 2,
+    "question": "Para gramáticas regulares, el problema de equivalencia G₁ ≡ G₂:",
+    "options": [
+      "es decidible",
+      "solo es decidible si ambas son lineales",
+      "no es decidible"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-6",
+    "theme": 2,
+    "question": "La equivalencia entre dos gramáticas de contexto libre arbitrarias es:",
+    "options": [
+      "no decidible en general",
+      "siempre decidible minimizando",
+      "trivial porque basta comparar reglas"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-7",
+    "theme": 2,
+    "question": "La concatenación de lenguajes L·∅ produce:",
+    "options": [
+      "∅",
+      "L",
+      "{ε}"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-8",
+    "theme": 2,
+    "question": "La concatenación L·{ε} produce:",
+    "options": [
+      "L",
+      "∅",
+      "Σ*"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-9",
+    "theme": 2,
+    "question": "La concatenación de lenguajes es una operación:",
+    "options": [
+      "asociativa",
+      "conmutativa",
+      "idempotente"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-10",
+    "theme": 2,
+    "question": "Para lenguajes L₁,L₂,L₃, siempre se cumple:",
+    "options": [
+      "L₁(L₂∪L₃)=L₁L₂ ∪ L₁L₃",
+      "L₁(L₂∪L₃)=L₁L₂L₃",
+      "L₁(L₂∪L₃)=L₂∪L₃"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-11",
+    "theme": 2,
+    "question": "El complemento de un lenguaje L ⊆ Σ* se define como:",
+    "options": [
+      "Σ* − L",
+      "L − Σ*",
+      "Σ − L"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-12",
+    "theme": 2,
+    "question": "Si una gramática tiene solo reglas regulares terminales, el lenguaje generado es:",
+    "options": [
+      "finito",
+      "siempre infinito",
+      "necesariamente no regular"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-13",
+    "theme": 2,
+    "question": "Todo lenguaje finito es:",
+    "options": [
+      "regular",
+      "no regular",
+      "solo lineal"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-14",
+    "theme": 2,
+    "question": "Todo lenguaje regular es también:",
+    "options": [
+      "de contexto libre",
+      "finito",
+      "no representable mediante gramáticas"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-15",
+    "theme": 2,
+    "question": "Un lenguaje lineal es siempre:",
+    "options": [
+      "de contexto libre",
+      "regular",
+      "sensible al contexto pero no libre"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-16",
+    "theme": 2,
+    "question": "Una misma gramática puede ser a la vez regular por la derecha y regular por la izquierda:",
+    "options": [
+      "en ciertos casos, sí",
+      "es imposible por definición",
+      "solo si tiene infinitas reglas"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-19",
+    "theme": 2,
+    "question": "La producción AB → BA es un ejemplo de regla:",
+    "options": [
+      "sensible al contexto",
+      "regular",
+      "lineal por la derecha"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-21",
+    "theme": 2,
+    "question": "Una gramática con una sola regla puede generar un lenguaje infinito:",
+    "options": [
+      "si la regla introduce recursión, sí",
+      "no, una sola regla siempre genera lenguaje finito",
+      "solo si tiene al menos dos símbolos iniciales"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-22",
+    "theme": 2,
+    "question": "Que ε sea una forma sentencial de G implica que ε:",
+    "options": [
+      "no tiene por qué pertenecer necesariamente a L(G)",
+      "pertenece automáticamente a L(G)",
+      "nunca puede pertenecer a L(G)"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-24",
+    "theme": 2,
+    "question": "El lenguaje {ε} es:",
+    "options": [
+      "regular",
+      "no regular",
+      "solo sensible al contexto"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-25",
+    "theme": 2,
+    "question": "La unión de dos lenguajes sensibles al contexto es:",
+    "options": [
+      "sensible al contexto",
+      "necesariamente regular",
+      "una operación para la que no hay cierre"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-26",
+    "theme": 2,
+    "question": "En general, |L₁L₂| puede ser menor que |L₁|·|L₂| porque:",
+    "options": [
+      "distintas concatenaciones pueden dar la misma cadena",
+      "la concatenación no está bien definida",
+      "siempre se pierde un símbolo al concatenar"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-27",
+    "theme": 2,
+    "question": "Para cualquier lenguaje L, la potencia cero satisface que:",
+    "options": [
+      "L⁰ = {ε}",
+      "L⁰ = ∅",
+      "L⁰ = L"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-28",
+    "theme": 2,
+    "question": "Para cualquier lenguaje L, la clausura de Kleene L* contiene necesariamente:",
+    "options": [
+      "ε",
+      "solo cadenas no vacías",
+      "exactamente las cadenas de L"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-29",
+    "theme": 2,
+    "question": "Si L ⊆ Σ* y n < m, la inclusión Lⁿ ⊆ Lᵐ:",
+    "options": [
+      "no es cierta en general",
+      "siempre es cierta",
+      "solo falla cuando L es infinito"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-30",
+    "theme": 2,
+    "question": "Si L es no vacío, afirmar que L* es necesariamente infinito es:",
+    "options": [
+      "falso en general",
+      "verdadero siempre",
+      "verdadero solo si ε ∈ L"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-53",
+    "theme": 2,
+    "question": "Si G es una gramática regular con alfabeto terminal no vacío, entonces L(G) es:",
+    "options": [
+      "un lenguaje regular",
+      "necesariamente infinito",
+      "indecidible"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-58",
+    "theme": 2,
+    "question": "La clase de los lenguajes regulares:",
+    "options": [
+      "está cerrada por unión y por concatenación",
+      "solo está cerrada por concatenación",
+      "no está cerrada por unión"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-91",
+    "theme": 2,
+    "question": "Si α es una expresión regular, entonces:",
+    "options": [
+      "αα* ⊆ α* y por tanto αα* − α* = ∅",
+      "αα* − α* = {ε}",
+      "αα* − α* = α"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-92",
+    "theme": 2,
+    "question": "Sea G = (N,T,P,S) con P = { S → ε }. Entonces G es de tipo:",
+    "options": [
+      "tipo 3",
+      "tipo 1 pero no tipo 2",
+      "tipo 0 pero no tipo 1"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "2-93",
+    "theme": 2,
+    "question": "Si una gramática tiene una regla ε, entonces:",
+    "options": [
+      "puede seguir siendo regular en casos permitidos",
+      "forzosamente deja de ser de tipo 2",
+      "solo puede ser de tipo 0"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-2",
+    "theme": 3,
+    "question": "La expresión regular (aa)* describe:",
+    "options": [
+      "las cadenas de a con longitud par",
+      "todas las cadenas no vacías de a",
+      "las cadenas de longitud impar"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-3",
+    "theme": 3,
+    "question": "La expresión regular a* describe:",
+    "options": [
+      "todas las cadenas formadas solo por a, incluida ε",
+      "solo a y aa",
+      "todas las cadenas no vacías"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-4",
+    "theme": 3,
+    "question": "La expresión regular a+ equivale a:",
+    "options": [
+      "aa*",
+      "a*",
+      "(a+ε)*"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-5",
+    "theme": 3,
+    "question": "La prioridad habitual de operadores en expresiones regulares es:",
+    "options": [
+      "Kleene > concatenación > unión",
+      "unión > concatenación > Kleene",
+      "todos los operadores tienen la misma prioridad"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-6",
+    "theme": 3,
+    "question": "La unión en una expresión regular representa:",
+    "options": [
+      "alternativa entre lenguajes",
+      "concatenación obligatoria",
+      "intersección de lenguajes"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-7",
+    "theme": 3,
+    "question": "La clausura de Kleene aplicada a un lenguaje L produce:",
+    "options": [
+      "L*",
+      "L+",
+      "L^R"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-8",
+    "theme": 3,
+    "question": "La expresión (ab)* genera exactamente:",
+    "options": [
+      "ε, ab, abab, ababab, ...",
+      "a, b, ab, ba",
+      "todas las cadenas con igual número de a y b"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-11",
+    "theme": 3,
+    "question": "La expresión ε + a denota el lenguaje:",
+    "options": [
+      "{ε, a}",
+      "{ε}",
+      "a*"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-12",
+    "theme": 3,
+    "question": "La expresión ∅* denota:",
+    "options": [
+      "{ε}",
+      "∅",
+      "Σ*"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-13",
+    "theme": 3,
+    "question": "La expresión ∅ + a denota:",
+    "options": [
+      "a",
+      "∅",
+      "ε"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-14",
+    "theme": 3,
+    "question": "La concatenación de expresiones regulares denota:",
+    "options": [
+      "concatenación de lenguajes",
+      "unión de lenguajes",
+      "intersección de lenguajes"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-15",
+    "theme": 3,
+    "question": "Dos expresiones regulares equivalentes describen:",
+    "options": [
+      "el mismo lenguaje",
+      "la misma forma sintáctica",
+      "el mismo número de operadores"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-16",
+    "theme": 3,
+    "question": "La expresión (a+b)*a(a+b)* describe sobre {a,b}:",
+    "options": [
+      "las cadenas que contienen al menos una a",
+      "las cadenas que terminan en b",
+      "las cadenas con número par de a"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-17",
+    "theme": 3,
+    "question": "La expresión b*(ab*)* describe sobre {a,b}:",
+    "options": [
+      "todas las cadenas sobre {a,b}",
+      "solo cadenas que empiezan por a",
+      "solo cadenas sin bb"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-18",
+    "theme": 3,
+    "question": "La reversa de un lenguaje regular es:",
+    "options": [
+      "regular",
+      "no regular en general",
+      "regular solo si el lenguaje es finito"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-53",
+    "theme": 3,
+    "question": "Sobre {a,b}, la expresión (a+b)*aba(a+b)* describe:",
+    "options": [
+      "las cadenas que contienen aba como subcadena",
+      "las cadenas que empiezan por aba",
+      "las cadenas que terminan en aba"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-54",
+    "theme": 3,
+    "question": "Sobre {a,b}, la expresión (a+b)*bab(a+b)* describe:",
+    "options": [
+      "las cadenas que contienen bab como subcadena",
+      "las cadenas que empiezan por bab",
+      "las cadenas que terminan en bab"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-55",
+    "theme": 3,
+    "question": "Sobre {a,b}, la expresión (a+b)*aa(a+b)* describe:",
+    "options": [
+      "las cadenas que contienen aa como subcadena",
+      "las cadenas que empiezan por aa",
+      "las cadenas que terminan en aa"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-56",
+    "theme": 3,
+    "question": "Sobre {a,b}, la expresión (a+b)*bb(a+b)* describe:",
+    "options": [
+      "las cadenas que contienen bb como subcadena",
+      "las cadenas que empiezan por bb",
+      "las cadenas que terminan en bb"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-91",
+    "theme": 3,
+    "question": "Si α y β son expresiones regulares equivalentes, entonces:",
+    "options": [
+      "denotan exactamente el mismo lenguaje",
+      "deben tener la misma longitud sintáctica",
+      "deben usar los mismos símbolos auxiliares"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-92",
+    "theme": 3,
+    "question": "La expresión regular (0+1)*00(0+1)* describe:",
+    "options": [
+      "las cadenas binarias que contienen 00 como subcadena",
+      "solo las cadenas que terminan en 00",
+      "solo la cadena 00"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "3-93",
+    "theme": 3,
+    "question": "La expresión regular (0+1)(0+1)(0+1) describe:",
+    "options": [
+      "las cadenas binarias de longitud exactamente 3",
+      "las cadenas binarias de longitud impar",
+      "solo la cadena 111"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-1",
+    "theme": 4,
+    "question": "Un AFD se caracteriza porque para cada estado y símbolo de entrada hay:",
+    "options": [
+      "a lo sumo una transición definida",
+      "múltiples transiciones posibles",
+      "siempre una transición ε"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-2",
+    "theme": 4,
+    "question": "Un AFND puede tener:",
+    "options": [
+      "varias transiciones para un mismo símbolo desde un estado",
+      "solo una transición por símbolo",
+      "únicamente estados finales"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-3",
+    "theme": 4,
+    "question": "Las transiciones ε aparecen en:",
+    "options": [
+      "AFND-ε",
+      "solo AFD",
+      "solo AFDM"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-4",
+    "theme": 4,
+    "question": "Un autómata acepta una cadena si al procesarla termina en:",
+    "options": [
+      "un estado final",
+      "el estado inicial",
+      "cualquier estado inaccesible"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-5",
+    "theme": 4,
+    "question": "Todo lenguaje aceptado por un AFND es:",
+    "options": [
+      "regular",
+      "de contexto libre no regular",
+      "lineal pero no regular"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-6",
+    "theme": 4,
+    "question": "Todo AFND tiene un AFD equivalente:",
+    "options": [
+      "sí, por construcción por subconjuntos",
+      "no, porque el no determinismo añade potencia",
+      "solo si no hay ε-transiciones"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-7",
+    "theme": 4,
+    "question": "La minimización de un AFD produce:",
+    "options": [
+      "un AFD equivalente con el menor número de estados posible",
+      "un AFND con menos transiciones",
+      "una gramática lineal"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-8",
+    "theme": 4,
+    "question": "Dos estados de un AFD son equivalentes cuando:",
+    "options": [
+      "aceptan los mismos sufijos o continuaciones",
+      "tienen el mismo nombre",
+      "ambos son finales"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-9",
+    "theme": 4,
+    "question": "Un estado inaccesible es un estado al que:",
+    "options": [
+      "no se puede llegar desde el estado inicial",
+      "no sale ninguna transición",
+      "siempre es final"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-10",
+    "theme": 4,
+    "question": "Eliminar estados inaccesibles de un AFD:",
+    "options": [
+      "no altera el lenguaje aceptado",
+      "siempre cambia el lenguaje",
+      "solo conserva el lenguaje si ningún estado final es eliminado"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-11",
+    "theme": 4,
+    "question": "Todo AFD completo tiene, para cada estado y símbolo:",
+    "options": [
+      "una transición definida",
+      "dos transiciones posibles",
+      "una transición ε"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-12",
+    "theme": 4,
+    "question": "El lenguaje aceptado por un AFD mínimo es:",
+    "options": [
+      "el mismo que el del AFD original",
+      "siempre más pequeño",
+      "siempre finito"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-13",
+    "theme": 4,
+    "question": "La construcción por subconjuntos transforma:",
+    "options": [
+      "un AFND en un AFD equivalente",
+      "un AFD en un AFND",
+      "una gramática en un autómata con pila"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-15",
+    "theme": 4,
+    "question": "La unión de dos lenguajes regulares es:",
+    "options": [
+      "regular",
+      "no regular en general",
+      "regular solo si ambos son finitos"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-16",
+    "theme": 4,
+    "question": "La intersección de dos lenguajes regulares es:",
+    "options": [
+      "regular",
+      "no regular",
+      "decidible pero no regular"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-17",
+    "theme": 4,
+    "question": "El complemento de un lenguaje regular es:",
+    "options": [
+      "regular",
+      "no regular",
+      "regular solo si el autómata no es completo"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-18",
+    "theme": 4,
+    "question": "La reversa de un lenguaje regular puede reconocerse mediante:",
+    "options": [
+      "un AFND obtenido invirtiendo transiciones y estados inicial/final",
+      "solo un AFD mínimo",
+      "ningún autómata finito"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-19",
+    "theme": 4,
+    "question": "AFD y AFND son equivalentes en poder expresivo:",
+    "options": [
+      "sí, reconocen exactamente los lenguajes regulares",
+      "no, el AFND reconoce más",
+      "solo sobre alfabetos binarios"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-20",
+    "theme": 4,
+    "question": "El producto de autómatas se utiliza clásicamente para construir autómatas de:",
+    "options": [
+      "intersección",
+      "reversa",
+      "minimización directa"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-44",
+    "theme": 4,
+    "question": "Un estado de bloqueo en un AFD sirve típicamente para:",
+    "options": [
+      "completar transiciones faltantes",
+      "aceptar todas las cadenas restantes",
+      "evitar la necesidad de estados finales"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-54",
+    "theme": 4,
+    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
+    "options": [
+      "sí, porque todo lenguaje finito es regular",
+      "no, salvo que contenga ε",
+      "solo si todas sus cadenas tienen la misma longitud"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-62",
+    "theme": 4,
+    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
+    "options": [
+      "∅",
+      "Σ*",
+      "{ε}"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-70",
+    "theme": 4,
+    "question": "Si el estado inicial de un AFD es también final, el autómata acepta necesariamente:",
+    "options": [
+      "ε",
+      "solo cadenas no vacías",
+      "todas las cadenas"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "4-78",
+    "theme": 4,
+    "question": "Respecto a la minimización de AFD, puede afirmarse que:",
+    "options": [
+      "nunca aumenta el número de estados",
+      "a veces añade estados para simplificar transiciones",
+      "solo reduce estados en alfabetos binarios"
+    ],
+    "answer": 0,
+    "explanation": ""
   },
   {
     "id": "1-8",
@@ -108,42 +1248,6 @@
     "explanation": "una aplicación A×A→A"
   },
   {
-    "id": "1-10",
-    "theme": 1,
-    "question": "Todo monoide es necesariamente:",
-    "options": [
-      "un semigrupo con elemento neutro",
-      "un grupo con inversos",
-      "una partición del conjunto"
-    ],
-    "answer": 0,
-    "explanation": "un semigrupo con elemento neutro"
-  },
-  {
-    "id": "1-11",
-    "theme": 1,
-    "question": "Si una operación tiene elemento neutro, este:",
-    "options": [
-      "es único",
-      "puede haber exactamente dos",
-      "depende del orden de aplicación"
-    ],
-    "answer": 0,
-    "explanation": "es único"
-  },
-  {
-    "id": "1-12",
-    "theme": 1,
-    "question": "¿Cuál es el conjunto de los cardinales de los conjuntos finitos?",
-    "options": [
-      "ℕ",
-      "ℤ",
-      "ℚ"
-    ],
-    "answer": 0,
-    "explanation": "ℕ"
-  },
-  {
     "id": "1-13",
     "theme": 1,
     "question": "Un conjunto infinito puede tener la misma cardinalidad que un subconjunto propio suyo:",
@@ -154,90 +1258,6 @@
     ],
     "answer": 0,
     "explanation": "sí"
-  },
-  {
-    "id": "1-14",
-    "theme": 1,
-    "question": "Todo subconjunto infinito de un conjunto numerable es:",
-    "options": [
-      "numerable",
-      "no numerable",
-      "siempre finito"
-    ],
-    "answer": 0,
-    "explanation": "numerable"
-  },
-  {
-    "id": "1-15",
-    "theme": 1,
-    "question": "La unión finita de conjuntos numerables es:",
-    "options": [
-      "numerable",
-      "siempre no numerable",
-      "finita"
-    ],
-    "answer": 0,
-    "explanation": "numerable"
-  },
-  {
-    "id": "1-16",
-    "theme": 1,
-    "question": "ℚ es un conjunto:",
-    "options": [
-      "numerable",
-      "no numerable",
-      "finito"
-    ],
-    "answer": 0,
-    "explanation": "numerable"
-  },
-  {
-    "id": "1-17",
-    "theme": 1,
-    "question": "ℝ es un conjunto:",
-    "options": [
-      "no numerable",
-      "numerable",
-      "finito"
-    ],
-    "answer": 0,
-    "explanation": "no numerable"
-  },
-  {
-    "id": "1-18",
-    "theme": 1,
-    "question": "El argumento diagonal de Cantor se usa para probar típicamente que:",
-    "options": [
-      "ciertos conjuntos son no numerables",
-      "toda función es biyectiva",
-      "toda relación es transitiva"
-    ],
-    "answer": 0,
-    "explanation": "ciertos conjuntos son no numerables"
-  },
-  {
-    "id": "1-19",
-    "theme": 1,
-    "question": "Un alfabeto en lenguajes formales puede ser:",
-    "options": [
-      "vacío",
-      "solo infinito",
-      "solo finito no vacío"
-    ],
-    "answer": 0,
-    "explanation": "vacío"
-  },
-  {
-    "id": "1-20",
-    "theme": 1,
-    "question": "Una cadena sobre un alfabeto finito es siempre:",
-    "options": [
-      "finita",
-      "infinita",
-      "numerable"
-    ],
-    "answer": 0,
-    "explanation": "finita"
   },
   {
     "id": "1-21",
@@ -252,18 +1272,6 @@
     "explanation": "0"
   },
   {
-    "id": "1-22",
-    "theme": 1,
-    "question": "La concatenación de cadenas es:",
-    "options": [
-      "asociativa",
-      "conmutativa",
-      "idempotente"
-    ],
-    "answer": 0,
-    "explanation": "asociativa"
-  },
-  {
     "id": "1-23",
     "theme": 1,
     "question": "Toda cadena es prefijo y sufijo de sí misma:",
@@ -276,54 +1284,6 @@
     "explanation": "sí"
   },
   {
-    "id": "1-24",
-    "theme": 1,
-    "question": "Si x es prefijo de y, entonces existe z tal que:",
-    "options": [
-      "y=xz",
-      "x=yz",
-      "z=xy"
-    ],
-    "answer": 0,
-    "explanation": "y=xz"
-  },
-  {
-    "id": "1-25",
-    "theme": 1,
-    "question": "La aplicación de Parikh asocia a cada cadena:",
-    "options": [
-      "el número de apariciones de cada símbolo",
-      "su reverso",
-      "su conjunto de prefijos"
-    ],
-    "answer": 0,
-    "explanation": "el número de apariciones de cada símbolo"
-  },
-  {
-    "id": "1-26",
-    "theme": 1,
-    "question": "Si Σ={0,1}, entonces |Σ^3| vale:",
-    "options": [
-      "8",
-      "6",
-      "9"
-    ],
-    "answer": 0,
-    "explanation": "8"
-  },
-  {
-    "id": "1-27",
-    "theme": 1,
-    "question": "Si |A|=m y |B|=n, entonces |A×B| es:",
-    "options": [
-      "m·n",
-      "m+n",
-      "m^n"
-    ],
-    "answer": 0,
-    "explanation": "m·n"
-  },
-  {
     "id": "1-28",
     "theme": 1,
     "question": "La relación 'x=y+3' sobre ℤ es:",
@@ -334,558 +1294,6 @@
     ],
     "answer": 0,
     "explanation": "no reflexiva"
-  },
-  {
-    "id": "1-29",
-    "theme": 1,
-    "question": "Si R es una relación de equivalencia, su conjunto cociente está formado por:",
-    "options": [
-      "sus clases de equivalencia",
-      "sus pares simétricos",
-      "sus elementos maximales"
-    ],
-    "answer": 0,
-    "explanation": "sus clases de equivalencia"
-  },
-  {
-    "id": "1-30",
-    "theme": 1,
-    "question": "Que dos conjuntos sean equipotenciales significa que:",
-    "options": [
-      "existe una biyección entre ellos",
-      "uno está contenido en el otro",
-      "tienen la misma intersección"
-    ],
-    "answer": 0,
-    "explanation": "existe una biyección entre ellos"
-  },
-  {
-    "id": "1-31",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 2 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "4",
-      "4",
-      "4"
-    ],
-    "answer": 0,
-    "explanation": "4"
-  },
-  {
-    "id": "1-32",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 3 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "9",
-      "6",
-      "8"
-    ],
-    "answer": 0,
-    "explanation": "9"
-  },
-  {
-    "id": "1-33",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 4 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "16",
-      "8",
-      "16"
-    ],
-    "answer": 0,
-    "explanation": "16"
-  },
-  {
-    "id": "1-34",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 5 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "25",
-      "10",
-      "32"
-    ],
-    "answer": 0,
-    "explanation": "25"
-  },
-  {
-    "id": "1-35",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 6 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "36",
-      "12",
-      "64"
-    ],
-    "answer": 0,
-    "explanation": "36"
-  },
-  {
-    "id": "1-36",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 7 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "49",
-      "14",
-      "128"
-    ],
-    "answer": 0,
-    "explanation": "49"
-  },
-  {
-    "id": "1-37",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 8 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "64",
-      "16",
-      "256"
-    ],
-    "answer": 0,
-    "explanation": "64"
-  },
-  {
-    "id": "1-38",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 9 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "81",
-      "18",
-      "512"
-    ],
-    "answer": 0,
-    "explanation": "81"
-  },
-  {
-    "id": "1-39",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 10 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "100",
-      "20",
-      "1024"
-    ],
-    "answer": 0,
-    "explanation": "100"
-  },
-  {
-    "id": "1-40",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 11 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "121",
-      "22",
-      "2048"
-    ],
-    "answer": 0,
-    "explanation": "121"
-  },
-  {
-    "id": "1-41",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 12 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "144",
-      "24",
-      "4096"
-    ],
-    "answer": 0,
-    "explanation": "144"
-  },
-  {
-    "id": "1-42",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 13 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "169",
-      "26",
-      "8192"
-    ],
-    "answer": 0,
-    "explanation": "169"
-  },
-  {
-    "id": "1-43",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 14 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "196",
-      "28",
-      "16384"
-    ],
-    "answer": 0,
-    "explanation": "196"
-  },
-  {
-    "id": "1-44",
-    "theme": 1,
-    "question": "Si un conjunto A tiene 15 elementos, ¿cuántos pares hay en A×A?",
-    "options": [
-      "225",
-      "30",
-      "32768"
-    ],
-    "answer": 0,
-    "explanation": "225"
-  },
-  {
-    "id": "1-45",
-    "theme": 1,
-    "question": "Si |A|=2 y |B|=3, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "6",
-      "5",
-      "8"
-    ],
-    "answer": 0,
-    "explanation": "6"
-  },
-  {
-    "id": "1-46",
-    "theme": 1,
-    "question": "Si |A|=3 y |B|=4, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "12",
-      "7",
-      "81"
-    ],
-    "answer": 0,
-    "explanation": "12"
-  },
-  {
-    "id": "1-47",
-    "theme": 1,
-    "question": "Si |A|=4 y |B|=5, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "20",
-      "9",
-      "1024"
-    ],
-    "answer": 0,
-    "explanation": "20"
-  },
-  {
-    "id": "1-48",
-    "theme": 1,
-    "question": "Si |A|=5 y |B|=2, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "10",
-      "7",
-      "25"
-    ],
-    "answer": 0,
-    "explanation": "10"
-  },
-  {
-    "id": "1-49",
-    "theme": 1,
-    "question": "Si |A|=6 y |B|=3, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "18",
-      "9",
-      "216"
-    ],
-    "answer": 0,
-    "explanation": "18"
-  },
-  {
-    "id": "1-50",
-    "theme": 1,
-    "question": "Si |A|=7 y |B|=2, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "14",
-      "9",
-      "49"
-    ],
-    "answer": 0,
-    "explanation": "14"
-  },
-  {
-    "id": "1-51",
-    "theme": 1,
-    "question": "Si |A|=3 y |B|=7, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "21",
-      "10",
-      "2187"
-    ],
-    "answer": 0,
-    "explanation": "21"
-  },
-  {
-    "id": "1-52",
-    "theme": 1,
-    "question": "Si |A|=8 y |B|=2, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "16",
-      "10",
-      "64"
-    ],
-    "answer": 0,
-    "explanation": "16"
-  },
-  {
-    "id": "1-53",
-    "theme": 1,
-    "question": "Si |A|=2 y |B|=8, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "16",
-      "10",
-      "256"
-    ],
-    "answer": 0,
-    "explanation": "16"
-  },
-  {
-    "id": "1-54",
-    "theme": 1,
-    "question": "Si |A|=4 y |B|=4, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "16",
-      "8",
-      "256"
-    ],
-    "answer": 0,
-    "explanation": "16"
-  },
-  {
-    "id": "1-55",
-    "theme": 1,
-    "question": "Si |A|=5 y |B|=5, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "25",
-      "10",
-      "3125"
-    ],
-    "answer": 0,
-    "explanation": "25"
-  },
-  {
-    "id": "1-56",
-    "theme": 1,
-    "question": "Si |A|=6 y |B|=6, ¿cuál es el cardinal de A×B?",
-    "options": [
-      "36",
-      "12",
-      "46656"
-    ],
-    "answer": 0,
-    "explanation": "36"
-  },
-  {
-    "id": "1-57",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 2 símbolos, ¿cuántas cadenas hay en Σ^4?",
-    "options": [
-      "16",
-      "8",
-      "16"
-    ],
-    "answer": 0,
-    "explanation": "16"
-  },
-  {
-    "id": "1-58",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 3 símbolos, ¿cuántas cadenas hay en Σ^2?",
-    "options": [
-      "9",
-      "6",
-      "8"
-    ],
-    "answer": 0,
-    "explanation": "9"
-  },
-  {
-    "id": "1-59",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 4 símbolos, ¿cuántas cadenas hay en Σ^3?",
-    "options": [
-      "64",
-      "12",
-      "81"
-    ],
-    "answer": 0,
-    "explanation": "64"
-  },
-  {
-    "id": "1-60",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 5 símbolos, ¿cuántas cadenas hay en Σ^2?",
-    "options": [
-      "25",
-      "10",
-      "32"
-    ],
-    "answer": 0,
-    "explanation": "25"
-  },
-  {
-    "id": "1-61",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 2 símbolos, ¿cuántas cadenas hay en Σ^5?",
-    "options": [
-      "32",
-      "10",
-      "25"
-    ],
-    "answer": 0,
-    "explanation": "32"
-  },
-  {
-    "id": "1-62",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 3 símbolos, ¿cuántas cadenas hay en Σ^3?",
-    "options": [
-      "27",
-      "9",
-      "27"
-    ],
-    "answer": 0,
-    "explanation": "27"
-  },
-  {
-    "id": "1-63",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 4 símbolos, ¿cuántas cadenas hay en Σ^2?",
-    "options": [
-      "16",
-      "8",
-      "16"
-    ],
-    "answer": 0,
-    "explanation": "16"
-  },
-  {
-    "id": "1-64",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 2 símbolos, ¿cuántas cadenas hay en Σ^6?",
-    "options": [
-      "64",
-      "12",
-      "36"
-    ],
-    "answer": 0,
-    "explanation": "64"
-  },
-  {
-    "id": "1-65",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 6 símbolos, ¿cuántas cadenas hay en Σ^2?",
-    "options": [
-      "36",
-      "12",
-      "64"
-    ],
-    "answer": 0,
-    "explanation": "36"
-  },
-  {
-    "id": "1-66",
-    "theme": 1,
-    "question": "Si un alfabeto Σ tiene 3 símbolos, ¿cuántas cadenas hay en Σ^4?",
-    "options": [
-      "81",
-      "12",
-      "64"
-    ],
-    "answer": 0,
-    "explanation": "81"
-  },
-  {
-    "id": "1-67",
-    "theme": 1,
-    "question": "Si |L₁|=2 y |L₂|=3, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "6",
-      "5",
-      "3"
-    ],
-    "answer": 0,
-    "explanation": "6"
-  },
-  {
-    "id": "1-68",
-    "theme": 1,
-    "question": "Si |L₁|=3 y |L₂|=3, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "9",
-      "6",
-      "3"
-    ],
-    "answer": 0,
-    "explanation": "9"
-  },
-  {
-    "id": "1-69",
-    "theme": 1,
-    "question": "Si |L₁|=4 y |L₂|=2, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "8",
-      "6",
-      "4"
-    ],
-    "answer": 0,
-    "explanation": "8"
-  },
-  {
-    "id": "1-70",
-    "theme": 1,
-    "question": "Si |L₁|=5 y |L₂|=2, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "10",
-      "7",
-      "5"
-    ],
-    "answer": 0,
-    "explanation": "10"
-  },
-  {
-    "id": "1-71",
-    "theme": 1,
-    "question": "Si |L₁|=2 y |L₂|=5, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "10",
-      "7",
-      "5"
-    ],
-    "answer": 0,
-    "explanation": "10"
-  },
-  {
-    "id": "1-72",
-    "theme": 1,
-    "question": "Si |L₁|=6 y |L₂|=3, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "18",
-      "9",
-      "6"
-    ],
-    "answer": 0,
-    "explanation": "18"
-  },
-  {
-    "id": "1-73",
-    "theme": 1,
-    "question": "Si |L₁|=3 y |L₂|=6, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "18",
-      "9",
-      "6"
-    ],
-    "answer": 0,
-    "explanation": "18"
-  },
-  {
-    "id": "1-74",
-    "theme": 1,
-    "question": "Si |L₁|=4 y |L₂|=4, el mayor valor posible de |L₁·L₂| es:",
-    "options": [
-      "16",
-      "8",
-      "4"
-    ],
-    "answer": 0,
-    "explanation": "16"
   },
   {
     "id": "1-75",
@@ -984,102 +1392,6 @@
     "explanation": "|ef| = |e| + |f|"
   },
   {
-    "id": "1-83",
-    "theme": 1,
-    "question": "En un conjunto de 2 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "2",
-      "4",
-      "4"
-    ],
-    "answer": 0,
-    "explanation": "2"
-  },
-  {
-    "id": "1-84",
-    "theme": 1,
-    "question": "En un conjunto de 3 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "3",
-      "9",
-      "8"
-    ],
-    "answer": 0,
-    "explanation": "3"
-  },
-  {
-    "id": "1-85",
-    "theme": 1,
-    "question": "En un conjunto de 4 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "4",
-      "16",
-      "16"
-    ],
-    "answer": 0,
-    "explanation": "4"
-  },
-  {
-    "id": "1-86",
-    "theme": 1,
-    "question": "En un conjunto de 5 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "5",
-      "25",
-      "32"
-    ],
-    "answer": 0,
-    "explanation": "5"
-  },
-  {
-    "id": "1-87",
-    "theme": 1,
-    "question": "En un conjunto de 6 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "6",
-      "36",
-      "64"
-    ],
-    "answer": 0,
-    "explanation": "6"
-  },
-  {
-    "id": "1-88",
-    "theme": 1,
-    "question": "En un conjunto de 7 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "7",
-      "49",
-      "128"
-    ],
-    "answer": 0,
-    "explanation": "7"
-  },
-  {
-    "id": "1-89",
-    "theme": 1,
-    "question": "En un conjunto de 8 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "8",
-      "64",
-      "256"
-    ],
-    "answer": 0,
-    "explanation": "8"
-  },
-  {
-    "id": "1-90",
-    "theme": 1,
-    "question": "En un conjunto de 9 elementos, la relación identidad tiene cardinal:",
-    "options": [
-      "9",
-      "81",
-      "512"
-    ],
-    "answer": 0,
-    "explanation": "9"
-  },
-  {
     "id": "2-1",
     "theme": 2,
     "question": "Una gramática de tipo 3 genera exactamente lenguajes:",
@@ -1090,18 +1402,6 @@
     ],
     "answer": 0,
     "explanation": "regulares"
-  },
-  {
-    "id": "2-2",
-    "theme": 2,
-    "question": "Toda gramática regular es también:",
-    "options": [
-      "lineal y de contexto libre",
-      "solo sensible al contexto",
-      "necesariamente ambigua"
-    ],
-    "answer": 0,
-    "explanation": "lineal y de contexto libre"
   },
   {
     "id": "2-3",
@@ -1212,30 +1512,6 @@
     "explanation": "Σ*−L"
   },
   {
-    "id": "2-12",
-    "theme": 2,
-    "question": "Si una gramática tiene solo reglas regulares terminales, el lenguaje generado es:",
-    "options": [
-      "finito",
-      "siempre infinito",
-      "necesariamente no regular"
-    ],
-    "answer": 0,
-    "explanation": "finito"
-  },
-  {
-    "id": "2-13",
-    "theme": 2,
-    "question": "Todo lenguaje finito es:",
-    "options": [
-      "regular",
-      "no regular",
-      "solo lineal"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
     "id": "2-14",
     "theme": 2,
     "question": "Todo lenguaje regular es:",
@@ -1243,18 +1519,6 @@
       "de contexto libre",
       "finito",
       "no representable"
-    ],
-    "answer": 0,
-    "explanation": "de contexto libre"
-  },
-  {
-    "id": "2-15",
-    "theme": 2,
-    "question": "Un lenguaje lineal es siempre:",
-    "options": [
-      "de contexto libre",
-      "regular",
-      "sensible al contexto no libre"
     ],
     "answer": 0,
     "explanation": "de contexto libre"
@@ -1320,18 +1584,6 @@
     "explanation": "de tipo 1"
   },
   {
-    "id": "2-21",
-    "theme": 2,
-    "question": "Una gramática con una sola regla puede generar un lenguaje infinito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si tiene dos no terminales"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
     "id": "2-22",
     "theme": 2,
     "question": "Si ε es una forma sentencial de G, entonces ε pertenece a L(G):",
@@ -1354,30 +1606,6 @@
     ],
     "answer": 0,
     "explanation": "regular"
-  },
-  {
-    "id": "2-24",
-    "theme": 2,
-    "question": "El lenguaje {ε} es:",
-    "options": [
-      "regular",
-      "no regular",
-      "solo sensible al contexto"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "2-25",
-    "theme": 2,
-    "question": "La unión de dos lenguajes sensibles al contexto es:",
-    "options": [
-      "sensible al contexto",
-      "necesariamente regular",
-      "no cerrada"
-    ],
-    "answer": 0,
-    "explanation": "sensible al contexto"
   },
   {
     "id": "2-26",
@@ -1716,115 +1944,7 @@
     "explanation": "un lenguaje regular"
   },
   {
-    "id": "2-54",
-    "theme": 2,
-    "question": "Si G es una gramática regular con alfabeto terminal no vacío, L(G) es:",
-    "options": [
-      "un lenguaje regular",
-      "necesariamente infinito",
-      "nunca decidible"
-    ],
-    "answer": 0,
-    "explanation": "un lenguaje regular"
-  },
-  {
-    "id": "2-55",
-    "theme": 2,
-    "question": "Si G es una gramática regular con alfabeto terminal no vacío, L(G) es:",
-    "options": [
-      "un lenguaje regular",
-      "necesariamente infinito",
-      "nunca decidible"
-    ],
-    "answer": 0,
-    "explanation": "un lenguaje regular"
-  },
-  {
-    "id": "2-56",
-    "theme": 2,
-    "question": "Si G es una gramática regular con alfabeto terminal no vacío, L(G) es:",
-    "options": [
-      "un lenguaje regular",
-      "necesariamente infinito",
-      "nunca decidible"
-    ],
-    "answer": 0,
-    "explanation": "un lenguaje regular"
-  },
-  {
-    "id": "2-57",
-    "theme": 2,
-    "question": "Si G es una gramática regular con alfabeto terminal no vacío, L(G) es:",
-    "options": [
-      "un lenguaje regular",
-      "necesariamente infinito",
-      "nunca decidible"
-    ],
-    "answer": 0,
-    "explanation": "un lenguaje regular"
-  },
-  {
     "id": "2-58",
-    "theme": 2,
-    "question": "La clase de los lenguajes regulares está cerrada por unión y concatenación:",
-    "options": [
-      "sí",
-      "no",
-      "solo por concatenación"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "2-59",
-    "theme": 2,
-    "question": "La clase de los lenguajes regulares está cerrada por unión y concatenación:",
-    "options": [
-      "sí",
-      "no",
-      "solo por concatenación"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "2-60",
-    "theme": 2,
-    "question": "La clase de los lenguajes regulares está cerrada por unión y concatenación:",
-    "options": [
-      "sí",
-      "no",
-      "solo por concatenación"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "2-61",
-    "theme": 2,
-    "question": "La clase de los lenguajes regulares está cerrada por unión y concatenación:",
-    "options": [
-      "sí",
-      "no",
-      "solo por concatenación"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "2-62",
-    "theme": 2,
-    "question": "La clase de los lenguajes regulares está cerrada por unión y concatenación:",
-    "options": [
-      "sí",
-      "no",
-      "solo por concatenación"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "2-63",
     "theme": 2,
     "question": "La clase de los lenguajes regulares está cerrada por unión y concatenación:",
     "options": [
@@ -1846,42 +1966,6 @@
     ],
     "answer": 0,
     "explanation": "las cadenas binarias de longitud 3"
-  },
-  {
-    "id": "3-2",
-    "theme": 3,
-    "question": "La expresión regular (aa)* describe:",
-    "options": [
-      "las cadenas de a con longitud par",
-      "todas las cadenas no vacías de a",
-      "las cadenas de longitud impar"
-    ],
-    "answer": 0,
-    "explanation": "las cadenas de a con longitud par"
-  },
-  {
-    "id": "3-3",
-    "theme": 3,
-    "question": "La expresión regular a* describe:",
-    "options": [
-      "todas las cadenas formadas solo por a, incluida ε",
-      "solo a y aa",
-      "todas las cadenas no vacías"
-    ],
-    "answer": 0,
-    "explanation": "todas las cadenas formadas solo por a, incluida ε"
-  },
-  {
-    "id": "3-4",
-    "theme": 3,
-    "question": "La expresión regular a+ equivale a:",
-    "options": [
-      "aa*",
-      "a*",
-      "(a+ε)*"
-    ],
-    "answer": 0,
-    "explanation": "aa*"
   },
   {
     "id": "3-5",
@@ -1990,66 +2074,6 @@
     ],
     "answer": 0,
     "explanation": "a"
-  },
-  {
-    "id": "3-14",
-    "theme": 3,
-    "question": "La concatenación de expresiones regulares denota:",
-    "options": [
-      "concatenación de lenguajes",
-      "unión de lenguajes",
-      "intersección de lenguajes"
-    ],
-    "answer": 0,
-    "explanation": "concatenación de lenguajes"
-  },
-  {
-    "id": "3-15",
-    "theme": 3,
-    "question": "Dos expresiones regulares equivalentes describen:",
-    "options": [
-      "el mismo lenguaje",
-      "el mismo número de símbolos",
-      "la misma forma sintáctica"
-    ],
-    "answer": 0,
-    "explanation": "el mismo lenguaje"
-  },
-  {
-    "id": "3-16",
-    "theme": 3,
-    "question": "La expresión (a+b)*a(a+b)* describe sobre {a,b}:",
-    "options": [
-      "las cadenas que contienen al menos una a",
-      "las cadenas que terminan en b",
-      "las cadenas con número par de a"
-    ],
-    "answer": 0,
-    "explanation": "las cadenas que contienen al menos una a"
-  },
-  {
-    "id": "3-17",
-    "theme": 3,
-    "question": "La expresión b*(ab*)* describe sobre {a,b}:",
-    "options": [
-      "todas las cadenas sobre {a,b}",
-      "solo cadenas que empiezan por a",
-      "solo cadenas sin bb"
-    ],
-    "answer": 0,
-    "explanation": "todas las cadenas sobre {a,b}"
-  },
-  {
-    "id": "3-18",
-    "theme": 3,
-    "question": "La reversa de un lenguaje regular es:",
-    "options": [
-      "regular",
-      "nunca regular",
-      "regular solo si es finito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
   },
   {
     "id": "3-19",
@@ -2304,114 +2328,6 @@
     "explanation": "(aaaaaaaaaa)*"
   },
   {
-    "id": "3-40",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 2?",
-    "options": [
-      "(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)"
-  },
-  {
-    "id": "3-41",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 3?",
-    "options": [
-      "(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)"
-  },
-  {
-    "id": "3-42",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 4?",
-    "options": [
-      "(0+1)(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)(0+1)"
-  },
-  {
-    "id": "3-43",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 5?",
-    "options": [
-      "(0+1)(0+1)(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)(0+1)(0+1)"
-  },
-  {
-    "id": "3-44",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 6?",
-    "options": [
-      "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)"
-  },
-  {
-    "id": "3-45",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 7?",
-    "options": [
-      "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)"
-  },
-  {
-    "id": "3-46",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 8?",
-    "options": [
-      "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)"
-  },
-  {
-    "id": "3-47",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 9?",
-    "options": [
-      "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)"
-  },
-  {
-    "id": "3-48",
-    "theme": 3,
-    "question": "¿Qué expresión regular describe las cadenas binarias de longitud exactamente 10?",
-    "options": [
-      "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)",
-      "(0+1)*",
-      "(01)*"
-    ],
-    "answer": 0,
-    "explanation": "(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)(0+1)"
-  },
-  {
     "id": "3-49",
     "theme": 3,
     "question": "Sobre {0,1}, la expresión (0+1)*00(0+1)* describe:",
@@ -2460,54 +2376,6 @@
     "explanation": "las cadenas que contienen 10 como subcadena"
   },
   {
-    "id": "3-53",
-    "theme": 3,
-    "question": "Sobre {a,b}, la expresión (a+b)*aba(a+b)* describe:",
-    "options": [
-      "las cadenas que contienen aba como subcadena",
-      "las cadenas que empiezan por aba",
-      "las cadenas que terminan en aba"
-    ],
-    "answer": 0,
-    "explanation": "las cadenas que contienen aba como subcadena"
-  },
-  {
-    "id": "3-54",
-    "theme": 3,
-    "question": "Sobre {a,b}, la expresión (a+b)*bab(a+b)* describe:",
-    "options": [
-      "las cadenas que contienen bab como subcadena",
-      "las cadenas que empiezan por bab",
-      "las cadenas que terminan en bab"
-    ],
-    "answer": 0,
-    "explanation": "las cadenas que contienen bab como subcadena"
-  },
-  {
-    "id": "3-55",
-    "theme": 3,
-    "question": "Sobre {a,b}, la expresión (a+b)*aa(a+b)* describe:",
-    "options": [
-      "las cadenas que contienen aa como subcadena",
-      "las cadenas que empiezan por aa",
-      "las cadenas que terminan en aa"
-    ],
-    "answer": 0,
-    "explanation": "las cadenas que contienen aa como subcadena"
-  },
-  {
-    "id": "3-56",
-    "theme": 3,
-    "question": "Sobre {a,b}, la expresión (a+b)*bb(a+b)* describe:",
-    "options": [
-      "las cadenas que contienen bb como subcadena",
-      "las cadenas que empiezan por bb",
-      "las cadenas que terminan en bb"
-    ],
-    "answer": 0,
-    "explanation": "las cadenas que contienen bb como subcadena"
-  },
-  {
     "id": "3-57",
     "theme": 3,
     "question": "Sobre {0,1}, la expresión (0+1)*101(0+1)* describe:",
@@ -2544,222 +2412,6 @@
     "explanation": "regular"
   },
   {
-    "id": "3-60",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-61",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-62",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-63",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-64",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-65",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-66",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-67",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-68",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-69",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "3-70",
-    "theme": 3,
-    "question": "Toda expresión regular denota un lenguaje:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "de tipo 0 necesariamente infinito"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "4-1",
-    "theme": 4,
-    "question": "Un AFD se caracteriza porque para cada estado y símbolo de entrada hay:",
-    "options": [
-      "a lo sumo una transición definida",
-      "múltiples transiciones posibles",
-      "siempre una transición ε"
-    ],
-    "answer": 0,
-    "explanation": "a lo sumo una transición definida"
-  },
-  {
-    "id": "4-2",
-    "theme": 4,
-    "question": "Un AFND puede tener:",
-    "options": [
-      "varias transiciones para un mismo símbolo desde un estado",
-      "solo una transición por símbolo",
-      "únicamente estados finales"
-    ],
-    "answer": 0,
-    "explanation": "varias transiciones para un mismo símbolo desde un estado"
-  },
-  {
-    "id": "4-3",
-    "theme": 4,
-    "question": "Las transiciones ε aparecen en:",
-    "options": [
-      "AFND-ε",
-      "solo AFD",
-      "solo AFDM"
-    ],
-    "answer": 0,
-    "explanation": "AFND-ε"
-  },
-  {
-    "id": "4-4",
-    "theme": 4,
-    "question": "Un autómata acepta una cadena si al procesarla termina en:",
-    "options": [
-      "un estado final",
-      "el estado inicial",
-      "cualquier estado inaccesible"
-    ],
-    "answer": 0,
-    "explanation": "un estado final"
-  },
-  {
-    "id": "4-5",
-    "theme": 4,
-    "question": "Todo lenguaje aceptado por un AFND es:",
-    "options": [
-      "regular",
-      "de contexto libre no regular",
-      "lineal pero no regular"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "4-6",
-    "theme": 4,
-    "question": "Todo AFND tiene un AFD equivalente:",
-    "options": [
-      "sí",
-      "no",
-      "solo si no tiene ε-transiciones"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-7",
-    "theme": 4,
-    "question": "La minimización de un AFD produce:",
-    "options": [
-      "un AFD equivalente con el menor número de estados posible",
-      "un AFND con menos transiciones",
-      "una gramática lineal"
-    ],
-    "answer": 0,
-    "explanation": "un AFD equivalente con el menor número de estados posible"
-  },
-  {
     "id": "4-8",
     "theme": 4,
     "question": "Dos estados de un AFD son equivalentes si:",
@@ -2770,30 +2422,6 @@
     ],
     "answer": 0,
     "explanation": "aceptan los mismos continuaciones"
-  },
-  {
-    "id": "4-9",
-    "theme": 4,
-    "question": "Un estado inaccesible es un estado al que:",
-    "options": [
-      "no se puede llegar desde el inicial",
-      "no sale ninguna transición",
-      "siempre es final"
-    ],
-    "answer": 0,
-    "explanation": "no se puede llegar desde el inicial"
-  },
-  {
-    "id": "4-10",
-    "theme": 4,
-    "question": "Eliminar estados inaccesibles de un AFD:",
-    "options": [
-      "no cambia el lenguaje aceptado",
-      "siempre cambia el lenguaje",
-      "solo cambia si el estado es final"
-    ],
-    "answer": 0,
-    "explanation": "no cambia el lenguaje aceptado"
   },
   {
     "id": "4-11",
@@ -2808,30 +2436,6 @@
     "explanation": "una transición definida"
   },
   {
-    "id": "4-12",
-    "theme": 4,
-    "question": "El lenguaje aceptado por un AFD mínimo es:",
-    "options": [
-      "el mismo que el del AFD original",
-      "siempre más pequeño",
-      "siempre finito"
-    ],
-    "answer": 0,
-    "explanation": "el mismo que el del AFD original"
-  },
-  {
-    "id": "4-13",
-    "theme": 4,
-    "question": "La construcción por subconjuntos transforma:",
-    "options": [
-      "un AFND en un AFD equivalente",
-      "un AFD en un AFND",
-      "una gramática en un autómata con pila"
-    ],
-    "answer": 0,
-    "explanation": "un AFND en un AFD equivalente"
-  },
-  {
     "id": "4-14",
     "theme": 4,
     "question": "Si un lenguaje es regular, entonces existe:",
@@ -2842,42 +2446,6 @@
     ],
     "answer": 0,
     "explanation": "un AFD que lo reconoce"
-  },
-  {
-    "id": "4-15",
-    "theme": 4,
-    "question": "La unión de dos lenguajes regulares es:",
-    "options": [
-      "regular",
-      "no regular en general",
-      "regular solo si ambos son finitos"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "4-16",
-    "theme": 4,
-    "question": "La intersección de dos lenguajes regulares es:",
-    "options": [
-      "regular",
-      "no regular",
-      "decidible pero no regular"
-    ],
-    "answer": 0,
-    "explanation": "regular"
-  },
-  {
-    "id": "4-17",
-    "theme": 4,
-    "question": "El complemento de un lenguaje regular es:",
-    "options": [
-      "regular",
-      "no regular",
-      "regular solo si el autómata no es completo"
-    ],
-    "answer": 0,
-    "explanation": "regular"
   },
   {
     "id": "4-18",
@@ -2916,282 +2484,6 @@
     "explanation": "intersección"
   },
   {
-    "id": "4-21",
-    "theme": 4,
-    "question": "En un AFD completo con 2 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "2",
-      "4",
-      "4"
-    ],
-    "answer": 0,
-    "explanation": "2"
-  },
-  {
-    "id": "4-22",
-    "theme": 4,
-    "question": "En un AFD completo con 3 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "3",
-      "6",
-      "9"
-    ],
-    "answer": 0,
-    "explanation": "3"
-  },
-  {
-    "id": "4-23",
-    "theme": 4,
-    "question": "En un AFD completo con 4 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "4",
-      "8",
-      "16"
-    ],
-    "answer": 0,
-    "explanation": "4"
-  },
-  {
-    "id": "4-24",
-    "theme": 4,
-    "question": "En un AFD completo con 5 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "5",
-      "10",
-      "25"
-    ],
-    "answer": 0,
-    "explanation": "5"
-  },
-  {
-    "id": "4-25",
-    "theme": 4,
-    "question": "En un AFD completo con 6 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "6",
-      "12",
-      "36"
-    ],
-    "answer": 0,
-    "explanation": "6"
-  },
-  {
-    "id": "4-26",
-    "theme": 4,
-    "question": "En un AFD completo con 7 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "7",
-      "14",
-      "49"
-    ],
-    "answer": 0,
-    "explanation": "7"
-  },
-  {
-    "id": "4-27",
-    "theme": 4,
-    "question": "En un AFD completo con 8 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "8",
-      "16",
-      "64"
-    ],
-    "answer": 0,
-    "explanation": "8"
-  },
-  {
-    "id": "4-28",
-    "theme": 4,
-    "question": "En un AFD completo con 9 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "9",
-      "18",
-      "81"
-    ],
-    "answer": 0,
-    "explanation": "9"
-  },
-  {
-    "id": "4-29",
-    "theme": 4,
-    "question": "En un AFD completo con 10 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "10",
-      "20",
-      "100"
-    ],
-    "answer": 0,
-    "explanation": "10"
-  },
-  {
-    "id": "4-30",
-    "theme": 4,
-    "question": "En un AFD completo con 11 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "11",
-      "22",
-      "121"
-    ],
-    "answer": 0,
-    "explanation": "11"
-  },
-  {
-    "id": "4-31",
-    "theme": 4,
-    "question": "En un AFD completo con 12 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "12",
-      "24",
-      "144"
-    ],
-    "answer": 0,
-    "explanation": "12"
-  },
-  {
-    "id": "4-32",
-    "theme": 4,
-    "question": "En un AFD completo con 13 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "13",
-      "26",
-      "169"
-    ],
-    "answer": 0,
-    "explanation": "13"
-  },
-  {
-    "id": "4-33",
-    "theme": 4,
-    "question": "En un AFD completo con 14 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "14",
-      "28",
-      "196"
-    ],
-    "answer": 0,
-    "explanation": "14"
-  },
-  {
-    "id": "4-34",
-    "theme": 4,
-    "question": "En un AFD completo con 15 estados sobre un alfabeto unitario, el número total de transiciones es:",
-    "options": [
-      "15",
-      "30",
-      "225"
-    ],
-    "answer": 0,
-    "explanation": "15"
-  },
-  {
-    "id": "4-35",
-    "theme": 4,
-    "question": "En un AFD completo con 2 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "4",
-      "2",
-      "4"
-    ],
-    "answer": 0,
-    "explanation": "4"
-  },
-  {
-    "id": "4-36",
-    "theme": 4,
-    "question": "En un AFD completo con 3 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "6",
-      "3",
-      "9"
-    ],
-    "answer": 0,
-    "explanation": "6"
-  },
-  {
-    "id": "4-37",
-    "theme": 4,
-    "question": "En un AFD completo con 4 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "8",
-      "4",
-      "16"
-    ],
-    "answer": 0,
-    "explanation": "8"
-  },
-  {
-    "id": "4-38",
-    "theme": 4,
-    "question": "En un AFD completo con 5 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "10",
-      "5",
-      "25"
-    ],
-    "answer": 0,
-    "explanation": "10"
-  },
-  {
-    "id": "4-39",
-    "theme": 4,
-    "question": "En un AFD completo con 6 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "12",
-      "6",
-      "36"
-    ],
-    "answer": 0,
-    "explanation": "12"
-  },
-  {
-    "id": "4-40",
-    "theme": 4,
-    "question": "En un AFD completo con 7 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "14",
-      "7",
-      "49"
-    ],
-    "answer": 0,
-    "explanation": "14"
-  },
-  {
-    "id": "4-41",
-    "theme": 4,
-    "question": "En un AFD completo con 8 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "16",
-      "8",
-      "64"
-    ],
-    "answer": 0,
-    "explanation": "16"
-  },
-  {
-    "id": "4-42",
-    "theme": 4,
-    "question": "En un AFD completo con 9 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "18",
-      "9",
-      "81"
-    ],
-    "answer": 0,
-    "explanation": "18"
-  },
-  {
-    "id": "4-43",
-    "theme": 4,
-    "question": "En un AFD completo con 10 estados sobre un alfabeto binario, el número total de transiciones es:",
-    "options": [
-      "20",
-      "10",
-      "100"
-    ],
-    "answer": 0,
-    "explanation": "20"
-  },
-  {
     "id": "4-44",
     "theme": 4,
     "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
@@ -3204,391 +2496,7 @@
     "explanation": "completar transiciones faltantes"
   },
   {
-    "id": "4-45",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-46",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-47",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-48",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-49",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-50",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-51",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-52",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-53",
-    "theme": 4,
-    "question": "Un estado de bloqueo en un AFD es útil típicamente para:",
-    "options": [
-      "completar transiciones faltantes",
-      "aceptar todas las cadenas",
-      "minimizar a cero estados"
-    ],
-    "answer": 0,
-    "explanation": "completar transiciones faltantes"
-  },
-  {
-    "id": "4-54",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-55",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-56",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-57",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-58",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-59",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-60",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-61",
-    "theme": 4,
-    "question": "Todo lenguaje finito puede reconocerse con un autómata finito:",
-    "options": [
-      "sí",
-      "no",
-      "solo si contiene ε"
-    ],
-    "answer": 0,
-    "explanation": "sí"
-  },
-  {
-    "id": "4-62",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
-    "id": "4-63",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
-    "id": "4-64",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
-    "id": "4-65",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
-    "id": "4-66",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
-    "id": "4-67",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
-    "id": "4-68",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
-    "id": "4-69",
-    "theme": 4,
-    "question": "Si un autómata no tiene ningún estado final, el lenguaje aceptado es:",
-    "options": [
-      "∅",
-      "Σ*",
-      "{ε}"
-    ],
-    "answer": 0,
-    "explanation": "∅"
-  },
-  {
     "id": "4-70",
-    "theme": 4,
-    "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
-    "options": [
-      "ε",
-      "solo cadenas no vacías",
-      "todas las cadenas"
-    ],
-    "answer": 0,
-    "explanation": "ε"
-  },
-  {
-    "id": "4-71",
-    "theme": 4,
-    "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
-    "options": [
-      "ε",
-      "solo cadenas no vacías",
-      "todas las cadenas"
-    ],
-    "answer": 0,
-    "explanation": "ε"
-  },
-  {
-    "id": "4-72",
-    "theme": 4,
-    "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
-    "options": [
-      "ε",
-      "solo cadenas no vacías",
-      "todas las cadenas"
-    ],
-    "answer": 0,
-    "explanation": "ε"
-  },
-  {
-    "id": "4-73",
-    "theme": 4,
-    "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
-    "options": [
-      "ε",
-      "solo cadenas no vacías",
-      "todas las cadenas"
-    ],
-    "answer": 0,
-    "explanation": "ε"
-  },
-  {
-    "id": "4-74",
-    "theme": 4,
-    "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
-    "options": [
-      "ε",
-      "solo cadenas no vacías",
-      "todas las cadenas"
-    ],
-    "answer": 0,
-    "explanation": "ε"
-  },
-  {
-    "id": "4-75",
-    "theme": 4,
-    "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
-    "options": [
-      "ε",
-      "solo cadenas no vacías",
-      "todas las cadenas"
-    ],
-    "answer": 0,
-    "explanation": "ε"
-  },
-  {
-    "id": "4-76",
-    "theme": 4,
-    "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
-    "options": [
-      "ε",
-      "solo cadenas no vacías",
-      "todas las cadenas"
-    ],
-    "answer": 0,
-    "explanation": "ε"
-  },
-  {
-    "id": "4-77",
     "theme": 4,
     "question": "Si el estado inicial de un AFD es también final, entonces el autómata acepta necesariamente:",
     "options": [
@@ -3612,87 +2520,171 @@
     "explanation": "verdadero en general"
   },
   {
-    "id": "4-79",
-    "theme": 4,
-    "question": "La minimización nunca aumenta el número de estados de un AFD:",
+    "id": "1-91",
+    "theme": 1,
+    "question": "Si f es una función monaria sobre A, con Dom(f) = Rg(f), entonces:",
     "options": [
-      "verdadero en general",
-      "falso en general",
-      "solo si el alfabeto es binario"
+      "f puede ser inyectiva sin ser sobreyectiva",
+      "f puede ser sobreyectiva sin ser inyectiva",
+      "f es biyectiva"
     ],
-    "answer": 0,
-    "explanation": "verdadero en general"
+    "answer": 1,
+    "explanation": "Si Dom(f)=Rg(f), la imagen cubre todo el dominio ⇒ es sobreyectiva. Pero puede no ser inyectiva."
   },
   {
-    "id": "4-80",
-    "theme": 4,
-    "question": "La minimización nunca aumenta el número de estados de un AFD:",
+    "id": "1-92",
+    "theme": 1,
+    "question": "Si α es una expresión regular, entonces:",
     "options": [
-      "verdadero en general",
-      "falso en general",
-      "solo si el alfabeto es binario"
+      "αα* - α* = {ε}",
+      "αα* - α* = ∅",
+      "αα* - α* = α"
     ],
-    "answer": 0,
-    "explanation": "verdadero en general"
+    "answer": 1,
+    "explanation": "αα* está contenido en α*, así que αα* - α* = ∅."
   },
   {
-    "id": "4-81",
-    "theme": 4,
-    "question": "La minimización nunca aumenta el número de estados de un AFD:",
+    "id": "1-93",
+    "theme": 1,
+    "question": "Dados los conjuntos A = {a,b,c,d}, Π₁ = {a,c}, Π₂ = {b,d}, entonces:",
     "options": [
-      "verdadero en general",
-      "falso en general",
-      "solo si el alfabeto es binario"
+      "Π₁ y Π₂ definen una partición sobre A",
+      "Π₁ y Π₂ son clases de equivalencia",
+      "Π₁ y Π₂ definen una relación sobre A"
     ],
     "answer": 0,
-    "explanation": "verdadero en general"
+    "explanation": "Cubren todo A y son disjuntos, así que forman una partición."
   },
   {
-    "id": "4-82",
-    "theme": 4,
-    "question": "La minimización nunca aumenta el número de estados de un AFD:",
+    "id": "1-94",
+    "theme": 1,
+    "question": "Sea G = (N,T,P,S) con P = { S -> ε}. Entonces G es de tipo:",
     "options": [
-      "verdadero en general",
-      "falso en general",
-      "solo si el alfabeto es binario"
+      "tipo 3",
+      "tipo 1 pero no tipo 2",
+      "tipo 0 pero no tipo 1"
     ],
     "answer": 0,
-    "explanation": "verdadero en general"
+    "explanation": "La producción S→ε se admite en gramáticas regulares en el caso habitual del símbolo inicial."
   },
   {
-    "id": "4-83",
-    "theme": 4,
-    "question": "La minimización nunca aumenta el número de estados de un AFD:",
+    "id": "1-95",
+    "theme": 1,
+    "question": "El cardinal del conjunto potencia de los reales:",
     "options": [
-      "verdadero en general",
-      "falso en general",
-      "solo si el alfabeto es binario"
+      "No es ℵ₀ y sí es ℵ₁",
+      "No es ℵ₀ y no es ℵ₁",
+      "No es ℵ₁ y sí es ℵ₀"
     ],
-    "answer": 0,
-    "explanation": "verdadero en general"
+    "answer": 1,
+    "explanation": "El conjunto potencia de ℝ tiene cardinal estrictamente mayor que ℝ; desde ZFC no se identifica de forma necesaria con ℵ₁."
   },
   {
-    "id": "4-84",
-    "theme": 4,
-    "question": "La minimización nunca aumenta el número de estados de un AFD:",
+    "id": "1-96",
+    "theme": 1,
+    "question": "Sea A ⊆ ℕ, A = {n ∈ ℕ | n ≤ 10}, y A⁻ el cierre estricto con resta natural:",
     "options": [
-      "verdadero en general",
-      "falso en general",
-      "solo si el alfabeto es binario"
+      "A⁻ = ℤ",
+      "A⁻ = A",
+      "A⁻ = ℕ"
     ],
-    "answer": 0,
-    "explanation": "verdadero en general"
+    "answer": 2,
+    "explanation": "El cierre estricto bajo resta natural termina generando todos los naturales."
   },
   {
-    "id": "4-85",
-    "theme": 4,
-    "question": "La minimización nunca aumenta el número de estados de un AFD:",
+    "id": "1-97",
+    "theme": 1,
+    "question": "Sean L₁ y L₂ lenguajes. Operación prefijos L₁ [ L₂:",
     "options": [
-      "verdadero en general",
-      "falso en general",
-      "solo si el alfabeto es binario"
+      "{ε} es el neutro",
+      "Σ* es el neutro",
+      "no tiene elemento neutro"
     ],
     "answer": 0,
-    "explanation": "verdadero en general"
+    "explanation": "El neutro de la operación de prefijos es {ε}."
+  },
+  {
+    "id": "1-98",
+    "theme": 1,
+    "question": "Si A es finito y R relación sobre A:",
+    "options": [
+      "si R no es simétrica es antisimétrica",
+      "R puede ser antisimétrica aunque sea reflexiva",
+      "si R es transitiva no puede ser antisimétrica"
+    ],
+    "answer": 1,
+    "explanation": "Una relación puede ser reflexiva y antisimétrica a la vez, como ≤."
+  },
+  {
+    "id": "1-99",
+    "theme": 1,
+    "question": "Si una gramática tiene regla epsilon:",
+    "options": [
+      "L(G) es tipo 0 y puede ser tipo 3",
+      "solo es tipo 0",
+      "tipo 0 y tipo 1 pero nunca tipo 2"
+    ],
+    "answer": 0,
+    "explanation": "La presencia de una ε-producción no impide por sí sola que la gramática sea regular en ciertos casos."
+  },
+  {
+    "id": "1-100",
+    "theme": 1,
+    "question": "Número de cadenas con misma numeración entre Σ₁* y Σ₂*:",
+    "options": [
+      "|Σ₁|",
+      "|Σ₁| + 1",
+      "|Σ₁| - 1"
+    ],
+    "answer": 0,
+    "explanation": "En la numeración estándar, el número de coincidencias iniciales depende del tamaño del alfabeto de Σ₁."
+  },
+  {
+    "id": "1-101",
+    "theme": 1,
+    "question": "Número mínimo de cadenas comunes en ordenación entre Σ₁* y Σ₂*:",
+    "options": [
+      "0",
+      "|Σ₁ ∩ Σ₂|",
+      "1"
+    ],
+    "answer": 2,
+    "explanation": "Al menos ε aparece en ambas ordenaciones."
+  },
+  {
+    "id": "1-102",
+    "theme": 1,
+    "question": "Expresión regular ((a + b)* + c)*, cadena que NO pertenece:",
+    "options": [
+      "bacc",
+      "cb",
+      "c"
+    ],
+    "answer": 0,
+    "explanation": "La pregunta está formulada como trampa en algunas recopilaciones; revisa este ítem con tus apuntes porque la expresión admite cadenas con a, b y c."
+  },
+  {
+    "id": "1-103",
+    "theme": 1,
+    "question": "Cierre estricto de A = {a,b,c} con concatenación:",
+    "options": [
+      "L((a + b + c)*)",
+      "L((a + b + c)(a + b + c)*)",
+      "L(a* + b* + c*)"
+    ],
+    "answer": 1,
+    "explanation": "El cierre estricto es el positivo: una o más concatenaciones, excluyendo ε."
+  },
+  {
+    "id": "1-104",
+    "theme": 1,
+    "question": "Si A y B son equipotenciales, afirmación FALSA:",
+    "options": [
+      "Existe función biyectiva A -> B",
+      "A ⊂ B o B ⊂ A",
+      "Tienen misma cardinalidad"
+    ],
+    "answer": 1,
+    "explanation": "La equipotencia significa misma cardinalidad, no relación de inclusión."
   }
 ]
