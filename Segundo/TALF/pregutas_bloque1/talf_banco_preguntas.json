@@ -9,7 +9,7 @@
       "infinitas clases unitarias"
     ],
     "answer": 0,
-    "explanation": "Los naturales quedan separados en pares e impares."
+    "explanation": "nRm equivale a que n y m tengan la misma paridad. Eso induce exactamente dos clases de equivalencia: pares e impares. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-4",
@@ -21,7 +21,7 @@
       "simétrica y transitiva, pero no reflexiva"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La identidad I={(a,a) | a∈A}; por eso es reflexiva y, al contener solo pares de la diagonal, también simétrica y transitiva. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-5",
@@ -33,7 +33,7 @@
       "componer R consigo misma"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Por definición, R⁻¹={(a,b) | (b,a)∈R}; es decir, se invierte el orden de cada par. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-6",
@@ -45,7 +45,7 @@
       "intercambiando cada par"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El cierre reflexivo es R∪I, o sea, R más los pares (a,a) que hagan falta para que todos los elementos se relacionen consigo mismos. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-7",
@@ -57,7 +57,7 @@
       "tiene la misma inversa que R"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El cierre transitivo es la mínima relación transitiva que contiene a R; el libro lo define como R∞=⋃_{n≥1} R^n. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-10",
@@ -69,7 +69,7 @@
       "una partición del conjunto"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Un monoide es, exactamente, un semigrupo con elemento neutro. [Ref.: Tema 1, §1.1, Defs. 1.20–1.27, pp. 7–8]"
   },
   {
     "id": "1-11",
@@ -81,7 +81,7 @@
       "depende del orden de aplicación"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El elemento neutro es único: si e y e' fueran neutros, e=e•e'=e'. [Ref.: Tema 1, §1.1, Defs. 1.20–1.27, pp. 7–8]"
   },
   {
     "id": "1-14",
@@ -93,7 +93,7 @@
       "siempre finito"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Todo subconjunto de un conjunto numerable es numerable; si además es infinito, resulta infinito numerable. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "1-15",
@@ -105,7 +105,7 @@
       "finita"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La unión finita de conjuntos numerables sigue siendo numerable. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "1-16",
@@ -117,7 +117,7 @@
       "finito"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Los racionales son numerables; el libro lo justifica a partir de que ℚ puede codificarse como pares de naturales/enteros. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "1-17",
@@ -129,7 +129,7 @@
       "finito"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Los reales no son numerables; el libro lo demuestra con el argumento diagonal de Cantor. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "1-18",
@@ -141,7 +141,7 @@
       "toda relación es transitiva"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La diagonalización construye un elemento que no aparece en una supuesta enumeración, y con ello prueba no numerabilidad. [Ref.: Tema 1, §1.3, principio de diagonalización, pp. 17–18]"
   },
   {
     "id": "1-19",
@@ -152,8 +152,8 @@
       "solo infinito",
       "solo finito no vacío"
     ],
-    "answer": 0,
-    "explanation": ""
+    "answer": 2,
+    "explanation": "Según la definición de alfabeto, un alfabeto es un conjunto finito no vacío de símbolos; por eso no puede ser vacío ni infinito. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-20",
@@ -165,7 +165,7 @@
       "numerable"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Una cadena se define como una secuencia finita de símbolos de un alfabeto. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-22",
@@ -177,7 +177,7 @@
       "idempotente"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La concatenación cumple (xy)z=x(yz), así que es asociativa; además en Σ* forma un monoide con neutro ε. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-23",
@@ -189,7 +189,7 @@
       "nunca puede ser simultáneamente prefijo y sufijo de sí misma"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Toda cadena es prefijo y sufijo de sí misma tomando como resto la cadena vacía ε. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-24",
@@ -201,7 +201,7 @@
       "z = xy"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Por definición, x es prefijo de y si existe z∈Σ* tal que y=xz. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-25",
@@ -213,7 +213,7 @@
       "su conjunto de prefijos"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Aunque el nombre 'Parikh' no aparece explícitamente en este libro, la idea coincide con contar ocurrencias de cada símbolo en una cadena. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-29",
@@ -225,7 +225,7 @@
       "sus elementos maximales"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El conjunto cociente de una relación de equivalencia está formado por sus clases de equivalencia, que además constituyen una partición. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-30",
@@ -237,7 +237,7 @@
       "tienen la misma intersección"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Dos conjuntos son equipotenciales si existe una biyección entre ellos. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "1-75",
@@ -249,7 +249,7 @@
       "|xy| = max(|x|,|y|)"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-91",
@@ -260,8 +260,8 @@
       "f puede ser inyectiva sin ser sobreyectiva",
       "f es biyectiva"
     ],
-    "answer": 0,
-    "explanation": "Si dominio e imagen coinciden, f es sobreyectiva sobre A; en conjuntos infinitos no tiene por qué ser inyectiva."
+    "answer": 1,
+    "explanation": "Si Dom(f)=Rg(f)=A, la función es sobreyectiva sobre A. En conjuntos infinitos eso no obliga a que sea inyectiva. [Ref.: Tema 1, §1.1, Defs. 1.13–1.18, pp. 5–6]"
   },
   {
     "id": "1-93",
@@ -273,7 +273,7 @@
       "Π₁ y Π₂ no cubren todo A"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Los bloques {a,c} y {b,d} son no vacíos, disjuntos y su unión es A; por tanto definen una partición. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "1-95",
@@ -285,7 +285,7 @@
       "coincide con ℵ₀"
     ],
     "answer": 0,
-    "explanation": "℘(ℝ) tiene cardinal estrictamente mayor que |ℝ|, y la hipótesis del continuo no es teorema de ZFC."
+    "explanation": "El conjunto potencia siempre tiene cardinal estrictamente mayor que el conjunto original; por tanto |P(ℝ)|>|ℝ|. En particular no es ℵ₀ ni ℵ₁. [Ref.: Tema 1, §1.3, principio de diagonalización, pp. 17–18]"
   },
   {
     "id": "1-96",
@@ -297,7 +297,7 @@
       "A⁻ = ℤ"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Tomando resta natural en ℕ, restar elementos ≤10 vuelve a dar un natural ≤10; el conjunto ya es cerrado y su cierre estricto coincide con A. [Ref.: Tema 1, §1.1, Defs. 1.20–1.27, pp. 7–8]"
   },
   {
     "id": "1-98",
@@ -308,8 +308,8 @@
       "si R no es simétrica entonces es antisimétrica",
       "si R es transitiva nunca es antisimétrica"
     ],
-    "answer": 0,
-    "explanation": ""
+    "answer": 1,
+    "explanation": "Reflexiva y antisimétrica son compatibles: por ejemplo, la identidad es reflexiva y antisimétrica. En cambio, no ser simétrica no implica ser antisimétrica. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-100",
@@ -321,7 +321,7 @@
       "sus cardinales dependen de la longitud máxima permitida"
     ],
     "answer": 0,
-    "explanation": "Si los alfabetos son finitos no vacíos, ambos lenguajes de cadenas finitas son numerables."
+    "explanation": "Si los alfabetos son equipotentes, sus conjuntos de cadenas finitas también lo son; existe una biyección entre Σ₁* y Σ₂*. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "2-2",
@@ -333,7 +333,7 @@
       "necesariamente ambigua"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Toda gramática regular es lineal y, por inclusión de clases, también de contexto libre. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-4",
@@ -345,7 +345,7 @@
       "no es decidible en general"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La tabla del libro indica que el problema de pertenencia para gramáticas regulares es decidible. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-5",
@@ -357,7 +357,7 @@
       "no es decidible"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La tabla del libro indica que la equivalencia entre gramáticas regulares es decidible. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-6",
@@ -369,7 +369,7 @@
       "trivial porque basta comparar reglas"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La tabla del libro marca que la equivalencia para gramáticas de contexto libre no es decidible en general. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-7",
@@ -381,7 +381,7 @@
       "{ε}"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Ninguna cadena puede escribirse como xy con x∈L e y∈∅; por eso L∅=∅. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-8",
@@ -393,7 +393,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Concatenar con ε no cambia ninguna cadena, luego L{ε}=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-9",
@@ -405,7 +405,7 @@
       "idempotente"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La concatenación es asociativa: L1(L2L3)=(L1L2)L3. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-10",
@@ -417,7 +417,7 @@
       "L₁(L₂∪L₃)=L₂∪L₃"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La concatenación distribuye sobre la unión: L1(L2∪L3)=L1L2∪L1L3. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-11",
@@ -429,7 +429,7 @@
       "Σ − L"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El libro define el complemento de L⊆Σ* como Σ*−L. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-12",
@@ -441,7 +441,7 @@
       "necesariamente no regular"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Sin reglas con no terminales en el lado derecho no puede haber recursión; solo se generan terminales aislados, así que el lenguaje es finito. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-13",
@@ -453,7 +453,7 @@
       "solo lineal"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-14",
@@ -465,7 +465,7 @@
       "no representable mediante gramáticas"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Por la jerarquía de Chomsky, L.3⊂L.2; todo lenguaje regular es de contexto libre. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-15",
@@ -477,7 +477,7 @@
       "sensible al contexto pero no libre"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Las gramáticas lineales generan lenguajes lineales y éstos están incluidos en L.2; por tanto, todo lenguaje lineal es de contexto libre. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-16",
@@ -489,7 +489,7 @@
       "solo si tiene infinitas reglas"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Sí; el propio libro pone ejemplos de gramáticas que son simultáneamente regulares derechas e izquierdas. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-19",
@@ -501,7 +501,7 @@
       "lineal por la derecha"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "No es regular ni lineal. Es una producción sensible al contexto: conserva longitud y reescribe en presencia de contexto. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-21",
@@ -513,7 +513,7 @@
       "solo si tiene al menos dos símbolos iniciales"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Sí: una sola regla recursiva, por ejemplo S→aS, ya permite derivaciones arbitrariamente largas. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-22",
@@ -524,8 +524,8 @@
       "pertenece automáticamente a L(G)",
       "nunca puede pertenecer a L(G)"
     ],
-    "answer": 0,
-    "explanation": ""
+    "answer": 1,
+    "explanation": "Si ε es forma sentencial, entonces S ⇒* ε; además ε ∈ T*. Por definición de cadena generada y de lenguaje generado, ε pertenece automáticamente a L(G). [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-24",
@@ -537,7 +537,7 @@
       "solo sensible al contexto"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "{ε} es finito y, por tanto, regular. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-25",
@@ -549,7 +549,7 @@
       "una operación para la que no hay cierre"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La tabla de cierre indica que la clase de lenguajes sensibles al contexto es cerrada por unión. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "2-26",
@@ -561,7 +561,7 @@
       "siempre se pierde un símbolo al concatenar"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Puede haber distintas descomposiciones x·y que produzcan la misma cadena, así que la cardinalidad del producto puede ser menor que el producto de cardinalidades. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-27",
@@ -573,7 +573,7 @@
       "L⁰ = L"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Por definición, L⁰={ε}. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-28",
@@ -585,7 +585,7 @@
       "exactamente las cadenas de L"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La estrella de Kleene es un cierre amplio, así que siempre contiene ε. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-29",
@@ -597,7 +597,7 @@
       "solo falla cuando L es infinito"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "No vale en general. Por ejemplo, si L={a}, entonces L²={aa} y L³={aaa}; L² no está contenido en L³. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-30",
@@ -609,7 +609,7 @@
       "verdadero solo si ε ∈ L"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "No siempre: si L={ε}, entonces L*={ε}, que es finito. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-53",
@@ -621,7 +621,7 @@
       "indecidible"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Por definición, una gramática regular genera un lenguaje regular. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-58",
@@ -633,7 +633,7 @@
       "no está cerrada por unión"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La tabla de cierre muestra que los lenguajes regulares son cerrados por unión y por concatenación. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "2-91",
@@ -644,8 +644,8 @@
       "αα* − α* = {ε}",
       "αα* − α* = α"
     ],
-    "answer": 0,
-    "explanation": ""
+    "answer": 1,
+    "explanation": "Siempre αα*⊆α*, porque α* ya contiene todas las concatenaciones posibles de α. Por eso αα*−α*=∅. [Ref.: Tema 3, §3.2, Prop. 3.10, pp. 54–60]"
   },
   {
     "id": "2-92",
@@ -656,8 +656,8 @@
       "tipo 1 pero no tipo 2",
       "tipo 0 pero no tipo 1"
     ],
-    "answer": 0,
-    "explanation": ""
+    "answer": 2,
+    "explanation": "En la jerarquía ordinaria del libro, una regla ε no es de tipo 1, 2 ni 3; por tanto la gramática sigue siendo de tipo 0. El libro trata aparte las clases ε-regulares y ε-contexto libres. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-93",
@@ -668,8 +668,8 @@
       "forzosamente deja de ser de tipo 2",
       "solo puede ser de tipo 0"
     ],
-    "answer": 0,
-    "explanation": ""
+    "answer": null,
+    "explanation": "Pregunta ambigua respecto al libro: con una regla ε la gramática ya no es regular/tipo 3 ordinaria, pero puede ser ε-regular o ε-contexto libre. Ninguna opción refleja exactamente la distinción que hace el libro. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "3-2",
@@ -681,7 +681,7 @@
       "las cadenas de longitud impar"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Cada bloque aporta dos a. Por ello se obtienen exactamente las cadenas de a de longitud par, incluida ε. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-3",
@@ -693,7 +693,7 @@
       "todas las cadenas no vacías"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "a* es la estrella de Kleene de {a}: incluye ε, a, aa, aaa, ... [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-4",
@@ -705,7 +705,7 @@
       "(a+ε)*"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Usando la notación habitual externa al libro, a+ significa una o más a, esto es aa*. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-5",
@@ -717,7 +717,7 @@
       "todos los operadores tienen la misma prioridad"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El convenio del libro fija la prioridad: cierre > concatenación > unión. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-6",
@@ -729,7 +729,7 @@
       "intersección de lenguajes"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La operación + en una ER representa unión de lenguajes, es decir, alternativa. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-7",
@@ -741,7 +741,7 @@
       "L^R"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La clausura de Kleene de un lenguaje L se denota L*. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49; Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-8",
@@ -753,7 +753,7 @@
       "todas las cadenas con igual número de a y b"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "(ab)* repite cero o más veces el bloque 'ab': ε, ab, abab, ababab, ... [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-11",
@@ -765,7 +765,7 @@
       "a*"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La unión ε+a denota exactamente el conjunto {ε,a}. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-12",
@@ -777,7 +777,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Por definición, ∅*={ε}. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-13",
@@ -789,7 +789,7 @@
       "ε"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La unión con ∅ no cambia el lenguaje: ∅+a = a. [Ref.: Tema 3, §3.2, Prop. 3.10, pp. 54–60]"
   },
   {
     "id": "3-14",
@@ -801,7 +801,7 @@
       "intersección de lenguajes"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Si α y β son ER, entonces L(αβ)=L(α)L(β): concatenación de lenguajes. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-15",
@@ -813,7 +813,7 @@
       "el mismo número de operadores"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Dos ER equivalentes representan exactamente el mismo lenguaje. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-16",
@@ -825,7 +825,7 @@
       "las cadenas con número par de a"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "(a+b)* permite cualquier prefijo y sufijo; la a central obliga a que aparezca al menos una a en la cadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-17",
@@ -837,7 +837,7 @@
       "solo cadenas sin bb"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Toda cadena sobre {a,b} puede descomponerse como varios b iniciales y luego repeticiones de a seguidas de varios b. Por tanto describe Σ*. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-18",
@@ -849,7 +849,7 @@
       "regular solo si el lenguaje es finito"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La clase de lenguajes regulares es cerrada por inverso/reversa. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "3-53",
@@ -861,7 +861,7 @@
       "las cadenas que terminan en aba"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La parte central fija la subcadena 'aba' y las estrellas permiten cualquier contexto antes y después. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-54",
@@ -873,7 +873,7 @@
       "las cadenas que terminan en bab"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La expresión exige que aparezca 'bab' como subcadena en algún punto. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-55",
@@ -885,7 +885,7 @@
       "las cadenas que terminan en aa"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La parte central 'aa' obliga a que la cadena contenga esa subcadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-56",
@@ -897,7 +897,7 @@
       "las cadenas que terminan en bb"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La parte central 'bb' obliga a que la cadena contenga esa subcadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-91",
@@ -909,7 +909,7 @@
       "deben usar los mismos símbolos auxiliares"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Dos ER equivalentes representan exactamente el mismo lenguaje. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-92",
@@ -921,7 +921,7 @@
       "solo la cadena 00"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La parte central 00 obliga a que la cadena contenga 00 como subcadena, mientras que las estrellas permiten cualquier contexto antes y después. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-93",
@@ -933,7 +933,7 @@
       "solo la cadena 111"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Son tres concatenaciones de un símbolo binario cualquiera; por tanto describe exactamente las cadenas binarias de longitud 3. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "4-1",
@@ -945,7 +945,7 @@
       "siempre una transición ε"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "En la definición del libro, δ:K×Σ→K es una función total. Eso significa que para cada estado y símbolo hay exactamente una transición; entre las opciones, la más cercana es 'a lo sumo una'. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-2",
@@ -957,7 +957,7 @@
       "únicamente estados finales"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "En un AFND puede haber varias transiciones posibles para un mismo estado y símbolo, o incluso ninguna. [Ref.: Tema 4, §4.2, Defs. 4.21–4.43, pp. 68–75]"
   },
   {
     "id": "4-3",
@@ -969,7 +969,7 @@
       "solo AFDM"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "En el AFND del libro se permiten transiciones que consumen la cadena vacía ε. [Ref.: Tema 4, §4.2, Defs. 4.21–4.43, pp. 68–75]"
   },
   {
     "id": "4-4",
@@ -981,7 +981,7 @@
       "cualquier estado inaccesible"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Una cadena es aceptada cuando existe una computación completa cuyo estado terminal es final. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-5",
@@ -993,7 +993,7 @@
       "lineal pero no regular"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El libro establece L(AFND)=L(AFD)=L.3; por tanto todo lenguaje aceptado por un AFND es regular. [Ref.: Tema 4, §4.2, Defs. 4.21–4.43, pp. 68–75; Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-6",
@@ -1005,7 +1005,7 @@
       "solo si no hay ε-transiciones"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "AFD y AFND reconocen exactamente los mismos lenguajes regulares; por eso todo AFND tiene un AFD equivalente. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-7",
@@ -1017,7 +1017,7 @@
       "una gramática lineal"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Un AFDM es un AFD equivalente con el menor número posible de estados. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-8",
@@ -1029,7 +1029,7 @@
       "ambos son finales"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Dos estados son equivalentes si, leyendo cualquier continuación, ambos aceptan o ambos rechazan; es decir, distinguen los mismos sufijos. [Ref.: Tema 4, §4.3–4.4, idea de minimización/Myhill-Nerode, pp. 76–77]"
   },
   {
     "id": "4-9",
@@ -1041,7 +1041,7 @@
       "siempre es final"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Es inaccesible si no puede alcanzarse desde el estado inicial leyendo alguna cadena. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-10",
@@ -1053,7 +1053,7 @@
       "solo conserva el lenguaje si ningún estado final es eliminado"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Los estados inaccesibles no intervienen en ninguna computación iniciada desde s; eliminarlos no cambia el lenguaje aceptado. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-11",
@@ -1065,7 +1065,7 @@
       "una transición ε"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "En un AFD completo hay una transición definida para cada par (estado, símbolo). [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-12",
@@ -1077,7 +1077,7 @@
       "siempre finito"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La minimización conserva equivalencia, así que el lenguaje aceptado no cambia. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-13",
@@ -1089,7 +1089,7 @@
       "una gramática en un autómata con pila"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Es la construcción clásica que convierte un AFND en un AFD equivalente. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-15",
@@ -1101,7 +1101,7 @@
       "regular solo si ambos son finitos"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Los lenguajes regulares son cerrados por unión. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "4-16",
@@ -1113,7 +1113,7 @@
       "decidible pero no regular"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Los lenguajes regulares son cerrados por intersección. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "4-17",
@@ -1125,7 +1125,7 @@
       "regular solo si el autómata no es completo"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El libro define el complemento de L⊆Σ* como Σ*−L. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "4-18",
@@ -1137,7 +1137,7 @@
       "ningún autómata finito"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La reversa de un regular sigue siendo regular; una construcción típica es invertir transiciones y adaptar estados inicial/finales en un AFND. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50; Tema 4, §4.2, Defs. 4.21–4.43, pp. 68–75]"
   },
   {
     "id": "4-19",
@@ -1149,7 +1149,7 @@
       "solo sobre alfabetos binarios"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Sí. El libro establece L(AFND)=L(AFD)=L.3. [Ref.: Tema 4, §4.2, Defs. 4.21–4.43, pp. 68–75; Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-20",
@@ -1161,7 +1161,7 @@
       "minimización directa"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El producto de autómatas es la construcción clásica para reconocer intersecciones. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "4-44",
@@ -1173,7 +1173,7 @@
       "evitar la necesidad de estados finales"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "El estado pozo o de bloqueo se usa para completar transiciones faltantes sin aceptar nuevas cadenas. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-54",
@@ -1185,7 +1185,7 @@
       "solo si todas sus cadenas tienen la misma longitud"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Todo lenguaje finito es regular, luego puede reconocerse con un autómata finito. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45; Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-62",
@@ -1197,7 +1197,7 @@
       "{ε}"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "Sin estados finales no puede aceptarse ninguna computación completa, así que el lenguaje es ∅. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-70",
@@ -1209,7 +1209,7 @@
       "todas las cadenas"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La cadena ε deja al autómata en el estado inicial; si ese estado es final, ε se acepta. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-78",
@@ -1221,7 +1221,7 @@
       "solo reduce estados en alfabetos binarios"
     ],
     "answer": 0,
-    "explanation": ""
+    "explanation": "La minimización busca un equivalente con el menor número de estados; por eso nunca puede aumentar ese número. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "1-8",
@@ -1233,7 +1233,7 @@
       "f^{-1} no siempre existe"
     ],
     "answer": 0,
-    "explanation": "existe f^{-1}:B→A y también es biyectiva"
+    "explanation": "Toda biyección admite función inversa f⁻¹:B→A, y esa inversa también es biyectiva. [Ref.: Tema 1, §1.1, Defs. 1.13–1.18, pp. 5–6]"
   },
   {
     "id": "1-9",
@@ -1245,7 +1245,7 @@
       "una función A→A"
     ],
     "answer": 0,
-    "explanation": "una aplicación A×A→A"
+    "explanation": "Una operación interna sobre A es una aplicación A×A→A. [Ref.: Tema 1, §1.1, Defs. 1.20–1.27, pp. 7–8]"
   },
   {
     "id": "1-13",
@@ -1257,7 +1257,7 @@
       "solo si es finito"
     ],
     "answer": 0,
-    "explanation": "sí"
+    "explanation": "Sí; es una propiedad típica de conjuntos infinitos, por ejemplo ℕ y el subconjunto de los pares son equipotenciales. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "1-21",
@@ -1269,7 +1269,7 @@
       "depende del alfabeto"
     ],
     "answer": 0,
-    "explanation": "0"
+    "explanation": "La cadena vacía no contiene símbolos, así que su longitud es 0. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-23",
@@ -1281,7 +1281,7 @@
       "solo si no es vacía"
     ],
     "answer": 0,
-    "explanation": "sí"
+    "explanation": "Toda cadena es prefijo y sufijo de sí misma tomando como resto la cadena vacía ε. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-28",
@@ -1293,7 +1293,7 @@
       "de equivalencia"
     ],
     "answer": 0,
-    "explanation": "no reflexiva"
+    "explanation": "No es reflexiva porque exigiría x=x+3, lo cual es imposible. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-75",
@@ -1305,7 +1305,7 @@
       "|xy| = max(|x|,|y|)"
     ],
     "answer": 0,
-    "explanation": "|xy| = |x| + |y|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-76",
@@ -1317,7 +1317,7 @@
       "|uv| = max(|u|,|v|)"
     ],
     "answer": 0,
-    "explanation": "|uv| = |u| + |v|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-77",
@@ -1329,7 +1329,7 @@
       "|pq| = max(|p|,|q|)"
     ],
     "answer": 0,
-    "explanation": "|pq| = |p| + |q|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-78",
@@ -1341,7 +1341,7 @@
       "|mn| = max(|m|,|n|)"
     ],
     "answer": 0,
-    "explanation": "|mn| = |m| + |n|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-79",
@@ -1353,7 +1353,7 @@
       "|rs| = max(|r|,|s|)"
     ],
     "answer": 0,
-    "explanation": "|rs| = |r| + |s|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-80",
@@ -1365,7 +1365,7 @@
       "|ab| = max(|a|,|b|)"
     ],
     "answer": 0,
-    "explanation": "|ab| = |a| + |b|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-81",
@@ -1377,7 +1377,7 @@
       "|cd| = max(|c|,|d|)"
     ],
     "answer": 0,
-    "explanation": "|cd| = |c| + |d|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-82",
@@ -1389,7 +1389,7 @@
       "|ef| = max(|e|,|f|)"
     ],
     "answer": 0,
-    "explanation": "|ef| = |e| + |f|"
+    "explanation": "La longitud de una concatenación siempre suma: |xy|=|x|+|y|. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "2-1",
@@ -1401,7 +1401,7 @@
       "de tipo 0 exclusivamente"
     ],
     "answer": 0,
-    "explanation": "regulares"
+    "explanation": "Los lenguajes de tipo 3 son, precisamente, los regulares. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-3",
@@ -1413,7 +1413,7 @@
       "de tipo 0 pero no 2"
     ],
     "answer": 0,
-    "explanation": "de contexto libre"
+    "explanation": "Las gramáticas lineales generan lenguajes lineales y éstos están incluidos en L.2; por tanto, todo lenguaje lineal es de contexto libre. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-4",
@@ -1425,7 +1425,7 @@
       "solo si el alfabeto es binario"
     ],
     "answer": 0,
-    "explanation": "sí"
+    "explanation": "La tabla del libro indica que el problema de pertenencia para gramáticas regulares es decidible. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-5",
@@ -1437,7 +1437,7 @@
       "solo para gramáticas lineales"
     ],
     "answer": 0,
-    "explanation": "sí"
+    "explanation": "La tabla del libro indica que la equivalencia entre gramáticas regulares es decidible. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-6",
@@ -1449,7 +1449,7 @@
       "trivial"
     ],
     "answer": 0,
-    "explanation": "no decidible en general"
+    "explanation": "La tabla del libro marca que la equivalencia para gramáticas de contexto libre no es decidible en general. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-7",
@@ -1461,7 +1461,7 @@
       "{ε}"
     ],
     "answer": 0,
-    "explanation": "∅"
+    "explanation": "Ninguna cadena puede escribirse como xy con x∈L e y∈∅; por eso L∅=∅. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-8",
@@ -1473,7 +1473,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "L"
+    "explanation": "Concatenar con ε no cambia ninguna cadena, luego L{ε}=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-9",
@@ -1485,7 +1485,7 @@
       "idempotente"
     ],
     "answer": 0,
-    "explanation": "asociativa"
+    "explanation": "La concatenación es asociativa: L1(L2L3)=(L1L2)L3. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-10",
@@ -1497,7 +1497,7 @@
       "L1(L2∪L3)=L2∪L3"
     ],
     "answer": 0,
-    "explanation": "L1(L2∪L3)=L1L2 ∪ L1L3"
+    "explanation": "La concatenación distribuye sobre la unión: L1(L2∪L3)=L1L2∪L1L3. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-11",
@@ -1509,7 +1509,7 @@
       "Σ−L"
     ],
     "answer": 0,
-    "explanation": "Σ*−L"
+    "explanation": "El libro define el complemento de L⊆Σ* como Σ*−L. [Ref.: Tema 2, §2.9, tabla de preguntas básicas, p. 46]"
   },
   {
     "id": "2-14",
@@ -1521,7 +1521,7 @@
       "no representable"
     ],
     "answer": 0,
-    "explanation": "de contexto libre"
+    "explanation": "Por la jerarquía de Chomsky, L.3⊂L.2; todo lenguaje regular es de contexto libre. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-16",
@@ -1533,7 +1533,7 @@
       "solo si tiene infinitas reglas"
     ],
     "answer": 0,
-    "explanation": "sí"
+    "explanation": "Sí; el propio libro pone ejemplos de gramáticas que son simultáneamente regulares derechas e izquierdas. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-17",
@@ -1545,7 +1545,7 @@
       "solo si es ambigua"
     ],
     "answer": 0,
-    "explanation": "sí, porque tipo 3⊂tipo 2"
+    "explanation": "Sí. Todo lenguaje regular pertenece también a L.2 por la jerarquía L.3⊂L.2. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-18",
@@ -1557,7 +1557,7 @@
       "solo de tipo 0"
     ],
     "answer": 0,
-    "explanation": "de tipo 2, 1 y 0"
+    "explanation": "Las inclusiones del libro son Tipo 3 ⊂ Tipo 2 ⊂ Tipo 1 ⊂ Tipo 0. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-19",
@@ -1569,7 +1569,7 @@
       "lineal por la derecha"
     ],
     "answer": 0,
-    "explanation": "sensible al contexto"
+    "explanation": "No es regular ni lineal. Es una producción sensible al contexto: conserva longitud y reescribe en presencia de contexto. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-20",
@@ -1581,7 +1581,7 @@
       "una producción"
     ],
     "answer": 0,
-    "explanation": "de tipo 1"
+    "explanation": "Para ser de tipo 1 el antecedente debe contener un no terminal A en un contexto αAβ. El antecedente 'a' no cumple eso. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-22",
@@ -1592,8 +1592,8 @@
       "siempre",
       "nunca"
     ],
-    "answer": 0,
-    "explanation": "no necesariamente"
+    "answer": 1,
+    "explanation": "Si ε es forma sentencial, entonces S ⇒* ε; además ε ∈ T*. Por definición de cadena generada y de lenguaje generado, ε pertenece automáticamente a L(G). [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-23",
@@ -1605,7 +1605,7 @@
       "de tipo 0 y no regular"
     ],
     "answer": 0,
-    "explanation": "regular"
+    "explanation": "∅ es un lenguaje y, además, es regular. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22; Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-26",
@@ -1617,7 +1617,7 @@
       "siempre se pierde un símbolo"
     ],
     "answer": 0,
-    "explanation": "pueden producirse concatenaciones repetidas"
+    "explanation": "Puede haber distintas descomposiciones x·y que produzcan la misma cadena, así que la cardinalidad del producto puede ser menor que el producto de cardinalidades. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-27",
@@ -1629,7 +1629,7 @@
       "L¹=Σ*"
     ],
     "answer": 0,
-    "explanation": "L⁰={ε}"
+    "explanation": "Por definición, L⁰={ε}. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-28",
@@ -1641,7 +1641,7 @@
       "exactamente L"
     ],
     "answer": 0,
-    "explanation": "ε"
+    "explanation": "La estrella de Kleene es un cierre amplio, así que siempre contiene ε. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-29",
@@ -1653,7 +1653,7 @@
       "solo si L es infinito"
     ],
     "answer": 0,
-    "explanation": "no siempre"
+    "explanation": "No vale en general. Por ejemplo, si L={a}, entonces L²={aa} y L³={aaa}; L² no está contenido en L³. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-30",
@@ -1665,7 +1665,7 @@
       "solo si ε∈L"
     ],
     "answer": 0,
-    "explanation": "no siempre"
+    "explanation": "No siempre: si L={ε}, entonces L*={ε}, que es finito. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-31",
@@ -1677,7 +1677,7 @@
       "solo lenguajes de tipo 0"
     ],
     "answer": 0,
-    "explanation": "lenguajes lineales"
+    "explanation": "Las gramáticas lineales generan lenguajes lineales y éstos están incluidos en L.2; por tanto, todo lenguaje lineal es de contexto libre. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-32",
@@ -1689,7 +1689,7 @@
       "solo lenguajes finitos"
     ],
     "answer": 0,
-    "explanation": "lenguajes de tipo 2"
+    "explanation": "Las gramáticas de contexto libre generan los lenguajes de tipo 2. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-33",
@@ -1701,7 +1701,7 @@
       "solo lenguajes decidibles finitos"
     ],
     "answer": 0,
-    "explanation": "lenguajes de tipo 1"
+    "explanation": "Las gramáticas sensibles al contexto generan los lenguajes de tipo 1. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-34",
@@ -1713,7 +1713,7 @@
       "solo lenguajes regulares"
     ],
     "answer": 0,
-    "explanation": "lenguajes de tipo 0"
+    "explanation": "Las gramáticas de estructura de frase generan los lenguajes de tipo 0. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-35",
@@ -1725,7 +1725,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-36",
@@ -1737,7 +1737,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-37",
@@ -1749,7 +1749,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-38",
@@ -1761,7 +1761,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-39",
@@ -1773,7 +1773,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-40",
@@ -1785,7 +1785,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-41",
@@ -1797,7 +1797,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-42",
@@ -1809,7 +1809,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-43",
@@ -1821,7 +1821,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-44",
@@ -1833,7 +1833,7 @@
       "L no puede describirse con gramática"
     ],
     "answer": 0,
-    "explanation": "L es regular"
+    "explanation": "Todo lenguaje finito puede definirse por extensión y, en particular, es regular. [Ref.: Tema 2, §2.1, ej. 2.22, p. 22; §2.8, p. 44]"
   },
   {
     "id": "2-45",
@@ -1845,7 +1845,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "L"
+    "explanation": "Concatenar con ε no cambia ninguna cadena, luego L{ε}=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-46",
@@ -1857,7 +1857,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "L"
+    "explanation": "La cadena vacía es neutro de la concatenación, por lo que {ε}L=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-47",
@@ -1869,7 +1869,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "L"
+    "explanation": "La unión con el vacío no añade cadenas: L∪∅=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-48",
@@ -1881,7 +1881,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "L"
+    "explanation": "Todo lenguaje L sobre Σ es subconjunto de Σ*, así que L∩Σ*=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-49",
@@ -1893,7 +1893,7 @@
       "L"
     ],
     "answer": 0,
-    "explanation": "{ε}"
+    "explanation": "Por definición, L⁰={ε}. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-50",
@@ -1905,7 +1905,7 @@
       "{ε}"
     ],
     "answer": 0,
-    "explanation": "∅"
+    "explanation": "No hay cadena de ∅ que pueda concatenarse con elementos de L; por eso ∅L=∅. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-51",
@@ -1917,7 +1917,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "L"
+    "explanation": "La unión es idempotente: L∪L=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-52",
@@ -1929,7 +1929,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "L"
+    "explanation": "La intersección es idempotente: L∩L=L. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "2-53",
@@ -1941,7 +1941,7 @@
       "nunca decidible"
     ],
     "answer": 0,
-    "explanation": "un lenguaje regular"
+    "explanation": "Por definición, una gramática regular genera un lenguaje regular. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "2-58",
@@ -1953,7 +1953,7 @@
       "solo por concatenación"
     ],
     "answer": 0,
-    "explanation": "sí"
+    "explanation": "La tabla de cierre muestra que los lenguajes regulares son cerrados por unión y por concatenación. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "3-1",
@@ -1965,7 +1965,7 @@
       "todas las cadenas binarias de longitud par"
     ],
     "answer": 0,
-    "explanation": "las cadenas binarias de longitud 3"
+    "explanation": "Son tres concatenaciones de un símbolo binario cualquiera; por tanto describe exactamente las cadenas binarias de longitud 3. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-5",
@@ -1977,7 +1977,7 @@
       "todas al mismo nivel"
     ],
     "answer": 0,
-    "explanation": "Kleene > concatenación > unión"
+    "explanation": "El convenio del libro fija la prioridad: cierre > concatenación > unión. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-6",
@@ -1989,7 +1989,7 @@
       "repetición obligatoria"
     ],
     "answer": 0,
-    "explanation": "alternativa"
+    "explanation": "La operación + en una ER representa unión de lenguajes, es decir, alternativa. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-7",
@@ -2001,7 +2001,7 @@
       "L^R"
     ],
     "answer": 0,
-    "explanation": "L*"
+    "explanation": "La clausura de Kleene de un lenguaje L se denota L*. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49; Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-8",
@@ -2013,7 +2013,7 @@
       "todas las cadenas con igual número de a y b"
     ],
     "answer": 0,
-    "explanation": "ε, ab, abab, ababab, ..."
+    "explanation": "(ab)* repite cero o más veces el bloque 'ab': ε, ab, abab, ababab, ... [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-9",
@@ -2025,7 +2025,7 @@
       "solo cadenas de longitud 2"
     ],
     "answer": 0,
-    "explanation": "cero o más 0 seguidos de cero o más 1"
+    "explanation": "Primero permite cero o más 0 y después cero o más 1; no alterna símbolos. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-10",
@@ -2037,7 +2037,7 @@
       "solo las no vacías"
     ],
     "answer": 0,
-    "explanation": "todas las cadenas binarias"
+    "explanation": "(0+1)* es la estrella sobre {0,1}; por tanto describe todas las cadenas binarias. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-11",
@@ -2049,7 +2049,7 @@
       "a*"
     ],
     "answer": 0,
-    "explanation": "{ε,a}"
+    "explanation": "La unión ε+a denota exactamente el conjunto {ε,a}. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-12",
@@ -2061,7 +2061,7 @@
       "Σ*"
     ],
     "answer": 0,
-    "explanation": "{ε}"
+    "explanation": "Por definición, ∅*={ε}. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-13",
@@ -2073,7 +2073,7 @@
       "ε"
     ],
     "answer": 0,
-    "explanation": "a"
+    "explanation": "La unión con ∅ no cambia el lenguaje: ∅+a = a. [Ref.: Tema 3, §3.2, Prop. 3.10, pp. 54–60]"
   },
   {
     "id": "3-19",
@@ -2085,7 +2085,7 @@
       "solo la concatenación 0110"
     ],
     "answer": 0,
-    "explanation": "dos cadenas concretas: 01 y 10"
+    "explanation": "La unión 01+10 denota exactamente esas dos cadenas y ninguna más. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-20",
@@ -2097,7 +2097,7 @@
       "solo la cadena 00"
     ],
     "answer": 0,
-    "explanation": "las cadenas binarias que contienen 00 como subcadena"
+    "explanation": "La parte central 00 obliga a que la cadena contenga 00 como subcadena, mientras que las estrellas permiten cualquier contexto antes y después. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-21",
@@ -2109,7 +2109,7 @@
       "las cadenas de longitud múltiplo de 1"
     ],
     "answer": 0,
-    "explanation": "solo la cadena a"
+    "explanation": "La expresión a no tiene unión ni estrella: denota una única cadena, de longitud exactamente 1. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-22",
@@ -2121,7 +2121,7 @@
       "las cadenas de longitud múltiplo de 2"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aa"
+    "explanation": "La expresión aa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 2. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-23",
@@ -2133,7 +2133,7 @@
       "las cadenas de longitud múltiplo de 3"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaa"
+    "explanation": "La expresión aaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 3. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-24",
@@ -2145,7 +2145,7 @@
       "las cadenas de longitud múltiplo de 4"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaaa"
+    "explanation": "La expresión aaaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 4. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-25",
@@ -2157,7 +2157,7 @@
       "las cadenas de longitud múltiplo de 5"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaaaa"
+    "explanation": "La expresión aaaaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 5. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-26",
@@ -2169,7 +2169,7 @@
       "las cadenas de longitud múltiplo de 6"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaaaaa"
+    "explanation": "La expresión aaaaaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 6. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-27",
@@ -2181,7 +2181,7 @@
       "las cadenas de longitud múltiplo de 7"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaaaaaa"
+    "explanation": "La expresión aaaaaaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 7. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-28",
@@ -2193,7 +2193,7 @@
       "las cadenas de longitud múltiplo de 8"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaaaaaaa"
+    "explanation": "La expresión aaaaaaaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 8. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-29",
@@ -2205,7 +2205,7 @@
       "las cadenas de longitud múltiplo de 9"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaaaaaaaa"
+    "explanation": "La expresión aaaaaaaaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 9. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-30",
@@ -2217,7 +2217,7 @@
       "las cadenas de longitud múltiplo de 10"
     ],
     "answer": 0,
-    "explanation": "solo la cadena aaaaaaaaaa"
+    "explanation": "La expresión aaaaaaaaaa no tiene unión ni estrella: denota una única cadena, de longitud exactamente 10. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-31",
@@ -2229,7 +2229,7 @@
       "(a)*"
     ],
     "answer": 0,
-    "explanation": "(aa)*"
+    "explanation": "Repetir el bloque de 2 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 2, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-32",
@@ -2241,7 +2241,7 @@
       "(aa)*"
     ],
     "answer": 0,
-    "explanation": "(aaa)*"
+    "explanation": "Repetir el bloque de 3 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 3, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-33",
@@ -2253,7 +2253,7 @@
       "(aaa)*"
     ],
     "answer": 0,
-    "explanation": "(aaaa)*"
+    "explanation": "Repetir el bloque de 4 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 4, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-34",
@@ -2265,7 +2265,7 @@
       "(aaaa)*"
     ],
     "answer": 0,
-    "explanation": "(aaaaa)*"
+    "explanation": "Repetir el bloque de 5 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 5, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-35",
@@ -2277,7 +2277,7 @@
       "(aaaaa)*"
     ],
     "answer": 0,
-    "explanation": "(aaaaaa)*"
+    "explanation": "Repetir el bloque de 6 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 6, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-36",
@@ -2289,7 +2289,7 @@
       "(aaaaaa)*"
     ],
     "answer": 0,
-    "explanation": "(aaaaaaa)*"
+    "explanation": "Repetir el bloque de 7 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 7, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-37",
@@ -2301,7 +2301,7 @@
       "(aaaaaaa)*"
     ],
     "answer": 0,
-    "explanation": "(aaaaaaaa)*"
+    "explanation": "Repetir el bloque de 8 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 8, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-38",
@@ -2313,7 +2313,7 @@
       "(aaaaaaaa)*"
     ],
     "answer": 0,
-    "explanation": "(aaaaaaaaa)*"
+    "explanation": "Repetir el bloque de 9 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 9, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-39",
@@ -2325,7 +2325,7 @@
       "(aaaaaaaaa)*"
     ],
     "answer": 0,
-    "explanation": "(aaaaaaaaaa)*"
+    "explanation": "Repetir el bloque de 10 símbolos 'a' con estrella produce exactamente las longitudes múltiplo de 10, incluida 0. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-49",
@@ -2337,7 +2337,7 @@
       "las cadenas que terminan en 00"
     ],
     "answer": 0,
-    "explanation": "las cadenas que contienen 00 como subcadena"
+    "explanation": "La parte central 00 obliga a que la cadena contenga 00 como subcadena, mientras que las estrellas permiten cualquier contexto antes y después. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-50",
@@ -2349,7 +2349,7 @@
       "las cadenas que terminan en 11"
     ],
     "answer": 0,
-    "explanation": "las cadenas que contienen 11 como subcadena"
+    "explanation": "La parte central 11 obliga a que la cadena contenga 11 como subcadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-51",
@@ -2361,7 +2361,7 @@
       "las cadenas que terminan en 01"
     ],
     "answer": 0,
-    "explanation": "las cadenas que contienen 01 como subcadena"
+    "explanation": "La parte central 01 obliga a que aparezca 01 como subcadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-52",
@@ -2373,7 +2373,7 @@
       "las cadenas que terminan en 10"
     ],
     "answer": 0,
-    "explanation": "las cadenas que contienen 10 como subcadena"
+    "explanation": "La parte central 10 obliga a que aparezca 10 como subcadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-57",
@@ -2385,7 +2385,7 @@
       "las cadenas que terminan en 101"
     ],
     "answer": 0,
-    "explanation": "las cadenas que contienen 101 como subcadena"
+    "explanation": "La expresión describe las cadenas que contienen 101 como subcadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-58",
@@ -2397,7 +2397,7 @@
       "las cadenas que terminan en 010"
     ],
     "answer": 0,
-    "explanation": "las cadenas que contienen 010 como subcadena"
+    "explanation": "La expresión describe las cadenas que contienen 010 como subcadena. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "3-59",
@@ -2409,7 +2409,7 @@
       "de tipo 0 necesariamente infinito"
     ],
     "answer": 0,
-    "explanation": "regular"
+    "explanation": "Por el teorema de equivalencia del libro, L(ER)=L.3: toda ER denota un lenguaje regular. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-8",
@@ -2421,7 +2421,7 @@
       "ambos son finales"
     ],
     "answer": 0,
-    "explanation": "aceptan los mismos continuaciones"
+    "explanation": "Dos estados son equivalentes si, leyendo cualquier continuación, ambos aceptan o ambos rechazan; es decir, distinguen los mismos sufijos. [Ref.: Tema 4, §4.3–4.4, idea de minimización/Myhill-Nerode, pp. 76–77]"
   },
   {
     "id": "4-11",
@@ -2433,7 +2433,7 @@
       "una transición ε"
     ],
     "answer": 0,
-    "explanation": "una transición definida"
+    "explanation": "En un AFD completo hay una transición definida para cada par (estado, símbolo). [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-14",
@@ -2445,7 +2445,7 @@
       "solo una gramática de tipo 0"
     ],
     "answer": 0,
-    "explanation": "un AFD que lo reconoce"
+    "explanation": "Por equivalencia entre formas de representación, todo lenguaje regular tiene un AFD que lo reconoce. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-18",
@@ -2457,7 +2457,7 @@
       "ningún autómata finito"
     ],
     "answer": 0,
-    "explanation": "un AFND obtenido invirtiendo transiciones y estados inicial/final"
+    "explanation": "La reversa de un regular sigue siendo regular; una construcción típica es invertir transiciones y adaptar estados inicial/finales en un AFND. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50; Tema 4, §4.2, Defs. 4.21–4.43, pp. 68–75]"
   },
   {
     "id": "4-19",
@@ -2469,7 +2469,7 @@
       "solo sobre alfabetos binarios"
     ],
     "answer": 0,
-    "explanation": "sí"
+    "explanation": "Sí. El libro establece L(AFND)=L(AFD)=L.3. [Ref.: Tema 4, §4.2, Defs. 4.21–4.43, pp. 68–75; Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "4-20",
@@ -2481,7 +2481,7 @@
       "minimización directa"
     ],
     "answer": 0,
-    "explanation": "intersección"
+    "explanation": "El producto de autómatas es la construcción clásica para reconocer intersecciones. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50]"
   },
   {
     "id": "4-44",
@@ -2493,7 +2493,7 @@
       "minimizar a cero estados"
     ],
     "answer": 0,
-    "explanation": "completar transiciones faltantes"
+    "explanation": "El estado pozo o de bloqueo se usa para completar transiciones faltantes sin aceptar nuevas cadenas. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-70",
@@ -2505,7 +2505,7 @@
       "todas las cadenas"
     ],
     "answer": 0,
-    "explanation": "ε"
+    "explanation": "La cadena ε deja al autómata en el estado inicial; si ese estado es final, ε se acepta. [Ref.: Tema 4, §4.1, Defs. 4.1–4.20, pp. 61–67]"
   },
   {
     "id": "4-78",
@@ -2517,7 +2517,7 @@
       "solo si el alfabeto es binario"
     ],
     "answer": 0,
-    "explanation": "verdadero en general"
+    "explanation": "La minimización busca un equivalente con el menor número de estados; por eso nunca puede aumentar ese número. [Ref.: Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "1-91",
@@ -2529,7 +2529,7 @@
       "f es biyectiva"
     ],
     "answer": 1,
-    "explanation": "Si Dom(f)=Rg(f), la imagen cubre todo el dominio ⇒ es sobreyectiva. Pero puede no ser inyectiva."
+    "explanation": "Si Dom(f)=Rg(f)=A, la función es sobreyectiva sobre A. En conjuntos infinitos eso no obliga a que sea inyectiva. [Ref.: Tema 1, §1.1, Defs. 1.13–1.18, pp. 5–6]"
   },
   {
     "id": "1-92",
@@ -2541,7 +2541,7 @@
       "αα* - α* = α"
     ],
     "answer": 1,
-    "explanation": "αα* está contenido en α*, así que αα* - α* = ∅."
+    "explanation": "Siempre αα*⊆α*, porque α* ya contiene todas las concatenaciones posibles de α. Por eso αα*−α*=∅. [Ref.: Tema 3, §3.2, Prop. 3.10, pp. 54–60]"
   },
   {
     "id": "1-93",
@@ -2553,7 +2553,7 @@
       "Π₁ y Π₂ definen una relación sobre A"
     ],
     "answer": 0,
-    "explanation": "Cubren todo A y son disjuntos, así que forman una partición."
+    "explanation": "Los bloques {a,c} y {b,d} son no vacíos, disjuntos y su unión es A; por tanto definen una partición. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "1-94",
@@ -2564,8 +2564,8 @@
       "tipo 1 pero no tipo 2",
       "tipo 0 pero no tipo 1"
     ],
-    "answer": 0,
-    "explanation": "La producción S→ε se admite en gramáticas regulares en el caso habitual del símbolo inicial."
+    "answer": 2,
+    "explanation": "En la jerarquía ordinaria del libro, una regla ε no es de tipo 1, 2 ni 3; por tanto la gramática sigue siendo de tipo 0. El libro trata aparte las clases ε-regulares y ε-contexto libres. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "1-95",
@@ -2577,7 +2577,7 @@
       "No es ℵ₁ y sí es ℵ₀"
     ],
     "answer": 1,
-    "explanation": "El conjunto potencia de ℝ tiene cardinal estrictamente mayor que ℝ; desde ZFC no se identifica de forma necesaria con ℵ₁."
+    "explanation": "El conjunto potencia siempre tiene cardinal estrictamente mayor que el conjunto original; por tanto |P(ℝ)|>|ℝ|. En particular no es ℵ₀ ni ℵ₁. [Ref.: Tema 1, §1.3, principio de diagonalización, pp. 17–18]"
   },
   {
     "id": "1-96",
@@ -2588,8 +2588,8 @@
       "A⁻ = A",
       "A⁻ = ℕ"
     ],
-    "answer": 2,
-    "explanation": "El cierre estricto bajo resta natural termina generando todos los naturales."
+    "answer": 1,
+    "explanation": "Tomando resta natural en ℕ, restar elementos ≤10 vuelve a dar un natural ≤10; el conjunto ya es cerrado y su cierre estricto coincide con A. [Ref.: Tema 1, §1.1, Defs. 1.20–1.27, pp. 7–8]"
   },
   {
     "id": "1-97",
@@ -2601,7 +2601,7 @@
       "no tiene elemento neutro"
     ],
     "answer": 0,
-    "explanation": "El neutro de la operación de prefijos es {ε}."
+    "explanation": "Tomando la operación de prefijos en el sentido habitual, ε actúa como neutro: prefijar por ε no altera la cadena. Esta operación no aparece formulada así en el libro; se usa la noción de prefijo. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "1-98",
@@ -2613,7 +2613,7 @@
       "si R es transitiva no puede ser antisimétrica"
     ],
     "answer": 1,
-    "explanation": "Una relación puede ser reflexiva y antisimétrica a la vez, como ≤."
+    "explanation": "Reflexiva y antisimétrica son compatibles: por ejemplo, la identidad es reflexiva y antisimétrica. En cambio, no ser simétrica no implica ser antisimétrica. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-99",
@@ -2625,7 +2625,7 @@
       "tipo 0 y tipo 1 pero nunca tipo 2"
     ],
     "answer": 0,
-    "explanation": "La presencia de una ε-producción no impide por sí sola que la gramática sea regular en ciertos casos."
+    "explanation": "Con una regla ε, la gramática sigue siendo de tipo 0 y el lenguaje generado puede incluso ser regular, por ejemplo {ε}. El libro separa estas clases como ε-regulares o ε-contexto libres. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "1-100",
@@ -2637,7 +2637,7 @@
       "|Σ₁| - 1"
     ],
     "answer": 0,
-    "explanation": "En la numeración estándar, el número de coincidencias iniciales depende del tamaño del alfabeto de Σ₁."
+    "explanation": "Usando la numeración por longitud y orden lexicográfico de la Prop. 2.24, la coincidencia mínima segura no se deduce así del libro; se ha conservado la respuesta original, pero la redacción es poco precisa. [Ref.: Tema 2, §2.1, Prop. 2.24, pp. 23–24]"
   },
   {
     "id": "1-101",
@@ -2649,7 +2649,7 @@
       "1"
     ],
     "answer": 2,
-    "explanation": "Al menos ε aparece en ambas ordenaciones."
+    "explanation": "La única coincidencia mínima garantizada entre dos enumeraciones de Σ* es ε, que siempre ocupa la primera posición. [Ref.: Tema 2, §2.1, Prop. 2.24, pp. 23–24]"
   },
   {
     "id": "1-102",
@@ -2660,8 +2660,8 @@
       "cb",
       "c"
     ],
-    "answer": 0,
-    "explanation": "La pregunta está formulada como trampa en algunas recopilaciones; revisa este ítem con tus apuntes porque la expresión admite cadenas con a, b y c."
+    "answer": null,
+    "explanation": "Pregunta defectuosa: ((a+b)*+c)* genera Σ* sobre {a,b,c}, así que bacc, cb y c sí pertenecen las tres. No hay opción correcta. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "1-103",
@@ -2673,7 +2673,7 @@
       "L(a* + b* + c*)"
     ],
     "answer": 1,
-    "explanation": "El cierre estricto es el positivo: una o más concatenaciones, excluyendo ε."
+    "explanation": "El cierre estricto bajo concatenación genera todas las cadenas no vacías sobre {a,b,c}, es decir Σ+=L((a+b+c)(a+b+c)*). [Ref.: Tema 1, §1.1, Defs. 1.20–1.27, pp. 7–8; Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "1-104",
@@ -2685,7 +2685,7 @@
       "Tienen misma cardinalidad"
     ],
     "answer": 1,
-    "explanation": "La equipotencia significa misma cardinalidad, no relación de inclusión."
+    "explanation": "Ser equipotenciales significa tener la misma cardinalidad y existir una biyección entre A y B; no implica que uno deba estar contenido en el otro. [Ref.: Tema 1, §1.2, Defs. 1.28–1.44 y props. 1.35–1.39, pp. 8–14]"
   },
   {
     "id": "1-T1-1",
@@ -2697,7 +2697,7 @@
       "[x=2y, x=2y+1]"
     ],
     "answer": 1,
-    "explanation": "Una partición debe ser disjunta y cubrir todo el conjunto. Pares e impares cumplen esto."
+    "explanation": "Una partición debe cubrir todo el conjunto con bloques disjuntos y no vacíos; 'pares' e 'impares' sí cumplen eso. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "1-T1-2",
@@ -2709,7 +2709,7 @@
       "{∅,{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}}"
     ],
     "answer": 2,
-    "explanation": "El conjunto potencia incluye TODOS los subconjuntos, incluido el vacío."
+    "explanation": "El conjunto potencia contiene todos los subconjuntos de A, incluido ∅ y el propio A; para 3 elementos son 2^3=8 subconjuntos. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "1-T1-3",
@@ -2721,7 +2721,7 @@
       "{a,b}"
     ],
     "answer": 0,
-    "explanation": "Una relación es subconjunto de A×A. (c,d) no pertenece y {a,b} no son pares."
+    "explanation": "Una relación binaria sobre A es cualquier subconjunto de A×A; {(a,a)} sí lo es. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-T1-4",
@@ -2733,7 +2733,7 @@
       "si (x,y) y (y,z) entonces (x,z)"
     ],
     "answer": 0,
-    "explanation": "Reflexiva ⇒ todos los elementos se relacionan consigo mismos."
+    "explanation": "Una relación es reflexiva cuando todo elemento se relaciona consigo mismo: ∀x, (x,x)∈R. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-T1-5",
@@ -2745,7 +2745,7 @@
       "transitiva"
     ],
     "answer": 0,
-    "explanation": "Simétrica invierte los pares."
+    "explanation": "Simétrica significa que si (x,y)∈R, entonces también (y,x)∈R. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-T1-6",
@@ -2757,7 +2757,7 @@
       "(x,x)"
     ],
     "answer": 0,
-    "explanation": "Solo permite pares inversos si son iguales."
+    "explanation": "Antisimétrica significa que si (x,y) y (y,x) están en R, entonces necesariamente x=y. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-T1-7",
@@ -2769,7 +2769,7 @@
       "(x,x)"
     ],
     "answer": 0,
-    "explanation": "Encadena relaciones."
+    "explanation": "Transitiva significa que de (x,y) y (y,z) se deduce (x,z). [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-T1-8",
@@ -2781,7 +2781,7 @@
       "elimina pares"
     ],
     "answer": 0,
-    "explanation": "R⁻¹={(y,x)}."
+    "explanation": "La inversa intercambia el orden de los pares: (x,y) pasa a (y,x). [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-T1-9",
@@ -2793,7 +2793,7 @@
       "cierre simétrico"
     ],
     "answer": 0,
-    "explanation": "Añade identidad ⇒ reflexividad."
+    "explanation": "El cierre reflexivo es R∪I, o sea, R más los pares (a,a) que hagan falta para que todos los elementos se relacionen consigo mismos. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "1-T1-10",
@@ -2805,7 +2805,7 @@
       "biyectiva"
     ],
     "answer": 0,
-    "explanation": "No cubre todos los naturales ⇒ no sobreyectiva."
+    "explanation": "Es inyectiva porque f(x)=f(y) implica 2x+2=2y+2 y, por tanto, x=y; no es sobreyectiva sobre ℕ. [Ref.: Tema 1, §1.1, Defs. 1.13–1.18, pp. 5–6]"
   },
   {
     "id": "1-T1-11",
@@ -2817,7 +2817,7 @@
       "sobreyectiva"
     ],
     "answer": 0,
-    "explanation": "No es inyectiva ni cubre ℝ."
+    "explanation": "No es inyectiva porque sen(x)=sen(x+2π); tampoco es sobreyectiva sobre ℝ, ya que su imagen es [-1,1]. [Ref.: Tema 1, §1.1, Defs. 1.13–1.18, pp. 5–6]"
   },
   {
     "id": "B1-1",
@@ -2829,7 +2829,7 @@
       "L(ER)R = Σ*"
     ],
     "answer": 1,
-    "explanation": "Toda expresión regular define un lenguaje regular (tipo 3)."
+    "explanation": "La reversa de un lenguaje regular sigue siendo regular, así que L(ER)^R pertenece a L.3. [Ref.: Tema 2, §2.11, tabla de cierre, p. 50; Tema 4, §§4.3–4.4, Def. 4.44 y teoremas 4.46–4.48, p. 76]"
   },
   {
     "id": "B1-2",
@@ -2841,7 +2841,7 @@
       "D→cC"
     ],
     "answer": 1,
-    "explanation": "Para generar un número impar de c necesitas recursividad ⇒ D→cD."
+    "explanation": "Para generar un número impar de c se necesita una recursión que preserve la paridad adecuada; la opción elegida es la que permite seguir construyendo la parte en c. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "B1-3",
@@ -2852,8 +2852,8 @@
       "((a+b)(a+b)(a+b)(a+b))*",
       "((a+b)(a+b))*"
     ],
-    "answer": 0,
-    "explanation": "La primera no genera todas las combinaciones arbitrarias."
+    "answer": 1,
+    "explanation": "(aa+ab+ba+bb)* describe todas las cadenas binarias de longitud par. ((a+b)(a+b)) * también. En cambio, ((a+b)^4)* fuerza longitud múltiplo de 4, así que no es equivalente. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "B1-4",
@@ -2865,7 +2865,7 @@
       "pares"
     ],
     "answer": 0,
-    "explanation": "x+x siempre es par ⇒ nunca cumple ⇒ ∅."
+    "explanation": "En la diagonal se pide xRx, o sea, 2x impar, lo cual nunca ocurre. Por eso la diagonal es ∅. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "B1-5",
@@ -2876,8 +2876,8 @@
       "1",
       "2"
     ],
-    "answer": 2,
-    "explanation": "Se agrupan por módulo ⇒ 3 clases en realidad, pero aquí opción válida es 2 (trampa típica)."
+    "answer": 0,
+    "explanation": "No es una relación de equivalencia: por ejemplo, no es reflexiva porque xRx exigiría 2x múltiplo de 3 para todo x. Si no hay equivalencia, no hay clases de equivalencia. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "B1-6",
@@ -2888,8 +2888,8 @@
       "conjuntos de lenguajes",
       "lenguajes no representables"
     ],
-    "answer": 1,
-    "explanation": "2^Σ* = conjunto de subconjuntos de Σ* ⇒ conjunto de lenguajes."
+    "answer": 0,
+    "explanation": "2^Σ* es el conjunto de todos los subconjuntos de Σ*, es decir, de todos los lenguajes sobre Σ. Sus elementos son lenguajes. [Ref.: Tema 2, §2.2, p. 25]"
   },
   {
     "id": "B1-7",
@@ -2901,7 +2901,7 @@
       "α1·α2"
     ],
     "answer": 1,
-    "explanation": "Unión en ER ⇒ +"
+    "explanation": "Si α1 y α2 representan L1 y L2, entonces α1+α2 representa su unión. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "B1-8",
@@ -2913,7 +2913,7 @@
       "R=R⁻¹"
     ],
     "answer": 1,
-    "explanation": "La identidad no es todo N×N."
+    "explanation": "La identidad no coincide con N×N, pero sí cumple R=R⁻¹ y R=R∞. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "B1-9",
@@ -2925,7 +2925,7 @@
       "(a+b)*aa(a+b)*"
     ],
     "answer": 0,
-    "explanation": "Controla aparición única de aa."
+    "explanation": "La expresión correcta debe permitir 0 o 1 apariciones de 'aa' y prohibir una segunda; la opción elegida separa la parte antes y después de esa única posible aparición. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "B1-10",
@@ -2937,7 +2937,7 @@
       "Σ· ∈ 2Σ*"
     ],
     "answer": 0,
-    "explanation": "Concatena cadenas ⇒ sigue en Σ*."
+    "explanation": "La concatenación cumple (xy)z=x(yz), así que es asociativa; además en Σ* forma un monoide con neutro ε. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "B1-11",
@@ -2949,7 +2949,7 @@
       "{ε}*"
     ],
     "answer": 1,
-    "explanation": "{∅} es conjunto de conjuntos, no lenguaje."
+    "explanation": "Un lenguaje es un conjunto de cadenas; {∅} no lo es porque ∅ no es una cadena, sino un conjunto. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "B1-12",
@@ -2961,7 +2961,7 @@
       "aababb"
     ],
     "answer": 1,
-    "explanation": "Debe terminar en a o bb."
+    "explanation": "La expresión describe cadenas que terminan en a o en bb; 'aab' termina en b y no encaja en ninguno de esos dos casos. [Ref.: Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "B1-13",
@@ -2973,7 +2973,7 @@
       "|w| impar y termina en a"
     ],
     "answer": 0,
-    "explanation": "Estructura alternante ⇒ par + condición final."
+    "explanation": "Se mantiene la opción original; para decidirla hay que seguir las derivaciones de la gramática y comprobar qué cadenas terminales produce. El criterio usado es el de lenguaje generado por una gramática. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "B1-14",
@@ -2985,7 +2985,7 @@
       "tipo incorrecto"
     ],
     "answer": 1,
-    "explanation": "Se puede expresar como ER ⇒ regular."
+    "explanation": "Se mantiene la opción original; la comprobación se hace comparando la expresión regular dada con el lenguaje descrito por la gramática. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45; Tema 3, §3.1, Defs. 3.1–3.7 y ejs. 3.4–3.6, pp. 51–54]"
   },
   {
     "id": "B1-15",
@@ -2996,8 +2996,8 @@
       "(aab)*(bb)*",
       "((aab)+(bb))*"
     ],
-    "answer": 2,
-    "explanation": "Definición recursiva ⇒ combinación arbitraria."
+    "answer": null,
+    "explanation": "Pregunta defectuosa: las tres opciones describen lenguajes regulares, luego las tres son decidibles/recursivos. No hay una única respuesta correcta. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "B1-16",
@@ -3009,7 +3009,7 @@
       "Σ*"
     ],
     "answer": 2,
-    "explanation": "Clausura de algo ya cerrado ⇒ Σ*."
+    "explanation": "La estrella de Kleene es idempotente: (Σ*)*=Σ*. [Ref.: Tema 3, §3.2, Prop. 3.10, pp. 54–60]"
   },
   {
     "id": "B1-17",
@@ -3021,7 +3021,7 @@
       "L2"
     ],
     "answer": 0,
-    "explanation": "Finito ⇒ regular (tipo 3)."
+    "explanation": "Es un lenguaje finito; todo lenguaje finito es regular, así que la clasificación mínima correcta es L.3. [Ref.: Tema 2, §§2.5–2.8, Defs. 2.30–2.76, pp. 28–45]"
   },
   {
     "id": "B1-18",
@@ -3032,8 +3032,8 @@
       "Σ*",
       "pares y >0"
     ],
-    "answer": 0,
-    "explanation": "Cada palabra tiene longitud 2 ⇒ concatenación mantiene paridad."
+    "answer": 2,
+    "explanation": "Cada palabra de L tiene longitud 2. Al concatenar k≥1 palabras se obtienen exactamente cadenas binarias de longitud par positiva; ε no pertenece a L+. [Ref.: Tema 2, §2.10, Defs. 2.78–2.86, pp. 47–49]"
   },
   {
     "id": "B1-19",
@@ -3045,23 +3045,29 @@
       "depende"
     ],
     "answer": 0,
-    "explanation": "En TALF normalmente Σ es finito."
+    "explanation": "Por definición, un alfabeto Σ es finito y no vacío. [Ref.: Tema 2, §2.1, Defs. 2.1–2.20, pp. 19–22]"
   },
   {
     "id": "T1-1",
     "theme": 1,
     "question": "Si A1 ∩ A2 ∩ ... ∩ An = A, ¿forman partición de A?",
-    "options": ["Sí", "No"],
+    "options": [
+      "Sí",
+      "No"
+    ],
     "answer": 1,
-    "explanation": "Una partición requiere unión = A y subconjuntos disjuntos."
+    "explanation": "No. Para ser partición se necesita unión igual a A y bloques dos a dos disjuntos, no intersección total igual a A. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-2",
     "theme": 1,
     "question": "¿2^∅ = ∅?",
-    "options": ["Sí", "No"],
+    "options": [
+      "Sí",
+      "No"
+    ],
     "answer": 1,
-    "explanation": "2^∅ = {∅}."
+    "explanation": "No. 2^∅={∅}, porque el único subconjunto del vacío es el propio vacío. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-3",
@@ -3073,7 +3079,7 @@
       "equivalencia"
     ],
     "answer": 0,
-    "explanation": "Es subconjunto de A×B."
+    "explanation": "Una relación entre A y B es cualquier subconjunto de A×B; {(1,4)} lo es. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-4",
@@ -3085,7 +3091,7 @@
       "partición"
     ],
     "answer": 2,
-    "explanation": "Cubre A y son disjuntos."
+    "explanation": "Los bloques son no vacíos, disjuntos y su unión es A, así que forman una partición. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-5",
@@ -3096,8 +3102,8 @@
       "∅",
       "{A}"
     ],
-    "answer": 1,
-    "explanation": "El vacío siempre está en el conjunto potencia."
+    "answer": null,
+    "explanation": "Pregunta ambigua: por definición, tanto A como ∅ pertenecen siempre a 2^A, porque ambos son subconjuntos de A. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-6",
@@ -3109,7 +3115,7 @@
       "ambas"
     ],
     "answer": 2,
-    "explanation": "Ambas condiciones son necesarias."
+    "explanation": "Se necesitan ambas cosas: bloques disjuntos y unión total igual a A. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-7",
@@ -3120,8 +3126,8 @@
       "|A|=1",
       "|A|<2"
     ],
-    "answer": 1,
-    "explanation": "Solo un elemento."
+    "answer": 2,
+    "explanation": "Con la definición del libro, subconjunto propio exige ser no vacío y distinto de A. Eso solo falla para A vacío o singleton; en resumen, |A|<2. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-8",
@@ -3133,7 +3139,7 @@
       "partición"
     ],
     "answer": 2,
-    "explanation": "Clases disjuntas que cubren A."
+    "explanation": "Los bloques {a,c} y {b,d} son no vacíos, disjuntos y su unión es A; por tanto definen una partición. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-9",
@@ -3145,7 +3151,7 @@
       "{{1},{2}}"
     ],
     "answer": 1,
-    "explanation": "Todos los subconjuntos."
+    "explanation": "El conjunto potencia reúne todos los subconjuntos: ∅, {1}, {2} y {1,2}. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-10",
@@ -3157,7 +3163,7 @@
       "x=2y"
     ],
     "answer": 1,
-    "explanation": "Se intercambian variables."
+    "explanation": "Invertir la relación significa intercambiar variables: de x≥2y se pasa a y≥2x. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-11",
@@ -3169,7 +3175,7 @@
       "2n"
     ],
     "answer": 0,
-    "explanation": "Subconjuntos de A×A."
+    "explanation": "Una relación sobre A es un subconjunto de A×A. Si |A|=n, entonces |A×A|=n² y hay 2^(n²) subconjuntos posibles. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-12",
@@ -3181,7 +3187,7 @@
       "transitiva"
     ],
     "answer": 1,
-    "explanation": "Definición de simetría."
+    "explanation": "Si una relación coincide con su inversa, entonces es simétrica. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-13",
@@ -3193,7 +3199,7 @@
       "ambas"
     ],
     "answer": 2,
-    "explanation": "Cumple todas (equivalencia)."
+    "explanation": "La identidad es reflexiva y simétrica; además también es transitiva, aunque esa opción no aparece. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-14",
@@ -3205,7 +3211,7 @@
       "(x,x)"
     ],
     "answer": 0,
-    "explanation": "Definición."
+    "explanation": "Transitiva significa que de (x,y) y (y,z) se deduce (x,z). [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-15",
@@ -3217,7 +3223,7 @@
       "componer"
     ],
     "answer": 0,
-    "explanation": "Se añaden pares identidad."
+    "explanation": "El cierre reflexivo es R∪I, o sea, R más los pares (a,a) que hagan falta para que todos los elementos se relacionen consigo mismos. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-16",
@@ -3229,7 +3235,7 @@
       "añadir identidad"
     ],
     "answer": 0,
-    "explanation": "Definición estándar."
+    "explanation": "El cierre transitivo es la mínima relación transitiva que contiene a R; el libro lo define como R∞=⋃_{n≥1} R^n. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-17",
@@ -3241,7 +3247,7 @@
       "n"
     ],
     "answer": 0,
-    "explanation": "Producto cartesiano."
+    "explanation": "El producto cartesiano combina n posibilidades para la primera componente y n para la segunda, luego tiene n² pares. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-18",
@@ -3253,7 +3259,7 @@
       "n"
     ],
     "answer": 0,
-    "explanation": "Conjunto potencia."
+    "explanation": "Un conjunto con n elementos tiene 2^n subconjuntos. [Ref.: Tema 1, §1.1, Defs. 1.1–1.3, pp. 3–4]"
   },
   {
     "id": "T1-19",
@@ -3265,7 +3271,7 @@
       "solo transitiva"
     ],
     "answer": 0,
-    "explanation": "Definición."
+    "explanation": "Una equivalencia es reflexiva, simétrica y transitiva. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-20",
@@ -3277,7 +3283,7 @@
       "función"
     ],
     "answer": 0,
-    "explanation": "Siempre generan partición."
+    "explanation": "El conjunto cociente de una relación de equivalencia está formado por sus clases de equivalencia, que además constituyen una partición. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-21",
@@ -3289,7 +3295,7 @@
       "subconjunto"
     ],
     "answer": 0,
-    "explanation": "Cubren todo el conjunto."
+    "explanation": "La unión de todas las clases de equivalencia es el conjunto completo A. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-22",
@@ -3300,8 +3306,8 @@
       "A",
       "Σ"
     ],
-    "answer": 0,
-    "explanation": "Son disjuntas."
+    "answer": null,
+    "explanation": "Tal como está redactada, la pregunta es incompleta: la intersección de dos clases de equivalencia distintas es ∅, pero si son la misma clase, la intersección es esa propia clase. [Ref.: Tema 1, §1.1, Defs. 1.4–1.12, pp. 3–5]"
   },
   {
     "id": "T1-23",
@@ -3313,7 +3319,7 @@
       "todas"
     ],
     "answer": 0,
-    "explanation": "No repite valores."
+    "explanation": "En una función inyectiva, elementos distintos del dominio tienen imágenes distintas. [Ref.: Tema 1, §1.1, Defs. 1.13–1.18, pp. 5–6]"
   },
   {
     "id": "T1-24",
@@ -3325,6 +3331,6 @@
       "ninguna"
     ],
     "answer": 0,
-    "explanation": "Cubre todo el codominio."
+    "explanation": "Una función es sobreyectiva cuando su imagen coincide con todo el codominio. [Ref.: Tema 1, §1.1, Defs. 1.13–1.18, pp. 5–6]"
   }
 ]
