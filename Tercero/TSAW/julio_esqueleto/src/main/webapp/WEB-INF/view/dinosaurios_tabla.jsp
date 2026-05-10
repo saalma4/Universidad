@@ -10,6 +10,7 @@
     Integer habitatid = (Integer) request.getAttribute("habitatid");
     Float tamanio = (Float) request.getAttribute("tamanio");
     Float peso = (Float) request.getAttribute("peso");
+    Integer editarId = (Integer) request.getAttribute("editarId");
 %>
 <head>
     <title>Dinosaurios</title>
@@ -39,6 +40,7 @@
     </label>
     <button type="submit">Filtrar</button>
 </form>
+
 <table border="1">
     <tr>
         <th>Nombre</th>
@@ -49,9 +51,42 @@
         <th>Habitats</th>
         <th></th>
         <th></th>
+        <th></th>
     </tr>
     <%
     for(Dinosaurio dinosaurio : dinosaurios){
+      if(editarId!=null && editarId.equals(dinosaurio.getId())){
+    %>
+    <form method="post" action="/editar">
+        <input hidden name="id" value="<%=dinosaurio.getId()%>">
+        <tr>
+            <td>
+                <input type="text" name="nombre" value="<%=dinosaurio.getNombre()%>">
+            </td>
+            <td><%=dinosaurio.getTamaño_metros()%></td>
+            <td><%=dinosaurio.getPeso_toneladas()%></td>
+            <td><%=dinosaurio.getPeriodo().getNombre()%></td>
+            <td><%=dinosaurio.getDieta().getTipo()%></td>
+            <td>
+                <%
+                    for(Habitat habitat: habitats){
+                %>
+                <label>
+                    <input type="checkbox" <%=dinosaurio.getHabitats().contains(habitat)?"checked":""%> name="habitats" value="<%=habitat.getId()%>">
+                    <%=habitat.getNombre()%>
+                </label>
+                <br>
+                <%
+                    }
+                %>
+            </td>
+            <td><a href="/duplicar?id=<%=dinosaurio.getId()%>">Duplicar</a></td>
+            <td><a href="/borrar?id=<%=dinosaurio.getId()%>">Borrar</a></td>
+            <td><button type="submit">Guardar</button></td>
+        </tr>
+    </form>
+    <%
+        }else{
     %>
     <tr>
         <td><%=dinosaurio.getNombre()%></td>
@@ -62,8 +97,10 @@
         <td><%=dinosaurio.getHabitatsString()%></td>
         <td><a href="/duplicar?id=<%=dinosaurio.getId()%>">Duplicar</a></td>
         <td><a href="/borrar?id=<%=dinosaurio.getId()%>">Borrar</a></td>
+        <td><a href="/?editarId=<%=dinosaurio.getId()%>">Editar</a></td>
     </tr>
     <%
+            }
         }
     %>
 </table>

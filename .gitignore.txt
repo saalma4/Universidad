@@ -1,0 +1,30 @@
+# --- ENTORNOS VIRTUALES (Lo más importante) ---
+# Ignora la carpeta del entorno virtual sin importar cómo la nombres
+.venv/
+venv/
+env/
+ENV/
+bin/
+Lib/
+Scripts/
+
+# --- PYTHON ---
+# Archivos temporales que genera Python al ejecutarse
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- CÓDIGO Y LIBRERÍAS ---
+# Ignora archivos de PyBullet o logs que puedan generarse
+*.log
+*.pckl
+
+# --- EDITORES DE CÓDIGO ---
+# Configuración local de tu VS Code o PyCharm (que será distinta en Windows y Linux)
+.vscode/
+.idea/
+
+# --- SISTEMA OPERATIVO ---
+# Basura que crea Windows y Linux para las miniaturas de carpetas
+Thumbs.db
+.DS_Store

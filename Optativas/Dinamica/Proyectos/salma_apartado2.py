@@ -1,6 +1,3 @@
-import math
-import queue
-import threading
 import time
 from dataclasses import dataclass
 
@@ -23,11 +20,11 @@ STOP_SPEED = 0.01
 class Parameters:
     mass: float = 6.80
     radius: float = 0.109
-    mu: float = 0.18
-    v0: float = 8.0
-    lane_length: float = 18.29
+    mu: float = 0.3
+    v0: float = 4.0
+    lane_length: float = 20.0
     launch_height: float = 0.111
-    time_scale: float = 1.0
+    time_scale: float = 0.5
 
     @property
     def beta(self) -> float:
@@ -51,40 +48,14 @@ def compute_theory(params: Parameters):
     }
 
 
-class BowlingSimulation(threading.Thread):
-    def __init__(self, params: Parameters, ui_callback):
-        super().__init__(daemon=True)
+class BowlingSimulation:
+    def __init__(self, params: Parameters):
         self.params = params
-        self.ui_callback = ui_callback
-        self._commands = queue.Queue()
-        self._stop_event = threading.Event()
-
-        self.client = None
+        self.client = p.connect(p.GUI)
         self.ball_id = None
         self.ground_id = None
+
         self.sim_time = 0.0
-        self.last_ui_send_time = 0.0
-        self.ball_launched = False
-        self.running = False
-        self.reached_rolling = False
-        self.rolling_time = None
-        self.rolling_speed = None
-        self.rolling_omega = None
-        self.theory = None
-
-    def post_command(self, cmd, payload=None):
-        self._commands.put((cmd, payload))
-
-    def stop(self):
-        self._stop_event.set()
-        self.post_command("quit")
-
-    def send_ui(self, kind, data):
-        self.ui_callback((kind, data))
-
-    def reset_world(self):
-        self.sim_time = 0.0
-        self.last_ui_send_time = 0.0
         self.ball_launched = False
         self.running = False
         self.reached_rolling = False
@@ -92,6 +63,75 @@ class BowlingSimulation(threading.Thread):
         self.rolling_speed = None
         self.rolling_omega = None
         self.theory = compute_theory(self.params)
+
+        self.mark_a_id = -1
+        self.mark_b_id = -1
+        self.state_text_id = -1
+        self.current_color = None
+
+        self.wall_last = time.perf_counter()
+        self.accumulator = 0.0
+        self.cam_x = 2.5
+
+        self.reset_world()
+
+    def close(self):
+        if self.client is not None:
+            p.disconnect(self.client)
+            self.client = None
+
+    def state_color(self, regime):
+        if regime == "Deslizamiento":
+            return [0.95, 0.40, 0.12, 1.0]
+        if regime == "Rodadura pura":
+            return [0.10, 0.72, 0.18, 1.0]
+        if regime == "Parada":
+            return [0.55, 0.55, 0.55, 1.0]
+        return [0.55, 0.55, 0.55, 1.0]
+
+    def update_ball_visuals(self, pos, orn, regime):
+        color = self.state_color(regime)
+        if color != self.current_color:
+            p.changeVisualShape(self.ball_id, -1, rgbaColor=color, physicsClientId=self.client)
+            self.current_color = color
+
+        r = self.params.radius * 1.18
+        tip_a = p.multiplyTransforms(pos, orn, [r, 0.0, 0.0], [0, 0, 0, 1])[0]
+        tip_b = p.multiplyTransforms(pos, orn, [0.0, 0.0, r], [0, 0, 0, 1])[0]
+
+        self.mark_a_id = p.addUserDebugLine(
+            pos, tip_a, [1, 1, 1], 2, 0,
+            replaceItemUniqueId=self.mark_a_id,
+            physicsClientId=self.client
+        )
+        self.mark_b_id = p.addUserDebugLine(
+            pos, tip_b, [0, 0, 0], 2, 0,
+            replaceItemUniqueId=self.mark_b_id,
+            physicsClientId=self.client
+        )
+        text_pos = [pos[0], pos[1], pos[2] + self.params.radius + 0.08]
+        self.state_text_id = p.addUserDebugText(
+            regime, text_pos, [0, 0, 0], 0.95, 0,
+            replaceItemUniqueId=self.state_text_id,
+            physicsClientId=self.client
+        )
+
+    def reset_world(self):
+        self.sim_time = 0.0
+        self.ball_launched = False
+        self.running = False
+        self.reached_rolling = False
+        self.rolling_time = None
+        self.rolling_speed = None
+        self.rolling_omega = None
+        self.theory = compute_theory(self.params)
+        self.mark_a_id = -1
+        self.mark_b_id = -1
+        self.state_text_id = -1
+        self.current_color = None
+        self.wall_last = time.perf_counter()
+        self.accumulator = 0.0
+        self.cam_x = 2.5
 
         p.resetSimulation(physicsClientId=self.client)
         p.setGravity(0, 0, -G, physicsClientId=self.client)
@@ -101,24 +141,55 @@ class BowlingSimulation(threading.Thread):
 
         half_len = self.params.lane_length / 2.0
         shape = p.createCollisionShape(p.GEOM_BOX, halfExtents=[half_len, 0.6, 0.02], physicsClientId=self.client)
-        visual = p.createVisualShape(p.GEOM_BOX, halfExtents=[half_len, 0.6, 0.02], rgbaColor=[0.82, 0.72, 0.52, 1], physicsClientId=self.client)
-        self.ground_id = p.createMultiBody(baseMass=0, baseCollisionShapeIndex=shape, baseVisualShapeIndex=visual,
-                                           basePosition=[half_len, 0, -0.02], physicsClientId=self.client)
-        p.changeDynamics(self.ground_id, -1, lateralFriction=self.params.mu, rollingFriction=0.0,
-                         spinningFriction=0.0, restitution=0.0, physicsClientId=self.client)
+        visual = p.createVisualShape(
+            p.GEOM_BOX, halfExtents=[half_len, 0.6, 0.02],
+            rgbaColor=[0.82, 0.72, 0.52, 1], physicsClientId=self.client
+        )
+        self.ground_id = p.createMultiBody(
+            baseMass=0,
+            baseCollisionShapeIndex=shape,
+            baseVisualShapeIndex=visual,
+            basePosition=[half_len, 0, -0.02],
+            physicsClientId=self.client
+        )
+        p.changeDynamics(
+            self.ground_id, -1,
+            lateralFriction=self.params.mu,
+            rollingFriction=0.0,
+            spinningFriction=0.0,
+            restitution=0.0,
+            physicsClientId=self.client
+        )
 
         cs = p.createCollisionShape(p.GEOM_SPHERE, radius=self.params.radius, physicsClientId=self.client)
-        vs = p.createVisualShape(p.GEOM_SPHERE, radius=self.params.radius, rgbaColor=[0.05, 0.05, 0.08, 1], physicsClientId=self.client)
-        self.ball_id = p.createMultiBody(baseMass=self.params.mass, baseCollisionShapeIndex=cs, baseVisualShapeIndex=vs,
-                                         basePosition=[0.0, 0.0, self.params.launch_height], physicsClientId=self.client)
-        p.changeDynamics(self.ball_id, -1, lateralFriction=self.params.mu, rollingFriction=0.0,
-                         spinningFriction=0.0, localInertiaDiagonal=[self.params.inertia] * 3,
-                         linearDamping=0.0, angularDamping=0.0, restitution=0.0,
-                         physicsClientId=self.client)
+        vs = p.createVisualShape(
+            p.GEOM_SPHERE, radius=self.params.radius,
+            rgbaColor=[0.08, 0.08, 0.12, 1],
+            physicsClientId=self.client
+        )
+        self.ball_id = p.createMultiBody(
+            baseMass=self.params.mass,
+            baseCollisionShapeIndex=cs,
+            baseVisualShapeIndex=vs,
+            basePosition=[0.0, 0.0, self.params.launch_height],
+            physicsClientId=self.client
+        )
+        p.changeDynamics(
+            self.ball_id, -1,
+            lateralFriction=self.params.mu,
+            rollingFriction=0.0,
+            spinningFriction=0.0,
+            localInertiaDiagonal=[self.params.inertia] * 3,
+            linearDamping=0.0,
+            angularDamping=0.0,
+            restitution=0.0,
+            physicsClientId=self.client
+        )
 
-        p.resetDebugVisualizerCamera(cameraDistance=4.0, cameraYaw=0, cameraPitch=-18,
-                                     cameraTargetPosition=[2.5, 0.0, 0.0], physicsClientId=self.client)
-        self.send_ui("reset_done", self.theory)
+        p.resetDebugVisualizerCamera(
+            cameraDistance=4.0, cameraYaw=0, cameraPitch=-18,
+            cameraTargetPosition=[self.cam_x, 0.0, 0.0], physicsClientId=self.client
+        )
 
     def launch_ball(self):
         self.sim_time = 0.0
@@ -129,56 +200,28 @@ class BowlingSimulation(threading.Thread):
         self.rolling_speed = None
         self.rolling_omega = None
         self.theory = compute_theory(self.params)
-        p.resetBasePositionAndOrientation(self.ball_id, [0.0, 0.0, self.params.launch_height], [0, 0, 0, 1], physicsClientId=self.client)
-        p.resetBaseVelocity(self.ball_id, linearVelocity=[self.params.v0, 0.0, 0.0], angularVelocity=[0.0, 0.0, 0.0], physicsClientId=self.client)
-        self.send_ui("launched", self.theory)
+        self.wall_last = time.perf_counter()
+        self.accumulator = 0.0
 
-    def _handle_commands(self):
-        while True:
-            try:
-                cmd, payload = self._commands.get_nowait()
-            except queue.Empty:
-                break
-            if cmd == "update_params":
-                self.params = payload
-            elif cmd == "reset":
-                self.params = payload
-                self.reset_world()
-            elif cmd == "launch":
-                self.launch_ball()
-            elif cmd == "quit":
-                return False
-        return True
+        p.resetBasePositionAndOrientation(
+            self.ball_id, [0.0, 0.0, self.params.launch_height], [0, 0, 0, 1],
+            physicsClientId=self.client
+        )
+        p.resetBaseVelocity(
+            self.ball_id,
+            linearVelocity=[self.params.v0, 0.0, 0.0],
+            angularVelocity=[0.0, 0.0, 0.0],
+            physicsClientId=self.client
+        )
 
-    def run(self):
-        self.client = p.connect(p.GUI)
-        self.reset_world()
-        while not self._stop_event.is_set():
-            if not self._handle_commands():
-                break
-            if self.ball_id is not None:
-                self.step_simulation()
-            p.stepSimulation(physicsClientId=self.client)
-            if self.running and self.ball_launched:
-                self.sim_time += SIM_DT
-            time.sleep(SIM_DT / max(self.params.time_scale, 1e-6))
-        if self.client is not None:
-            p.disconnect(self.client)
-
-    def step_simulation(self):
-        pos, _ = p.getBasePositionAndOrientation(self.ball_id, physicsClientId=self.client)
+    def current_state(self):
+        pos, orn = p.getBasePositionAndOrientation(self.ball_id, physicsClientId=self.client)
         lin_vel, ang_vel = p.getBaseVelocity(self.ball_id, physicsClientId=self.client)
         vx = lin_vel[0]
         omega = ang_vel[1]
         slip = vx - self.params.radius * omega
         speed_ref = max(abs(vx), abs(self.params.radius * omega), 1e-6)
         pure = abs(slip) / speed_ref <= PURE_ROLLING_REL_TOL
-
-        if self.ball_launched and not self.reached_rolling and pure:
-            self.reached_rolling = True
-            self.rolling_time = self.sim_time
-            self.rolling_speed = vx
-            self.rolling_omega = omega
 
         regime = "En espera"
         if self.ball_launched:
@@ -189,42 +232,80 @@ class BowlingSimulation(threading.Thread):
             else:
                 regime = "Deslizamiento"
 
-        now = time.perf_counter()
-        if now - self.last_ui_send_time >= 1.0 / 30.0:
-            data = {
-                "t": self.sim_time,
-                "x": pos[0],
-                "vx": vx,
-                "omega": omega,
-                "slip": slip,
-                "regime": regime,
-                "rolling_time": self.rolling_time,
-                "rolling_speed": self.rolling_speed,
-                "rolling_omega": self.rolling_omega,
-                "t_theory": self.theory["t_star"],
-                "v_theory": self.theory["v_star"],
-            }
-            self.send_ui("telemetry", data)
-            self.last_ui_send_time = now
+        return {
+            "pos": pos,
+            "orn": orn,
+            "vx": vx,
+            "omega": omega,
+            "slip": slip,
+            "pure": pure,
+            "regime": regime,
+        }
 
-        target_x = max(2.0, pos[0] + 1.5)
-        p.resetDebugVisualizerCamera(cameraDistance=4.0, cameraYaw=0, cameraPitch=-18,
-                                     cameraTargetPosition=[target_x, 0.0, 0.0], physicsClientId=self.client)
+    def step_until_now(self):
+        now = time.perf_counter()
+        elapsed = (now - self.wall_last) * max(self.params.time_scale, 0.0)
+        self.wall_last = now
+        self.accumulator += min(elapsed, 0.1)
+
+        max_steps = 200
+        steps = 0
+        while self.accumulator >= SIM_DT and steps < max_steps:
+            p.stepSimulation(physicsClientId=self.client)
+            if self.running and self.ball_launched:
+                self.sim_time += SIM_DT
+            self.accumulator -= SIM_DT
+            steps += 1
+
+        state = self.current_state()
+
+        if self.ball_launched and not self.reached_rolling and state["pure"]:
+            self.reached_rolling = True
+            self.rolling_time = self.sim_time
+            self.rolling_speed = state["vx"]
+            self.rolling_omega = state["omega"]
+
+        self.update_ball_visuals(state["pos"], state["orn"], state["regime"])
+
+        target_x = max(2.0, state["pos"][0] + 1.5)
+        self.cam_x += 0.10 * (target_x - self.cam_x)
+        p.resetDebugVisualizerCamera(
+            cameraDistance=4.0,
+            cameraYaw=0,
+            cameraPitch=-18,
+            cameraTargetPosition=[self.cam_x, 0.0, 0.0],
+            physicsClientId=self.client
+        )
+
+        return {
+            "t": self.sim_time,
+            "x": state["pos"][0],
+            "vx": state["vx"],
+            "omega": state["omega"],
+            "wR": state["omega"] * self.params.radius,
+            "slip": state["slip"],
+            "regime": state["regime"],
+            "rolling_time": self.rolling_time,
+            "rolling_speed": self.rolling_speed,
+            "rolling_omega": self.rolling_omega,
+            "t_theory": self.theory["t_star"],
+            "v_theory": self.theory["v_star"],
+        }
 
 
 class BowlingApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Apartado 2 - Simulacion base")
-        self.root.geometry("760x720")
-        self.ui_queue = queue.Queue()
+        self.root.geometry("760x740")
         self.vars = {}
         self.theory_labels = {}
         self.sim_labels = {}
-        self.sim = None
+
+        self.sim = BowlingSimulation(self.defaults())
         self.build_ui()
-        self.start_simulation()
-        self.root.after(30, self.process_ui_queue)
+        self.update_theory(self.sim.theory)
+        self.root.after(10, self.update_loop)
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
 
     def defaults(self):
@@ -282,6 +363,7 @@ class BowlingApp:
             ("x", "Posicion x (m)"),
             ("vx", "Velocidad lineal (m/s)"),
             ("omega", "Velocidad angular (rad/s)"),
+            ("wR", "omega·R (m/s)"),
             ("slip", "Slip v - Rω (m/s)"),
             ("rolling_time", "Instante medido de rodadura (s)"),
             ("rolling_speed", "Velocidad medida en rodadura (m/s)"),
@@ -293,7 +375,10 @@ class BowlingApp:
             lbl.grid(row=i, column=1, sticky="w", padx=(10, 0))
             self.sim_labels[key] = lbl
 
-        ttk.Label(main, text="En este apartado la bola sale sin giro inicial y se compara con la teoria ideal.").pack(anchor="w", pady=(12, 0))
+        ttk.Label(
+            main,
+            text="La bola cambia de color segun el estado y lleva dos marcas radiales para ver mejor la rotacion.",
+        ).pack(anchor="w", pady=(12, 0))
 
         self.load_defaults()
 
@@ -310,7 +395,7 @@ class BowlingApp:
             )
         except ValueError:
             raise ValueError("Todos los valores deben ser numericos.")
-        if params.mass <= 0 or params.radius <= 0 or params.mu <= 0 or params.v0 < 0 or params.lane_length <= 0:
+        if params.mass <= 0 or params.radius <= 0 or params.mu <= 0 or params.v0 < 0 or params.lane_length <= 0 or params.time_scale <= 0:
             raise ValueError("Revisa los valores de entrada.")
         return params
 
@@ -330,9 +415,9 @@ class BowlingApp:
         except ValueError as e:
             messagebox.showerror("Error", str(e))
             return
-        self.update_theory(compute_theory(params))
-        if self.sim is not None:
-            self.sim.post_command("update_params", params)
+        self.sim.params = params
+        self.sim.theory = compute_theory(params)
+        self.update_theory(self.sim.theory)
 
     def launch(self):
         try:
@@ -340,9 +425,9 @@ class BowlingApp:
         except ValueError as e:
             messagebox.showerror("Error", str(e))
             return
-        self.update_theory(compute_theory(params))
-        self.sim.post_command("update_params", params)
-        self.sim.post_command("launch")
+        self.sim.params = params
+        self.sim.launch_ball()
+        self.update_theory(self.sim.theory)
 
     def reset(self):
         try:
@@ -350,28 +435,18 @@ class BowlingApp:
         except ValueError as e:
             messagebox.showerror("Error", str(e))
             return
-        self.update_theory(compute_theory(params))
-        self.sim.post_command("reset", params)
+        self.sim.params = params
+        self.sim.reset_world()
+        self.update_theory(self.sim.theory)
+        for lbl in self.sim_labels.values():
+            lbl.config(text="-")
+        self.sim_labels["regime"].config(text="En espera")
 
-    def start_simulation(self):
-        params = self.defaults()
-        self.sim = BowlingSimulation(params, self.ui_queue.put)
-        self.sim.start()
-
-    def process_ui_queue(self):
-        try:
-            while True:
-                kind, data = self.ui_queue.get_nowait()
-                if kind == "reset_done":
-                    self.update_theory(data)
-                    for lbl in self.sim_labels.values():
-                        lbl.config(text="-")
-                    self.sim_labels["regime"].config(text="En espera")
-                elif kind == "telemetry":
-                    self.refresh_telemetry(data)
-        except queue.Empty:
-            pass
-        self.root.after(30, self.process_ui_queue)
+    def update_loop(self):
+        if self.sim is not None and self.sim.client is not None:
+            data = self.sim.step_until_now()
+            self.refresh_telemetry(data)
+        self.root.after(10, self.update_loop)
 
     def refresh_telemetry(self, data):
         self.sim_labels["regime"].config(text=data["regime"])
@@ -379,12 +454,13 @@ class BowlingApp:
         self.sim_labels["x"].config(text=f"{data['x']:.4f}")
         self.sim_labels["vx"].config(text=f"{data['vx']:.4f}")
         self.sim_labels["omega"].config(text=f"{data['omega']:.4f}")
+        self.sim_labels["wR"].config(text=f"{data['wR']:.4f}")
         self.sim_labels["slip"].config(text=f"{data['slip']:.6f}")
-        self.sim_labels["rolling_time"].config(text="-" if data['rolling_time'] is None else f"{data['rolling_time']:.4f}")
-        self.sim_labels["rolling_speed"].config(text="-" if data['rolling_speed'] is None else f"{data['rolling_speed']:.4f}")
-        if data['rolling_time'] is not None:
-            err_t = 100.0 * abs(data['rolling_time'] - data['t_theory']) / max(data['t_theory'], 1e-9)
-            err_v = 100.0 * abs(data['rolling_speed'] - data['v_theory']) / max(abs(data['v_theory']), 1e-9)
+        self.sim_labels["rolling_time"].config(text="-" if data["rolling_time"] is None else f"{data['rolling_time']:.4f}")
+        self.sim_labels["rolling_speed"].config(text="-" if data["rolling_speed"] is None else f"{data['rolling_speed']:.4f}")
+        if data["rolling_time"] is not None:
+            err_t = 100.0 * abs(data["rolling_time"] - data["t_theory"]) / max(data["t_theory"], 1e-9)
+            err_v = 100.0 * abs(data["rolling_speed"] - data["v_theory"]) / max(abs(data["v_theory"]), 1e-9)
             self.sim_labels["error_t"].config(text=f"{err_t:.4f}")
             self.sim_labels["error_v"].config(text=f"{err_v:.4f}")
         else:
@@ -393,7 +469,7 @@ class BowlingApp:
 
     def on_close(self):
         if self.sim is not None:
-            self.sim.stop()
+            self.sim.close()
         self.root.destroy()
 
 
