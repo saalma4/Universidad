@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1></h1>
+
+<form action="/especies/<%=especie.especie_id%>/guardar" method="post">
+    <h1>Edicion de especie</h1>
+    <input type="hidden" name="especie_id" value="<%= (especie ? especie.especie_id: '') %>" size="30" maxlength="30">
+    <table class="b-1">
+        <tr>
+            <td>Nombre: </td>
+            <td> <p> <%= (especie ? especie.especie: '') %></p> </td>
+        </tr>
+        <tr>
+            <td>Peso medio: </td>
+            <td> <input type="number" name="peso_medio" value="<%= (especie ? especie.peso_medio: '') %>" size="40" maxlength="40">  </td>
+        </tr>
+        <tr>
+            <td>Esperanza de vida: </td>
+            <td> <input type="number" name="esperanza_vida" value="<%= (especie ? especie.esperanza_vida: '') %>" size="40" maxlength="40">  </td>
+        </tr>
+        <tr>
+            <td>Familia: </td>
+            <td>
+                <select name="familia">
+                <%
+                familias.forEach(function(familia){
+                %>
+                    <option <%=especie&&especie.clasificacion === familia.familia_id?"selected":""%> label="<%=familia.familia%>" value="<%=familia.familia_id%>"/>
+                <%
+                });
+                %>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="submit">Guardar</button></td>
+        </tr>
+    </table>
+
+    <h2>Personajes de especie</h2>
+    <ul>
+        <%
+        personajes_de_especie.forEach(function(personaje){
+        %>
+        <li>
+            <%=personaje.nombre%>
+        </li>
+        <%
+        })
+        %>
+    </ul>
+
+</form>
+</body>
+</html>

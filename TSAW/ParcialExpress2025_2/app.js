@@ -5,7 +5,7 @@ const sequelize = require("sequelize");
 const bodyParser = require("body-parser");
 const path = require("path");
 const planetas = require("./controllers/planetas")
-const routes = require("routes/index")
+const routes = require("./routes/index")
 
 // APP y RENDERS  //////////////////////////////////////////////////////////////////////////////////////////////////////
 const app = express();
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-app.get('/', planetas.listarPlanetas)
+app.use('/', routes);
 
 app.use((req, res, next) => {
   const err = new Error(`${req.url} not found in this server`);

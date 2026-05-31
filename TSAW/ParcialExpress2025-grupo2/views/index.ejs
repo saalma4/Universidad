@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>hace mucho tiempo, en una galaxia muy muy lejana...</h1>
+
+<table style="border: 1px solid black;">
+  <tr>
+    <th style="border: 1px solid black;"><a href="/?filtro=titulo">TITULO</a></th>
+    <th style="border: 1px solid black;"><a href="/?filtro=anyo">AÑO</a></th>
+    <th style="border: 1px solid black;">TEXTO APERTURA</th>
+    <th style="border: 1px solid black;"></th>
+  </tr>
+  <% peliculas.forEach(function(pelicula) { %>
+    <tr>
+      <td style="border: 1px solid black;"> <%= pelicula.titulo %> </td>
+      <td style="border: 1px solid black;"> <%=pelicula.anyo %> </td>
+      <td style="border: 1px solid black;"> <%= pelicula.texto_apertura %> </td>
+      <td style="border: 1px solid black;"><a href="/frases/<%= pelicula.pelicula_id %>">Frases</a> </td>
+    </tr>
+  <% }); %>
+</table>
+</body>
+</html>

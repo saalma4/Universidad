@@ -5,9 +5,9 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1></h1>
+    <h1>Planteas Starwars</h1>
 
-    <table>
+    <table class="">
       <tr>
         <th>NOMBRE</th>
         <th>DIAMTETRO</th>
@@ -27,7 +27,7 @@
                 return especie.planeta === planeta.planeta_id
             }).forEach((especie)=>{
               %>
-                 <a href="/especie/<%=especie.especie_id%>"><%=especie.especie%></a>
+                 <a href="/especies/<%=especie.especie_id%>"><%=especie.especie%></a>
             <br>
             <%
             })

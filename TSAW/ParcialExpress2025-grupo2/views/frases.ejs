@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>Frases célebres de la pelicula: <%=pelicula.titulo%></h1>
+
+<table style="border: 1px solid black;">
+  <tr>
+    <th style="border: 1px solid black;"><a href="/?filtro=titulo">ID</a></th>
+    <th style="border: 1px solid black;"><a href="/?filtro=anyo">Frase</a></th>
+    <th style="border: 1px solid black;">Personaje</th>
+  </tr>
+  <% frases.forEach(function(frase) { %>
+    <tr>
+      <td style="border: 1px solid black;"> <%= frase.frase_id %> </td>
+      <td style="border: 1px solid black;"> <%= frase.frase %> </td>
+      <td style="border: 1px solid black;"> <%= frase.personaje_Personaje.nombre %> </td>
+    </tr>
+  <% }); %>
+</table>
+</body>
+</html>
