@@ -22,7 +22,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-//estaba el 80
+//estaba el 80 y ese es un puerto de uso privilegiado
 #define PORT     9000
 #define BUFSIZE  1024
 
@@ -56,7 +56,7 @@ int main(void)
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family      = AF_INET;
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    //ponia prt
+    //ponia prt y la estructura sockaddr_in no tiene ningun elemento llamado sin_prt
     serv_addr.sin_port         = htons(PORT);
 
     if (bind(listen_fd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
@@ -84,6 +84,7 @@ int main(void)
                inet_ntoa(cli_addr.sin_addr), ntohs(cli_addr.sin_port));
         fflush(stdout);
 
+        //aqui, la lectura de los datos no estaba en un bucle, por lo que cuando se eviaban cantidades de datos 
         
         while((n = read(conn_fd, buffer, BUFSIZE)) > 0){
                 printf("server: received %zd bytes\n", n);
