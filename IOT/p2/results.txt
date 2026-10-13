@@ -1,0 +1,51 @@
+ETAPA 1:
+
+terminal 1 (servidor): 
+./P2_conc_server
+server: listening on port 9100, my process number is 109964
+server: client 1 connected from 127.0.0.1
+server: client 2 connected from 127.0.0.1
+server: child 110090 finished with client 1
+server: child 110117 finished with client 2
+
+terminal 2 (cliente 1):
+./P2_conc_client 127.0.0.1 9100
+client: hello, you are client number 1
+client: goodbye
+
+terminal 3 (cliente 2):
+./P2_conc_client 127.0.0.1 9100
+client: hello, you are client number 2
+client: goodbye
+client: finished in 6.00 seconds
+
+ETAPA 2:
+
+Concurrent clients | Slowest client time (s) | Server processes
+-------------------|-------------------------|-----------------
+1                  |          6.00           |        2
+2                  |          6.00           |        3
+3                  |          6.00           |        4
+
+
+ETAPA 3:
+
+3.1. Se controla que el write sea correcto y en caso de no serlo (abandona el cliente), muestra error.
+./P2_conc_server
+server: listening on port 9100, my process number is 125404
+server: client 1 connected from 127.0.0.1
+write: Broken pipe
+
+3.2. Al ejecutar el comando que me da los procesos que empiecen por Z, vemos que hay 3:
+ps -e -o stat,cmd | grep '^Z'
+Z+   [P2_conc_server] <defunct>
+Z+   [P2_conc_server] <defunct>
+Z+   [P2_conc_server] <defunct>
+
+3.3 Se vuelve a conectar un cliente sin problema
+./P2_conc_server
+server: listening on port 9100, my process number is 140787
+server: client 1 connected from 127.0.0.1
+write: Broken pipe
+server: client 2 connected from 127.0.0.1
+server: child 141744 finished with client 2
