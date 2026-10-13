@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Yerai</title>
+  <style>
+    :root {
+      --navy: #0F3D56;
+      --teal: #176B85;
+      --pale: #E6F2F6;
+      --button: #171C22;
+      --ink: #16343A;
+      --bg: #F4F9FA;
+      --surface: #FFFFFF;
+      --line: #C7DCE3;
+      --muted: #55727A;
+      --safe: #167245;
+      --safe-bg: #EAF5EE;
+      --warn: #9B5C08;
+      --warn-bg: #FFF4DD;
+      --danger: #BE2929;
+      --danger-bg: #FCE8E8;
+      --font-scale: 1;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #eaf1f3;
+      font-size: calc(100% * var(--font-scale));
+    }
+    [data-theme="dark"] {
+      --navy: #0F3D56;
+      --teal: #176B85;
+      --pale: #233F49;
+      --button: #171C22;
+      --ink: #EAF3F5;
+      --bg: #101D22;
+      --surface: #18313A;
+      --line: #48636B;
+      --muted: #B4C9CE;
+      --safe: #9CE0B7;
+      --safe-bg: #173D31;
+      --warn: #FFD98D;
+      --warn-bg: #493B22;
+      --danger: #FFB1B1;
+      --danger-bg: #492929;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #eaf1f3;
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+    [data-theme="dark"] body { background: #10191e; }
+    button, input, select, textarea { font: inherit; }
+    button { color: inherit; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid #66b7d0;
+      outline-offset: 2px;
+    }
+    .app-frame {
+      width: min(100%, 440px);
+      min-height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      overflow: hidden;
+      box-shadow: 0 12px 42px rgba(14, 49, 61, .12);
+    }
+    .app-header {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      color: #fff;
+      background: var(--navy);
+    }
+    .brand-mark {
+      width: 38px; height: 38px; flex: 0 0 38px;
+      display: grid; place-items: center;
+      border-radius: 13px;
+      border: 0; padding: 0; cursor: pointer;
+      color: #fff;
+      background: var(--teal);
+    }
+    .brand-copy { flex: 1; min-width: 0; }
+    .brand-name { margin: 0; font-size: 1.38rem; line-height: 1.1; font-weight: 750; letter-spacing: -.03em; }
+    .brand-tagline { margin: 4px 0 0; font-size: .72rem; opacity: .92; }
+    .header-actions { display: flex; align-items: center; gap: 2px; }
+    .icon-button {
+      width: 34px; height: 36px; display: grid; place-items: center;
+      border: 0; border-radius: 10px; background: transparent; color: #fff; cursor: pointer;
+    }
+    .icon-button:hover, .icon-button.current { background: rgba(255,255,255,.16); }
+    main { flex: 1; padding: 14px 12px 12px; background: var(--surface); }
+    .footer {
+      display: flex; justify-content: center; align-items: center; gap: 6px;
+      min-height: 38px; padding: 8px 12px; text-align: center;
+      color: var(--muted); background: var(--pale); font-size: .72rem;
+    }
+    .demo-strip {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      margin-bottom: 10px; padding: 7px 9px; border: 1px solid var(--line);
+      border-radius: 10px; color: var(--muted); background: var(--bg); font-size: .7rem;
+    }
+    .demo-label { display: inline-flex; align-items: center; gap: 5px; }
+    .demo-chip { color: var(--teal); font-weight: 750; text-transform: uppercase; letter-spacing: .06em; }
+    .text-button {
+      border: 0; padding: 3px 2px; background: transparent; color: var(--teal);
+      font-weight: 700; cursor: pointer;
+    }
+    .page-card {
+      padding: 12px; border-radius: 14px; background: var(--pale);
+      color: var(--ink); margin-bottom: 10px;
+    }
+    .eyebrow { margin: 0 0 5px; font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+    .page-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .domain { display: flex; align-items: center; gap: 7px; font-weight: 700; overflow-wrap: anywhere; }
+    .active-state { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: .75rem; white-space: nowrap; }
+    .notice {
+      display: flex; gap: 10px; margin: 10px 0; padding: 12px;
+      border-radius: 14px; border: 1px solid transparent;
+    }
+    .notice.safe { color: var(--safe); background: var(--safe-bg); }
+    .notice.warn { color: var(--warn); background: var(--warn-bg); }
+    .notice.danger { color: var(--danger); background: var(--danger-bg); }
+    .notice-icon { flex: 0 0 auto; margin-top: 1px; }
+    .notice h2 { margin: 0; font-size: .85rem; line-height: 1.35; }
+    .notice p { margin: 5px 0 0; color: var(--ink); line-height: 1.4; }
+    .notice .notice-action { margin-top: 9px; }
+    .notice .notice-action button {
+      width: 100%; min-height: 36px; border: 0; border-radius: 999px;
+      color: #fff; background: var(--danger); font-weight: 700; cursor: pointer;
+    }
+    .section-title { margin: 12px 0 8px; font-size: .83rem; font-weight: 750; }
+    .mode-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+    .mode-card {
+      min-height: 80px; border: 1px solid var(--line); border-radius: 13px;
+      background: var(--pale); color: var(--ink); display: flex; flex-direction: column;
+      justify-content: center; align-items: center; gap: 4px; padding: 8px 4px;
+      cursor: pointer; transition: transform .12s ease, background .12s ease;
+    }
+    .mode-card:hover { transform: translateY(-1px); }
+    .mode-card.selected { background: var(--teal); border-color: var(--teal); color: #fff; }
+    .mode-card strong { font-size: .76rem; }
+    .mode-card small { font-size: .65rem; opacity: .86; }
+    .mode-info {
+      margin-top: 8px; padding: 11px 12px; border: 1px solid #A8D2E0;
+      border-radius: 13px; color: var(--ink); background: var(--pale);
+    }
+    [data-theme="dark"] .mode-info { border-color: #557780; }
+    .mode-info-title { display: flex; align-items: center; gap: 7px; color: var(--teal); font-weight: 750; }
+    .mode-info p { margin: 8px 0 5px; line-height: 1.43; }
+    .mode-info small { color: var(--muted); }
+    .primary-button, .secondary-button, .outline-button {
+      min-height: 42px; border-radius: 13px; cursor: pointer; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .primary-button { width: 100%; margin-top: 10px; border: 0; background: var(--button); color: #fff; }
+    .primary-button:hover { filter: brightness(1.14); }
+    .secondary-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 9px; }
+    .outline-button { width: 100%; border: 1px solid var(--line); background: transparent; color: var(--ink); }
+    .outline-button:hover { background: var(--pale); }
+    .back-button { display: flex; width: fit-content; gap: 7px; align-items: center; margin: 0 auto 12px; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+    .page-heading { margin: 0 0 10px; font-size: 1.24rem; letter-spacing: -.02em; }
+    .risk-summary { padding: 12px; border-radius: 14px; background: var(--pale); }
+    .risk-summary .domain { margin-bottom: 9px; }
+    .risk-line { display: flex; gap: 7px; align-items: center; }
+    .risk-score { display: flex; align-items: baseline; gap: 7px; margin-top: 11px; }
+    .risk-score strong { font-size: 2.2rem; line-height: 1; }
+    .risk-score span { color: var(--muted); font-size: .75rem; }
+    .risk-summary p { margin: 7px 0 0; color: var(--muted); line-height: 1.4; font-size: .77rem; }
+    .checks { margin: 13px 0; }
+    .check-row { display: flex; align-items: flex-start; gap: 8px; padding: 6px 2px; }
+    .check-icon { flex: 0 0 16px; color: var(--teal); margin-top: 1px; }
+    .check-row strong { display: block; font-size: .78rem; font-weight: 650; }
+    .check-row small { display: block; margin-top: 3px; color: var(--muted); font-size: .72rem; line-height: 1.35; }
+    .explanation { padding: 11px 12px; border-radius: 13px; background: var(--safe-bg); color: var(--ink); }
+    .explanation.risk { background: var(--warn-bg); }
+    .explanation strong { display: block; margin-bottom: 5px; font-size: .78rem; }
+    .explanation p { margin: 0; line-height: 1.42; font-size: .78rem; }
+    .detail-list { margin-top: 8px; display: grid; gap: 7px; }
+    .detail-item { padding: 10px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+    .detail-item.active { border-color: var(--danger); box-shadow: 0 0 0 2px rgba(190,41,41,.13); }
+    .detail-item strong { display: block; font-size: .78rem; }
+    .detail-item p { margin: 4px 0 8px; font-size: .74rem; color: var(--muted); line-height: 1.4; }
+    .detail-item button { border: 0; padding: 0; color: var(--teal); background: transparent; font-weight: 700; font-size: .72rem; cursor: pointer; }
+    .subtle-note { margin: 9px 0 0; color: var(--muted); font-size: .7rem; line-height: 1.4; }
+    .history-list { display: grid; gap: 8px; }
+    .history-item { display: flex; align-items: center; gap: 9px; padding: 11px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+    .history-item .history-copy { flex: 1; min-width: 0; }
+    .history-item strong { display: block; font-size: .8rem; }
+    .history-item small { display: block; margin-top: 3px; color: var(--muted); font-size: .7rem; }
+    .history-item button { border: 0; background: transparent; color: var(--teal); font-weight: 700; cursor: pointer; }
+    .setting-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+    .setting-row:last-child { border-bottom: 0; }
+    .setting-row label, .setting-row strong { font-size: .8rem; }
+    .setting-row small { display: block; color: var(--muted); font-size: .7rem; margin-top: 3px; }
+    select, input, textarea {
+      width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 10px 11px;
+      color: var(--ink); background: var(--surface);
+    }
+    .setting-row select { width: auto; min-width: 115px; }
+    textarea { min-height: 84px; resize: vertical; }
+    .form-label { display: block; margin: 12px 0 6px; font-size: .78rem; font-weight: 700; }
+    .tag-options { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag-option { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 9px; font-size: .73rem; }
+    .tag-option input { width: auto; accent-color: var(--teal); }
+    .inline-feedback { display: flex; align-items: flex-start; gap: 7px; margin: 0 0 10px; padding: 9px 10px; border: 1px solid #A8D2E0; border-radius: 11px; color: var(--ink); background: var(--pale); font-size: .75rem; line-height: 1.4; }
+    .empty-state { padding: 18px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px; }
+    @media (min-width: 600px) {
+      body { padding: 20px 0; }
+      .app-frame { min-height: min(860px, calc(100vh - 40px)); }
+    }
+    @media (max-width: 380px) {
+      main { padding: 11px 9px; }
+      .app-header { padding: 12px 11px; }
+      .brand-name { font-size: 1.24rem; }
+      .mode-card { min-height: 74px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-frame">
+    <header class="app-header" id="appHeader"></header>
+    <main id="content" tabindex="-1"></main>
+    <footer class="footer" id="appFooter"></footer>
+  </div>
+  <script>
+    const I18N = {
+      es: {
+        tagline: "Protección inteligente", demo: "Demostración", scenario: "Escenario",
+        switchSafe: "Probar sitio seguro", switchRisk: "Simular posible fraude",
+        currentPage: "Página actual", active: "Activo", safeTitle: "Sin amenazas conocidas",
+        safeBody: "No se han detectado señales de riesgo. Esto no garantiza seguridad absoluta.",
+        riskTitle: "Peligro: posible fraude", riskBody: "Se han detectado señales importantes de riesgo. Se recomienda no continuar.",
+        navigation: "Ver opciones de navegación", protection: "Nivel de protección",
+        agile: "Ágil", balanced: "Equilibrado", deep: "Profundo",
+        agileDesc: "Consulta la reputación del sitio y busca amenazas críticas. Es la opción más rápida; algunos avisos pueden llegar después de abrir la página.",
+        balancedDesc: "Combina reputación web y análisis estructural. Equilibra profundidad de análisis y rapidez.",
+        deepDesc: "Revisa el contenido, la privacidad y posibles tácticas de engaño antes de continuar. Puede tardar más.",
+        defaultMode: "Modo predeterminado", agileTime: "Respuesta objetivo: menos de 3 s",
+        balancedTime: "Respuesta objetivo: menos de 5 s", deepTime: "Auditoría objetivo: menos de 10 s",
+        report: "Ver informe de seguridad", sendReport: "Reportar", history: "Historial",
+        footer: "Evaluación orientativa, no garantiza seguridad absoluta",
+        back: "Volver", reportTitle: "Informe de seguridad", checks: "Comprobaciones previstas",
+        reputation: "Reputación de URL", ai: "Análisis de contenido e IA",
+        community: "Reportes comunitarios", cookies: "Cookies y privacidad",
+        suspicious: "Elementos sospechosos", thirdParty: "Reputación de terceros",
+        demoResult: "Resultado de demostración", explanation: "Explicación del resultado",
+        riskExplanation: "Se han observado señales de presión para comprar y detalles que conviene revisar antes de compartir datos o pagar.",
+        safeExplanation: "Las comprobaciones de demostración no han encontrado señales conocidas de riesgo en este sitio.",
+        viewElements: "Ver elementos sospechosos", hideElements: "Ocultar elementos",
+        concern1: "Urgencia difícil de comprobar", concern1desc: "El mensaje de oferta crea presión para decidir rápidamente.",
+        concern2: "Opción promocional seleccionada", concern2desc: "Una casilla de comunicaciones parece estar activada de antemano.",
+        concern3: "Condiciones de renovación poco claras", concern3desc: "El coste o la cancelación de una suscripción no se explican con claridad.",
+        highlight: "Resaltar en la página", highlighted: "Resaltado en la vista de demostración",
+        historyTitle: "Actividad reciente", clearHistory: "Borrar historial local",
+        historyPrivacy: "Este historial de muestra es local a esta demostración.",
+        safeSite: "tienda-segura.example", riskySite: "ejemplo.com",
+        reportFormTitle: "Enviar un reporte", reportPrompt: "¿Qué te ha parecido sospechoso?",
+        reportPrivacy: "El reporte de demostración no se envía a ningún servicio. Yeray no analiza contraseñas ni datos de pago.",
+        tagPhishing: "Suplantación", tagPrice: "Precio engañoso", tagPrivacy: "Privacidad o cookies",
+        tagPressure: "Presión para comprar", detailsLabel: "Detalles (opcional)",
+        detailsPlaceholder: "Describe brevemente lo que viste", submit: "Enviar reporte",
+        settingsTitle: "Preferencias", language: "Idioma", appearance: "Apariencia",
+        light: "Claro", dark: "Oscuro", notifications: "Avisos de seguridad",
+        notificationsDesc: "Avisar si un sitio analizado vuelve a mostrar señales de riesgo.",
+        textSize: "Tamaño del texto", privacyTitle: "Privacidad", privacyDesc: "Solo se analiza la información necesaria de la página. Los campos con contraseñas o tarjetas quedan fuera del análisis.",
+        alertCenter: "Centro de notificaciones", sampleAlert: "Aviso de seguridad", sampleAlertBody: "Se detectó una posible estafa en un sitio que ya habías visitado.",
+        noNotifications: "No hay avisos nuevos.", deleteTitle: "Eliminar cuenta", deleteConfirmBody: "La eliminación de una cuenta requiere verificar la identidad y confirmar la solicitud desde el backend seguro.",
+        confirmDelete: "Solicitar eliminación", cancel: "Cancelar", reportDetailsHint: "No incluyas contraseñas, datos de pago ni otra información personal.",
+        reportSaved: "Tu reporte quedó guardado en esta demostración.", trustTitle: "Dominios de confianza", trustBody: "Los dominios que marques como confiables dejarán de mostrar avisos preventivos en esta demostración.",
+        trustedDomain: "Dominio en lista de confianza", trustedDomainBody: "Los avisos preventivos están silenciados para este dominio. Puedes abrir el informe para consultar la evaluación.",
+        trustSite: "Añadir ejemplo.com a confianza", removeTrust: "Quitar de confianza",
+        myReports: "Mis reportes", noReports: "Aún no has enviado reportes en esta demostración.", reportedAt: "Enviado",
+        accountTitle: "Cuenta Yeray", signIn: "Iniciar sesión", createAccount: "Crear cuenta",
+        email: "Correo electrónico", password: "Contraseña", accountDemo: "Acceso de demostración: no se conecta a una cuenta real.",
+        deleteAccount: "Solicitar eliminación de cuenta", loginNote: "La gestión real de la cuenta se realizará a través del backend seguro.",
+        navigationTitle: "Pausa de seguridad", navigationBody: "Yeray detectó señales que podrían indicar una página engañosa. Evita introducir datos personales o de pago.",
+        returnSafe: "Volver", continueAnyway: "Continuar bajo mi responsabilidad",
+        continueNote: "Puedes continuar, pero el sitio seguirá marcado como sospechoso.",
+        noHistory: "Todavía no hay actividad en esta demostración.",
+        reportSent: "Reporte guardado en esta demostración.", historyCleared: "Historial local borrado.",
+        authDemo: "La autenticación se conectaría al backend seguro en la versión real.",
+        deleteDemo: "Solicitud de eliminación preparada para la versión real.",
+        notificationOn: "Avisos de seguridad activados.", notificationOff: "Avisos de seguridad desactivados.",
+        cleared: "Listo", noThreats: "Sin señales conocidas", highRisk: "Riesgo elevado",
+        reputationCheck: "Reputación: sin alertas conocidas", reputationRisk: "Reputación: varias señales de riesgo",
+        aiCheck: "Análisis de contenido: sin señales destacadas", aiRisk: "Contenido: presión y condiciones poco claras",
+        communityCheck: "Comunidad: sin reportes recientes", communityRisk: "Comunidad: reportes pendientes de revisión",
+        cookiesCheck: "Privacidad: revisión de demostración completada", cookiesRisk: "Privacidad: revisa las opciones de seguimiento",
+        suspiciousCheck: "Contenido: sin elementos señalados", suspiciousRisk: "Contenido: 3 elementos para revisar",
+        thirdCheck: "Fuentes externas: reputación estable", thirdRisk: "Fuentes externas: reputación inconsistente",
+        scoreRisk: "Riesgo estimado", scoreSafe: "Riesgo estimado", related: "Visita de demostración",
+        close: "Cerrar", reportInProgress: "Reporte recibido para revisión en la demostración."
+      },
+      en: {
+        tagline: "Smart protection", demo: "Demo", scenario: "Scenario",
+        switchSafe: "Try safe site", switchRisk: "Simulate possible fraud",
+        currentPage: "Current page", active: "Active", safeTitle: "No known threats",
+        safeBody: "No risk signals were found. This does not guarantee absolute safety.",
+        riskTitle: "Danger: possible fraud", riskBody: "Important risk signals were detected. We recommend that you do not continue.",
+        navigation: "View navigation options", protection: "Protection level",
+        agile: "Agile", balanced: "Balanced", deep: "Deep",
+        agileDesc: "Checks the site's reputation and looks for critical threats. It is the fastest option; some alerts may arrive after the page opens.",
+        balancedDesc: "Combines web reputation and structural analysis. It balances analysis depth and speed.",
+        deepDesc: "Reviews content, privacy and possible deceptive tactics before you continue. It may take longer.",
+        defaultMode: "Default mode", agileTime: "Target response: under 3 sec",
+        balancedTime: "Target response: under 5 sec", deepTime: "Target audit: under 10 sec",
+        report: "View security report", sendReport: "Report", history: "History",
+        footer: "Guidance only, no absolute safety guarantee",
+        back: "Back", reportTitle: "Security report", checks: "Planned checks",
+        reputation: "URL reputation", ai: "Content and AI analysis",
+        community: "Community reports", cookies: "Cookies and privacy",
+        suspicious: "Suspicious elements", thirdParty: "Third-party reputation",
+        demoResult: "Demo result", explanation: "Why this result",
+        riskExplanation: "We found signs of pressure to buy and details worth checking before sharing information or paying.",
+        safeExplanation: "The demo checks found no known risk signals for this site.",
+        viewElements: "View suspicious elements", hideElements: "Hide elements",
+        concern1: "Urgency that is hard to verify", concern1desc: "The offer message pressures you to decide quickly.",
+        concern2: "Promotion option preselected", concern2desc: "A marketing checkbox appears to be enabled in advance.",
+        concern3: "Unclear renewal terms", concern3desc: "The cost or cancellation of a subscription is not explained clearly.",
+        highlight: "Highlight on page", highlighted: "Highlighted in the demo view",
+        historyTitle: "Recent activity", clearHistory: "Clear local history",
+        historyPrivacy: "This sample history is local to this demo.",
+        safeSite: "safe-shop.example", riskySite: "example.com",
+        reportFormTitle: "Send a report", reportPrompt: "What seemed suspicious?",
+        reportPrivacy: "This demo report is not sent to any service. Yeray does not analyze passwords or payment details.",
+        tagPhishing: "Impersonation", tagPrice: "Misleading price", tagPrivacy: "Privacy or cookies",
+        tagPressure: "Purchase pressure", detailsLabel: "Details (optional)",
+        detailsPlaceholder: "Briefly describe what you saw", submit: "Send report",
+        settingsTitle: "Preferences", language: "Language", appearance: "Appearance",
+        light: "Light", dark: "Dark", notifications: "Security alerts",
+        notificationsDesc: "Alert if a previously analyzed site shows risk signals again.",
+        textSize: "Text size", privacyTitle: "Privacy", privacyDesc: "Only necessary page information is analyzed. Password and payment fields are excluded from analysis.",
+        alertCenter: "Notification center", sampleAlert: "Security alert", sampleAlertBody: "Possible fraud was detected on a site you visited before.",
+        noNotifications: "There are no new alerts.", deleteTitle: "Delete account", deleteConfirmBody: "Deleting an account requires identity verification and confirmation through the secure backend.",
+        confirmDelete: "Request deletion", cancel: "Cancel", reportDetailsHint: "Do not include passwords, payment details or other personal information.",
+        reportSaved: "Your report was saved in this demo.", trustTitle: "Trusted domains", trustBody: "Domains marked as trusted will stop showing preventive alerts in this demo.",
+        trustedDomain: "Domain is on your trusted list", trustedDomainBody: "Preventive alerts are muted for this domain. Open the report to see its assessment.",
+        trustSite: "Add example.com to trusted list", removeTrust: "Remove from trusted list",
+        myReports: "My reports", noReports: "You have not sent any reports in this demo yet.", reportedAt: "Sent",
+        accountTitle: "Yeray account", signIn: "Sign in", createAccount: "Create account",
+        email: "Email address", password: "Password", accountDemo: "Demo access: this does not connect to a real account.",
+        deleteAccount: "Request account deletion", loginNote: "Real account management will use the secure backend.",
+        navigationTitle: "Safety pause", navigationBody: "Yeray found signs that may indicate a deceptive page. Avoid entering personal or payment details.",
+        returnSafe: "Go back", continueAnyway: "Continue at my own risk",
+        continueNote: "You can continue, but the site will remain marked as suspicious.",
+        noHistory: "There is no activity in this demo yet.",
+        reportSent: "Report saved in this demo.", historyCleared: "Local history cleared.",
+        authDemo: "Authentication would connect to the secure backend in the real version.",
+        deleteDemo: "Deletion request prepared for the real version.",
+        notificationOn: "Security alerts enabled.", notificationOff: "Security alerts disabled.",
+        cleared: "Done", noThreats: "No known signals", highRisk: "High risk",
+        reputationCheck: "Reputation: no known alerts", reputationRisk: "Reputation: several risk signals",
+        aiCheck: "Content analysis: no notable signals", aiRisk: "Content: pressure and unclear terms",
+        communityCheck: "Community: no recent reports", communityRisk: "Community: reports awaiting review",
+        cookiesCheck: "Privacy: demo review completed", cookiesRisk: "Privacy: review tracking options",
+        suspiciousCheck: "Content: no flagged elements", suspiciousRisk: "Content: 3 items to review",
+        thirdCheck: "External sources: stable reputation", thirdRisk: "External sources: inconsistent reputation",
+        scoreRisk: "Estimated risk", scoreSafe: "Estimated risk", related: "Demo visit",
+        close: "Close", reportInProgress: "Report received for demo review."
+      }
+    };
+
+    const MODE_LABELS = { agile: "agile", balanced: "balanced", deep: "deep" };
+    const MODE_KEYS = { agile: ["agile", "agileDesc", "agileTime"], balanced: ["balanced", "balancedDesc", "balancedTime"], deep: ["deep", "deepDesc", "deepTime"] };
+    const state = {
+      view: "home", scenario: "risk", mode: "balanced", theme: "light",
+      lang: "es", fontScale: 1, notifications: true,
+      showDetails: false, highlighted: -1, continued: false,
+      accountMode: "signin", reports: [], trustedDomains: [], message: "",
+      history: [
+        { domain: "ejemplo.com", risk: true, when: "10:42" },
+        { domain: "tienda-segura.example", risk: false, when: "Ayer" }
+      ]
+    };
+    const t = function (key) { return I18N[state.lang][key] || key; };
+    function escapeHtml(value) {
+      const entities = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+      return String(value).replace(/[&<>"']/g, function (character) { return entities[character]; });
+    }
+    const icon = function (name, size) {
+      const s = size || 18;
+      const paths = {
+        shield: '<path d="M12 3 5 6v5c0 4.7 3 8 7 10 4-2 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>',
+        bell: '<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/>',
+        sliders: '<path d="M4 6h9M17 6h3M4 12h3m4 0h9M4 18h11m4 0h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>',
+        user: '<circle cx="12" cy="8" r="3"/><path d="M5 20a7 7 0 0 1 14 0"/><circle cx="12" cy="12" r="9"/>',
+        globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>',
+        flash: '<path d="m13 2-3 9h7l-8 11 2-9H5l8-11Z"/>',
+        shieldSmall: '<path d="M12 3 5 6v5c0 4.7 3 8 7 10 4-2 7-5.3 7-10V6l-7-3Z"/>',
+        check: '<path d="m5 12 4 4L19 6"/>',
+        report: '<path d="M6 21V4"/><path d="M6 4c5-3 8 3 13 0v10c-5 3-8-3-13 0"/>',
+        history: '<path d="M3 12a9 9 0 1 0 2.6-6.4L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/>',
+        lock: '<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>',
+        warning: '<path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3h.01"/>',
+        arrow: '<path d="m15 18-6-6 6-6M9 12h11"/>',
+        close: '<path d="m6 6 12 12M18 6 6 18"/>',
+        clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+        eye: '<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.5"/>',
+        info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-9h.01"/>'
+      };
+      return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (paths[name] || paths.info) + '</svg>';
+    };
+    const modeName = function (key) { return t(MODE_KEYS[key][0]); };
+    const modeDesc = function (key) { return t(MODE_KEYS[key][1]); };
+    const modeTime = function (key) { return t(MODE_KEYS[key][2]); };
+    const isRisk = function () { return state.scenario === "risk"; };
+
+    function renderHeader() {
+      return '<button class="brand-mark" aria-label="Yeray, ' + t("back") + '" onclick="showView(\'home\')">' + icon("shield", 23) + '</button>' +
+        '<div class="brand-copy"><h1 class="brand-name">Yeray</h1><p class="brand-tagline">' + t("tagline") + '</p></div>' +
+        '<nav class="header-actions" aria-label="Acciones">' +
+        '<button class="icon-button ' + (state.view === "notifications" ? "current" : "") + '" aria-label="' + t("notifications") + '" title="' + t("notifications") + '" onclick="showView(\'notifications\')">' + icon("bell", 18) + '</button>' +
+        '<button class="icon-button ' + (state.view === "settings" ? "current" : "") + '" aria-label="' + t("settingsTitle") + '" title="' + t("settingsTitle") + '" onclick="showView(\'settings\')">' + icon("sliders", 18) + '</button>' +
+        '<button class="icon-button ' + (state.view === "account" || state.view === "deleteAccount" ? "current" : "") + '" aria-label="' + t("accountTitle") + '" title="' + t("accountTitle") + '" onclick="showView(\'account\')">' + icon("user", 18) + '</button>' +
+        '</nav>';
+    }
+    function renderFooter() {
+      return icon("lock", 13) + '<span>' + t("footer") + '</span>';
+    }
+    function renderDemoStrip() {
+      return '<div class="demo-strip"><span class="demo-label"><span class="demo-chip">' + t("demo") + '</span><span>· ' + t("scenario") + '</span></span>' +
+        '<button class="text-button" onclick="toggleScenario()">' + (isRisk() ? t("switchSafe") : t("switchRisk")) + '</button></div>';
+    }
+    function renderHome() {
+      const trusted = state.trustedDomains.includes("ejemplo.com");
+      const risky = isRisk() && !trusted;
+      const modeKey = state.mode;
+      const alert = trusted
+        ? '<section class="notice warn"><div class="notice-icon">' + icon("info", 20) + '</div><div><h2>' + t("trustedDomain") + '</h2><p>' + t("trustedDomainBody") + '</p><div class="notice-action"><button onclick="openReport()">' + t("report") + '</button></div></div></section>'
+        : risky
+        ? '<section class="notice danger" aria-live="polite"><div class="notice-icon">' + icon("warning", 20) + '</div><div><h2>' + t("riskTitle") + '</h2><p>' + t("riskBody") + '</p><div class="notice-action"><button onclick="showView(\'navigation\')">' + t("navigation") + '</button></div></div></section>'
+        : '<section class="notice safe" aria-live="polite"><div class="notice-icon">' + icon("check", 20) + '</div><div><h2>' + t("safeTitle") + '</h2><p>' + t("safeBody") + '</p></div></section>';
+      const modeCards = ["agile", "balanced", "deep"].map(function (key) {
+        const symbol = key === "agile" ? "flash" : "shieldSmall";
+        return '<button class="mode-card ' + (state.mode === key ? "selected" : "") + '" aria-pressed="' + (state.mode === key) + '" onclick="setMode(\'' + key + '\')">' +
+          icon(symbol, 20) + '<strong>' + modeName(key) + '</strong>' +
+          (state.mode === key ? '<small>' + icon("check", 12) + '</small>' : '') + '</button>';
+      }).join("");
+      return renderDemoStrip() +
+        '<section class="page-card"><p class="eyebrow">' + t("currentPage") + '</p><div class="page-row"><div class="domain">' + icon("globe", 16) + '<span>ejemplo.com</span></div><span class="active-state">' + icon("shieldSmall", 14) + t("active") + '</span></div></section>' +
+        alert +
+        '<h2 class="section-title">' + t("protection") + '</h2>' +
+        '<div class="mode-grid" role="group" aria-label="' + t("protection") + '">' + modeCards + '</div>' +
+        '<section class="mode-info"><div class="mode-info-title">' + icon("shieldSmall", 17) + '<span>' + modeName(modeKey) + '</span></div><p>' + modeDesc(modeKey) + '</p><small>' + (modeKey === "balanced" ? t("defaultMode") : modeTime(modeKey)) + (modeKey === "balanced" ? " · " + modeTime(modeKey) : "") + '</small></section>' +
+        '<button class="primary-button" onclick="openReport()">' + icon("report", 17) + t("report") + '</button>' +
+        '<div class="secondary-row"><button class="outline-button" onclick="showView(\'reportForm\')">' + icon("report", 15) + t("sendReport") + '</button><button class="outline-button" onclick="showView(\'history\')">' + icon("history", 15) + t("history") + '</button></div>';
+    }
+    function renderReport() {
+      const risky = isRisk();
+      const checkKeys = [
+        ["reputation", risky ? "reputationRisk" : "reputationCheck"],
+        ["ai", risky ? "aiRisk" : "aiCheck"],
+        ["community", risky ? "communityRisk" : "communityCheck"],
+        ["cookies", risky ? "cookiesRisk" : "cookiesCheck"],
+        ["suspicious", risky ? "suspiciousRisk" : "suspiciousCheck"],
+        ["thirdParty", risky ? "thirdRisk" : "thirdCheck"]
+      ];
+      const score = risky ? 91 : 8;
+      const rows = checkKeys.map(function (pair) {
+        return '<div class="check-row"><span class="check-icon">' + icon(risky && (pair[0] === "reputation" || pair[0] === "suspicious") ? "warning" : "globe", 15) + '</span><div><strong>' + t(pair[0]) + '</strong><small>' + t(pair[1]) + ' · ' + t("demoResult") + '</small></div></div>';
+      }).join("");
+      let details = "";
+      if (state.showDetails && risky) {
+        const concerns = [
+          ["concern1", "concern1desc"], ["concern2", "concern2desc"], ["concern3", "concern3desc"]
+        ];
+        details = '<div class="detail-list">' + concerns.map(function (pair, index) {
+          return '<div class="detail-item ' + (state.highlighted === index ? "active" : "") + '"><strong>' + t(pair[0]) + '</strong><p>' + t(pair[1]) + '</p><button onclick="highlightItem(' + index + ')">' + (state.highlighted === index ? t("highlighted") : t("highlight")) + '</button></div>';
+        }).join("") + '</div>';
+      }
+      return '<button class="back-button" onclick="showView(\'home\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("reportTitle") + '</h2>' +
+        '<section class="risk-summary"><div class="domain">' + icon("globe", 16) + '<span>ejemplo.com</span></div>' +
+        '<div class="risk-line" style="color:' + (risky ? "var(--danger)" : "var(--safe)") + '">' + icon(risky ? "warning" : "check", 16) + '<strong>' + (risky ? t("riskTitle") : t("safeTitle")) + '</strong></div>' +
+        '<div class="risk-score"><strong>' + score + '</strong><span>/ 100 · ' + t(risky ? "highRisk" : "noThreats") + '</span></div>' +
+        '<p>' + t("demoResult") + '. ' + t(risky ? "riskBody" : "safeBody") + '</p></section>' +
+        '<h3 class="section-title">' + t("checks") + '</h3><div class="checks">' + rows + '</div>' +
+        '<section class="explanation ' + (risky ? "risk" : "") + '"><strong>' + t("explanation") + '</strong><p>' + t(risky ? "riskExplanation" : "safeExplanation") + '</p></section>' +
+        (risky ? '<button class="outline-button" style="margin-top:9px" onclick="toggleDetails()">' + icon("eye", 16) + t(state.showDetails ? "hideElements" : "viewElements") + '</button>' + details : '') +
+        '<p class="subtle-note">' + icon("info", 13) + ' ' + t("related") + ' · ' + t("footer") + '</p>';
+    }
+    function renderHistory() {
+      const items = state.history.map(function (item) {
+        return '<div class="history-item"><span style="color:' + (item.risk ? "var(--danger)" : "var(--safe)") + '">' + icon(item.risk ? "warning" : "check", 17) + '</span><div class="history-copy"><strong>' + item.domain + '</strong><small>' + (item.risk ? t("highRisk") : t("noThreats")) + ' · ' + item.when + '</small></div><button onclick="openHistoryItem(\'' + (item.risk ? "risk" : "safe") + '\')">' + t("report") + '</button></div>';
+      }).join("");
+      const tagKeys = { phishing: "tagPhishing", price: "tagPrice", privacy: "tagPrivacy", pressure: "tagPressure" };
+      const reports = state.reports.map(function (report) {
+        const tags = report.tags.map(function (tag) { return t(tagKeys[tag] || tag); }).join(", ") || t("detailsLabel");
+        const details = report.details ? '<p class="subtle-note">' + escapeHtml(report.details) + '</p>' : "";
+        return '<div class="history-item"><span style="color:var(--teal)">' + icon("report", 17) + '</span><div class="history-copy"><strong>' + escapeHtml(report.domain) + '</strong><small>' + tags + ' · ' + t("reportedAt") + ' ' + report.when + '</small>' + details + '</div></div>';
+      }).join("");
+      return '<button class="back-button" onclick="showView(\'home\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("historyTitle") + '</h2>' +
+        (items || '<div class="empty-state">' + t("noHistory") + '</div>') +
+        '<p class="subtle-note">' + icon("lock", 13) + ' ' + t("historyPrivacy") + '</p>' +
+        '<h3 class="section-title">' + t("myReports") + '</h3>' +
+        (reports || '<div class="empty-state">' + t("noReports") + '</div>') +
+        '<button class="outline-button" style="margin-top:12px" onclick="clearHistory()">' + t("clearHistory") + '</button>';
+    }
+    function renderSettings() {
+      const trusted = state.trustedDomains.includes("ejemplo.com");
+      return '<button class="back-button" onclick="showView(\'home\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("settingsTitle") + '</h2>' +
+        '<section class="page-card"><div class="setting-row"><strong>' + t("language") + '</strong><select aria-label="' + t("language") + '" onchange="setLanguage(this.value)"><option value="es" ' + (state.lang === "es" ? "selected" : "") + '>Español</option><option value="en" ' + (state.lang === "en" ? "selected" : "") + '>English</option></select></div>' +
+        '<div class="setting-row"><strong>' + t("appearance") + '</strong><select aria-label="' + t("appearance") + '" onchange="setTheme(this.value)"><option value="light" ' + (state.theme === "light" ? "selected" : "") + '>' + t("light") + '</option><option value="dark" ' + (state.theme === "dark" ? "selected" : "") + '>' + t("dark") + '</option></select></div>' +
+        '<div class="setting-row"><div><strong>' + t("textSize") + '</strong><small>− / +</small></div><div style="display:flex;gap:7px"><button class="outline-button" style="min-height:34px;width:42px" aria-label="Reducir texto" onclick="changeFont(-.05)">A−</button><button class="outline-button" style="min-height:34px;width:42px" aria-label="Aumentar texto" onclick="changeFont(.05)">A+</button></div></div>' +
+        '<div class="setting-row"><div><strong>' + t("notifications") + '</strong><small>' + t("notificationsDesc") + '</small></div><input style="width:22px;accent-color:var(--teal)" type="checkbox" ' + (state.notifications ? "checked" : "") + ' onchange="setNotifications(this.checked)" aria-label="' + t("notifications") + '"></div></section>' +
+        '<h3 class="section-title">' + t("trustTitle") + '</h3><section class="page-card"><p style="margin:0;line-height:1.4">' + t("trustBody") + '</p><button class="outline-button" style="margin-top:10px" onclick="toggleTrusted()">' + (trusted ? t("removeTrust") : t("trustSite")) + '</button></section>' +
+        '<h3 class="section-title">' + t("privacyTitle") + '</h3><section class="explanation"><p>' + t("privacyDesc") + '</p></section>' +
+        '<button class="outline-button" style="margin-top:10px" onclick="showView(\'account\')">' + t("accountTitle") + '</button>';
+    }
+    function renderNotifications() {
+      const notice = state.notifications
+        ? '<section class="notice danger"><div class="notice-icon">' + icon("warning", 20) + '</div><div><h2>' + t("sampleAlert") + '</h2><p><strong>ejemplo.com</strong><br>' + t("sampleAlertBody") + '</p><button class="text-button" style="margin-top:8px" onclick="openReport()">' + t("report") + '</button></div></section>'
+        : '<div class="empty-state">' + t("noNotifications") + '</div>';
+      return '<button class="back-button" onclick="showView(\'home\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("alertCenter") + '</h2>' +
+        '<section class="page-card"><div class="setting-row"><div><strong>' + t("notifications") + '</strong><small>' + t("notificationsDesc") + '</small></div><input style="width:22px;accent-color:var(--teal)" type="checkbox" ' + (state.notifications ? "checked" : "") + ' onchange="setNotifications(this.checked)" aria-label="' + t("notifications") + '"></div></section>' +
+        '<h3 class="section-title">' + t("historyTitle") + '</h3>' + notice +
+        '<p class="subtle-note">' + t("demoResult") + ' · ' + t("historyPrivacy") + '</p>';
+    }
+    function renderAccount() {
+      const create = state.accountMode === "create";
+      return '<button class="back-button" onclick="showView(\'home\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("accountTitle") + '</h2>' +
+        '<section class="page-card"><p style="margin:0;line-height:1.4">' + t("accountDemo") + '</p></section>' +
+        '<div class="secondary-row" role="tablist" aria-label="' + t("accountTitle") + '">' +
+        '<button class="' + (create ? "outline-button" : "primary-button") + '" style="margin-top:0" role="tab" aria-selected="' + (!create) + '" onclick="setAccountMode(\'signin\')">' + t("signIn") + '</button>' +
+        '<button class="' + (create ? "primary-button" : "outline-button") + '" style="margin-top:0" role="tab" aria-selected="' + create + '" onclick="setAccountMode(\'create\')">' + t("createAccount") + '</button></div>' +
+        '<form onsubmit="demoAuth(event)"><label class="form-label" for="accountEmail">' + t("email") + '</label><input id="accountEmail" type="email" autocomplete="email" required>' +
+        '<label class="form-label" for="accountPassword">' + t("password") + '</label><input id="accountPassword" type="password" autocomplete="' + (create ? "new-password" : "current-password") + '" required>' +
+        '<p class="subtle-note">' + t("loginNote") + '</p><button class="primary-button" type="submit">' + (create ? t("createAccount") : t("signIn")) + '</button></form>' +
+        '<button class="outline-button" style="margin-top:10px" onclick="showView(\'deleteAccount\')">' + t("deleteAccount") + '</button>';
+    }
+    function renderReportForm() {
+      return '<button class="back-button" onclick="showView(\'home\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("reportFormTitle") + '</h2>' +
+        '<section class="page-card"><p class="eyebrow">' + t("currentPage") + '</p><div class="domain">' + icon("globe", 16) + '<span>ejemplo.com</span></div></section>' +
+        '<form onsubmit="submitReport(event)"><p class="section-title">' + t("reportPrompt") + '</p><div class="tag-options">' +
+        '<label class="tag-option"><input type="checkbox" value="phishing">' + t("tagPhishing") + '</label><label class="tag-option"><input type="checkbox" value="price">' + t("tagPrice") + '</label>' +
+        '<label class="tag-option"><input type="checkbox" value="privacy">' + t("tagPrivacy") + '</label><label class="tag-option"><input type="checkbox" value="pressure">' + t("tagPressure") + '</label></div>' +
+        '<label class="form-label" for="reportDetails">' + t("detailsLabel") + '</label><textarea id="reportDetails" maxlength="240" placeholder="' + t("detailsPlaceholder") + '"></textarea>' +
+        '<p class="subtle-note">' + t("reportPrivacy") + ' ' + t("reportDetailsHint") + '</p><button class="primary-button" type="submit">' + t("submit") + '</button></form>';
+    }
+    function renderNavigation() {
+      return '<button class="back-button" onclick="showView(\'home\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("navigationTitle") + '</h2>' +
+        '<section class="notice danger"><div class="notice-icon">' + icon("warning", 22) + '</div><div><h2>' + t("riskTitle") + '</h2><p>' + t("navigationBody") + '</p></div></section>' +
+        '<section class="explanation risk"><strong>' + t("explanation") + '</strong><p>' + t("riskExplanation") + '</p></section>' +
+        '<p class="subtle-note">' + t("continueNote") + '</p>' +
+        '<button class="outline-button" style="margin-top:10px" onclick="showView(\'home\')">' + t("returnSafe") + '</button>' +
+        '<button class="primary-button" onclick="continueAnyway()">' + t("continueAnyway") + '</button>';
+    }
+    function renderDeleteAccount() {
+      return '<button class="back-button" onclick="showView(\'account\')">' + icon("arrow", 16) + t("back") + '</button>' +
+        '<h2 class="page-heading">' + t("deleteTitle") + '</h2>' +
+        '<section class="notice warn"><div class="notice-icon">' + icon("info", 20) + '</div><div><p style="margin:0">' + t("deleteConfirmBody") + '</p></div></section>' +
+        '<div class="secondary-row"><button class="outline-button" onclick="showView(\'account\')">' + t("cancel") + '</button><button class="primary-button" style="margin-top:0" onclick="requestDelete()">' + t("confirmDelete") + '</button></div>';
+    }
+    function renderContent() {
+      let html;
+      if (state.view === "report") html = renderReport();
+      else if (state.view === "history") html = renderHistory();
+      else if (state.view === "settings") html = renderSettings();
+      else if (state.view === "notifications") html = renderNotifications();
+      else if (state.view === "account") html = renderAccount();
+      else if (state.view === "reportForm") html = renderReportForm();
+      else if (state.view === "navigation") html = renderNavigation();
+      else if (state.view === "deleteAccount") html = renderDeleteAccount();
+      else html = renderHome();
+      return (state.message ? '<div class="inline-feedback" role="status" aria-live="polite">' + icon("check", 15) + '<span>' + state.message + '</span></div>' : '') + html;
+    }
+    function render() {
+      document.documentElement.lang = state.lang;
+      document.documentElement.setAttribute("data-theme", state.theme);
+      document.documentElement.style.setProperty("--font-scale", state.fontScale);
+      document.getElementById("appHeader").innerHTML = renderHeader();
+      document.getElementById("content").innerHTML = renderContent();
+      document.getElementById("appFooter").innerHTML = renderFooter();
+    }
+    function setMode(mode) { state.mode = mode; render(); }
+    function showView(view) { state.view = view; state.showDetails = false; state.highlighted = -1; state.message = ""; render(); document.getElementById("content").focus(); }
+    function openReport() { showView("report"); }
+    function toggleScenario() {
+      state.scenario = isRisk() ? "safe" : "risk";
+      state.continued = false;
+      state.history.unshift({ domain: "ejemplo.com", risk: isRisk(), when: new Date().toLocaleTimeString(state.lang === "es" ? "es-ES" : "en-US", { hour: "2-digit", minute: "2-digit" }) });
+      state.history = state.history.slice(0, 12);
+      state.message = "";
+      render();
+    }
+    function toggleDetails() { state.showDetails = !state.showDetails; render(); }
+    function highlightItem(index) { state.highlighted = index; state.message = t("highlighted"); render(); }
+    function openHistoryItem(kind) { state.scenario = kind; state.view = "report"; state.showDetails = false; state.message = ""; render(); }
+    function clearHistory() { state.history = []; state.message = t("historyCleared"); render(); }
+    function setLanguage(value) { state.lang = value; render(); }
+    function setTheme(value) { state.theme = value; render(); }
+    function changeFont(delta) { state.fontScale = Math.min(1.2, Math.max(.9, state.fontScale + delta)); render(); }
+    function setNotifications(value) { state.notifications = value; state.message = value ? t("notificationOn") : t("notificationOff"); render(); }
+    function toggleTrusted() {
+      if (state.trustedDomains.includes("ejemplo.com")) state.trustedDomains = state.trustedDomains.filter(function (domain) { return domain !== "ejemplo.com"; });
+      else state.trustedDomains.push("ejemplo.com");
+      state.message = state.trustedDomains.includes("ejemplo.com") ? t("trustedDomain") : t("removeTrust");
+      render();
+    }
+    function setAccountMode(mode) { state.accountMode = mode; state.message = ""; render(); }
+    function continueAnyway() { state.continued = true; state.view = "home"; state.message = t("continueNote"); render(); }
+    function submitReport(event) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const tags = Array.from(form.querySelectorAll('input[type="checkbox"]:checked')).map(function (input) { return input.value; });
+      const details = form.querySelector("#reportDetails").value.trim();
+      state.reports.unshift({ domain: "ejemplo.com", tags: tags, details: details, when: new Date().toLocaleTimeString(state.lang === "es" ? "es-ES" : "en-US", { hour: "2-digit", minute: "2-digit" }) });
+      state.view = "home";
+      state.message = t("reportSaved");
+      render();
+    }
+    function demoAuth(event) { event.preventDefault(); state.message = t("authDemo"); render(); }
+    function requestDelete() { state.view = "account"; state.message = t("deleteDemo"); render(); }
+    render();
+    render();
+  </script>
+</body>
+</html>

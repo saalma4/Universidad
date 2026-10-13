@@ -1,0 +1,42 @@
+/* Paleta Yerai: tokens visuales compartidos por la extensión. */
+:root {
+  --navy: #0F3D56;       /* Encabezado */
+  --teal: #176B85;       /* Selección activa e iconos */
+  --pale: #E6F2F6;       /* Caja explicativa */
+  --button: #171C22;     /* Botón del informe */
+  --ink: #16343A;        /* Texto principal */
+  --bg: #F4F9FA;         /* Fondo general */
+
+  /* Superficies y texto secundario de la interfaz */
+  --surface: #FFFFFF;
+  --line: #C7DCE3;
+  --muted: #55727A;
+
+  /* Estados semánticos para alertas tipo semáforo */
+  --safe: #167245;
+  --safe-bg: #EAF5EE;
+  --warn: #9B5C08;
+  --warn-bg: #FFF4DD;
+  --danger: #BE2929;
+  --danger-bg: #FCE8E8;
+}
+
+/* Valores de superficie y estado para el tema oscuro de Yerai. */
+[data-theme="dark"] {
+  --navy: #0F3D56;
+  --teal: #176B85;
+  --pale: #233F49;
+  --button: #171C22;
+  --ink: #EAF3F5;
+  --bg: #101D22;
+  --surface: #18313A;
+  --line: #48636B;
+  --muted: #B4C9CE;
+
+  --safe: #9CE0B7;
+  --safe-bg: #173D31;
+  --warn: #FFD98D;
+  --warn-bg: #493B22;
+  --danger: #FFB1B1;
+  --danger-bg: #492929;
+}

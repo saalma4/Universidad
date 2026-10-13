@@ -1,0 +1,1 @@
+client: 10000 bytes echoed in 1.281 ms  (identical)
